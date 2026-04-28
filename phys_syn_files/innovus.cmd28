@@ -1,0 +1,105 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Tue Apr 21 11:46:00 2026                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v21.17-s075_1 (64bit) 03/15/2023 11:17 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 21.17-s075_1 NR230308-2354/21_17-UB (database version 18.20.604) {superthreading v2.17}
+#@(#)CDS: AAE 21.17-s026 (64bit) 03/15/2023 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 21.17-s025_1 () Mar 14 2023 11:00:06 ( )
+#@(#)CDS: SYNTECH 21.17-s007_1 () Feb 20 2023 06:56:35 ( )
+#@(#)CDS: CPE v21.17-s068
+#@(#)CDS: IQuantus/TQuantus 21.1.1-s939 (64bit) Wed Nov 9 09:34:24 PST 2022 (Linux 3.10.0-693.el7.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+win
+set init_design_uniquify 1
+set init_verilog ../outputs/ipdc_syn.v
+set init_design_netlisttype Verilog
+set init_design_settop 1
+set init_top_cell ipdc
+set init_lef_file {../techlef/asap7_tech_4x_201209.lef ../lef/scaled/asap7sc7p5t_28_L_4x_220121a.lef ../lef/scaled/asap7sc7p5t_28_SL_4x_220121a.lef ../lef/scaled/asap7sc7p5t_28_R_4x_220121a.lef}
+set fp_core_cntl aspect
+set fp_aspect_ratio 1.0000
+set extract_shrink_factor 1.0
+set init_assign_buffer 0
+set init_pwr_net VDD
+set init_gnd_net VSS
+set init_cpf_file {}
+set init_mmmc_file ../scripts/ipdc.mmmc
+init_design
+setDesignMode -process 7 -node N7
+setMultiCpuUsage -localCpu 4
+setDesignMode -bottomRoutingLayer 2
+setDesignMode -topRoutingLayer 7
+floorPlan -site asap7sc7p5t -s 1684.8 1404.0 6.22 6.22 6.22 6.22 -noSnap
+addWellTap -cell TAPCELL_ASAP7_75t_L -cellInterval 12.960 -inRowOffset 1.296
+add_tracks -snap_m1_track_to_cell_pins
+add_tracks -mode replace -offsets {M5 vertical 0}
+deleteAllFPObjects
+addWellTap -cell TAPCELL_ASAP7_75t_L -cellInterval 12.960 -inRowOffset 1.296
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Left -layer 3 -spreadType center -spacing 2.0 -pin {
+i_rst_n i_clk i_op_valid 
+{i_op_mode[0]} {i_op_mode[1]} {i_op_mode[2]} {i_op_mode[3]}
+i_in_valid
+{i_in_data[0]} {i_in_data[1]} {i_in_data[2]} {i_in_data[3]}
+{i_in_data[4]} {i_in_data[5]} {i_in_data[6]} {i_in_data[7]}
+{i_in_data[8]} {i_in_data[9]} {i_in_data[10]} {i_in_data[11]}
+{i_in_data[12]} {i_in_data[13]} {i_in_data[14]} {i_in_data[15]}
+{i_in_data[16]} {i_in_data[17]} {i_in_data[18]} {i_in_data[19]}
+{i_in_data[20]} {i_in_data[21]} {i_in_data[22]} {i_in_data[23]}
+}
+editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Right -layer 3 -spreadType center -spacing 2.0 -pin {
+o_op_ready o_in_ready o_out_valid
+{o_out_data[0]} {o_out_data[1]} {o_out_data[2]} {o_out_data[3]}
+{o_out_data[4]} {o_out_data[5]} {o_out_data[6]} {o_out_data[7]}
+{o_out_data[8]} {o_out_data[9]} {o_out_data[10]} {o_out_data[11]}
+{o_out_data[12]} {o_out_data[13]} {o_out_data[14]} {o_out_data[15]}
+{o_out_data[16]} {o_out_data[17]} {o_out_data[18]} {o_out_data[19]}
+{o_out_data[20]} {o_out_data[21]} {o_out_data[22]} {o_out_data[23]}
+}
+editPin -snap TRACK -pin *
+setPinAssignMode -pinEditInBatch false
+legalizePin
+globalNetConnect VDD -type pgpin -pin VDD -inst *
+globalNetConnect VSS -type pgpin -pin VSS -inst *
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer Pad -stacked_via_bottom_layer M1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin { standardcell } -skip_via_on_wire_shape { noshape }
+addRing -nets {VDD VSS} -type core_rings -follow core -layer {top M7 bottom M7 left M6 right M6} -width 2.176 -spacing 0.384 -offset 0.384 -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+addStripe -skip_via_on_wire_shape blockring -direction horizontal -set_to_set_distance 2.16 -skip_via_on_pin Standardcell -stacked_via_top_layer M1 -layer M2 -width 0.05 -nets VDD -stacked_via_bottom_layer M1 -start_from bottom -snap_wire_center_to_grid None -start_offset -0.044 -stop_offset -0.044
+addStripe -skip_via_on_wire_shape blockring -direction horizontal -set_to_set_distance 2.16 -skip_via_on_pin Standardcell -stacked_via_top_layer M1 -layer M2 -width 0.05 -nets VSS -stacked_via_bottom_layer M1 -start_from bottom -snap_wire_center_to_grid None -start_offset 1.036 -stop_offset -0.044
+addStripe -skip_via_on_wire_shape Noshape -set_to_set_distance 20 -skip_via_on_pin Standardcell -stacked_via_top_layer Pad -spacing 0.360 -xleft_offset 0.360 -layer M3 -width 0.5 -nets {VDD VSS} -stacked_via_bottom_layer M2 -start_from left
+addStripe -skip_via_on_wire_shape Noshape -direction horizontal -set_to_set_distance 40 -skip_via_on_pin Standardcell -stacked_via_top_layer M7 -spacing 0.864 -layer M4 -width 0.5 -nets {VDD VSS} -stacked_via_bottom_layer M3 -start_from bottom
+setSrouteMode -reset
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { corePin } -layerChangeRange { M1(1) M7(1) } -blockPinTarget { nearestTarget } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -deleteExistingRoutes -allowJogging 0 -crossoverViaLayerRange { M1(1) Pad(10) } -nets { VDD VSS } -allowLayerChange 0 -targetViaLayerRange { M1 (1) Pad(10) }
+editPowerVia -add_vias 1 -orthogonal_only 0
+verify_drc
+setOptMode -holdTargetSlack 0.020
+setOptMode -setupTargetSlack 0.020
+colorizePowerMesh
+place_opt_design
+ccopt_design
+all_constraint_modes -active
+set_interactive_constraint_modes [all_constraint_modes -active]
+reset_propagated_clock [all_clocks]
+set_propagated_clock [all_clocks]
+report_timing
+routeDesign
+zoomBox -264.91200 -398.38725 899.52750 753.18550
+zoomBox -573.47400 -886.15800 1322.62125 988.98600
+zoomBox -880.60350 -1373.00475 1743.75025 1222.35050
+zoomBox -1898.48475 -2992.76325 3128.95325 1979.12300
+zoomBox -3765.90400 -5767.71325 4420.43925 2328.17325
+zoomBox -2617.66775 -3790.89225 3296.96525 2058.38575
+zoomBox -2161.81650 -2995.19450 2865.62175 1976.69200
+zoomBox -1068.57800 -1298.17375 2018.89775 1755.18625
+zoomBox -807.59250 -893.04925 1816.76200 1702.30675
+zoomBox -585.75475 -548.69325 1644.94650 1657.35925
+report_timing
+optDesign -postRoute
+optDesign -postRoute -hold
+report_timing

@@ -1,0 +1,76 @@
+Loading db file '/home/v72206/MiniProject_03/MiniProject_03/lib/db/asap7sc7p5t_SEQ_SLVT_TT_nldm_220123.db'
+Loading db file '/home/v72206/MiniProject_03/MiniProject_03/lib/db/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.db'
+Loading db file '/home/v72206/MiniProject_03/MiniProject_03/lib/db/asap7sc7p5t_OA_SLVT_TT_nldm_211120.db'
+Loading db file '/home/v72206/MiniProject_03/MiniProject_03/lib/db/asap7sc7p5t_INVBUF_SLVT_TT_nldm_211120.db'
+Loading db file '/home/v72206/MiniProject_03/MiniProject_03/lib/db/asap7sc7p5t_SEQ_LVT_TT_nldm_220123.db'
+Loading db file '/home/v72206/MiniProject_03/MiniProject_03/lib/db/asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.db'
+Loading db file '/home/v72206/MiniProject_03/MiniProject_03/lib/db/asap7sc7p5t_OA_LVT_TT_nldm_211120.db'
+Loading db file '/home/v72206/MiniProject_03/MiniProject_03/lib/db/asap7sc7p5t_INVBUF_LVT_TT_nldm_211120.db'
+Loading db file '/home/v72206/MiniProject_03/MiniProject_03/lib/db/asap7sc7p5t_AO_LVT_TT_nldm_211120.db'
+Loading db file '/home/v72206/MiniProject_03/MiniProject_03/lib/db/asap7sc7p5t_AO_SLVT_TT_nldm_211120.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : ipdc
+Version: U-2022.12
+Date   : Wed Apr 22 07:22:04 2026
+****************************************
+
+
+Library(s) Used:
+
+    asap7sc7p5t_INVBUF_SLVT_TT_nldm_211120 (File: /home/v72206/MiniProject_03/MiniProject_03/lib/db/asap7sc7p5t_INVBUF_SLVT_TT_nldm_211120.db)
+    asap7sc7p5t_AO_LVT_TT_nldm_211120 (File: /home/v72206/MiniProject_03/MiniProject_03/lib/db/asap7sc7p5t_AO_LVT_TT_nldm_211120.db)
+    asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120 (File: /home/v72206/MiniProject_03/MiniProject_03/lib/db/asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.db)
+    asap7sc7p5t_OA_LVT_TT_nldm_211120 (File: /home/v72206/MiniProject_03/MiniProject_03/lib/db/asap7sc7p5t_OA_LVT_TT_nldm_211120.db)
+    asap7sc7p5t_INVBUF_LVT_TT_nldm_211120 (File: /home/v72206/MiniProject_03/MiniProject_03/lib/db/asap7sc7p5t_INVBUF_LVT_TT_nldm_211120.db)
+    asap7sc7p5t_OA_SLVT_TT_nldm_211120 (File: /home/v72206/MiniProject_03/MiniProject_03/lib/db/asap7sc7p5t_OA_SLVT_TT_nldm_211120.db)
+    asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120 (File: /home/v72206/MiniProject_03/MiniProject_03/lib/db/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.db)
+    asap7sc7p5t_AO_SLVT_TT_nldm_211120 (File: /home/v72206/MiniProject_03/MiniProject_03/lib/db/asap7sc7p5t_AO_SLVT_TT_nldm_211120.db)
+    asap7sc7p5t_SEQ_SLVT_TT_nldm_220123 (File: /home/v72206/MiniProject_03/MiniProject_03/lib/db/asap7sc7p5t_SEQ_SLVT_TT_nldm_220123.db)
+    asap7sc7p5t_SEQ_LVT_TT_nldm_220123 (File: /home/v72206/MiniProject_03/MiniProject_03/lib/db/asap7sc7p5t_SEQ_LVT_TT_nldm_220123.db)
+
+
+Operating Conditions: PVT_0P7V_25C   Library: asap7sc7p5t_AO_LVT_TT_nldm_211120
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 0.7  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ps
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  =   7.5355 mW   (81%)
+  Net Switching Power  =   1.7161 mW   (19%)
+                         ---------
+Total Dynamic Power    =   9.2516 mW  (100%)
+
+Cell Leakage Power     = 437.1922 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      5.3717            0.0000            0.0000            5.3717  (  55.44%)  i
+register       3.1657e-03        9.0162e-04        1.2876e+08            0.1328  (   1.37%)
+sequential     1.8350e-04        3.5233e-06        4.1904e+05        6.0606e-04  (   0.01%)
+combinational      2.1607            1.7148        3.0801e+08            4.1842  (  43.18%)
+--------------------------------------------------------------------------------------------------
+Total              7.5358 mW         1.7157 mW     4.3719e+08 pW         9.6894 mW
+1

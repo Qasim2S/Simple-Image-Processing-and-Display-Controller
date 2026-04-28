@@ -1,0 +1,104 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[11:09:11.026473] Configured Lic search path (23.02-s003): 6055@licaccess.cmc.ca
+
+Version: 23.12-s086_1, built Wed Jul 24 16:05:35 PDT 2024
+Options: genus.tcl 
+Date:    Sat Jan 10 11:09:11 2026
+Host:    vcl-vm0-171 (x86_64 w/Linux 4.18.0-553.27.1.el8_10.x86_64) (1core*4cpus*7physical cpus*Intel(R) Xeon(R) Gold 6248R CPU @ 3.00GHz 36608KB) (15849076KB)
+PID:     302241
+OS:      Red Hat Enterprise Linux release 8.10 (Ootpa)
+
+Checking out license: Genus_Synthesis
+[11:09:11.341306] Periodic Lic check successful
+[11:09:11.865602] Feature usage summary:
+[11:09:11.865602] Genus_Synthesis
+
+  Setting attribute of root '/': 'init_lib_search_path' = ../lib/ ../lef/scaled/ ../techlef/
+  Setting attribute of root '/': 'init_hdl_search_path' = ../sources/
+  Setting attribute of root '/': 'library' =   asap7sc7p5t_AO_LVT_TT_nldm_211120.lib   asap7sc7p5t_INVBUF_LVT_TT_nldm_220122.lib   asap7sc7p5t_OA_LVT_TT_nldm_211120.lib   asap7sc7p5t_SEQ_LVT_TT_nldm_220123.lib   asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib  asap7sc7p5t_AO_SLVT_TT_nldm_211120.lib  asap7sc7p5t_INVBUF_SLVT_TT_nldm_220122.lib  asap7sc7p5t_OA_SLVT_TT_nldm_211120.lib  asap7sc7p5t_SEQ_SLVT_TT_nldm_220123.lib  asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib
+
+  According to lef_library, there are total 10 routing layers [ V(5) / H(5) ]
+
+  Setting attribute of root '/': 'lef_library' = /home/v70259/mydata/ASIC_Design_Course/1_New_Labs/Lab3333/scripts/../techlef//asap7_tech_4x_201209.lef /home/v70259/mydata/ASIC_Design_Course/1_New_Labs/Lab3333/scripts/../lef/scaled//asap7sc7p5t_28_L_4x_220121a.lef /home/v70259/mydata/ASIC_Design_Course/1_New_Labs/Lab3333/scripts/../lef/scaled//asap7sc7p5t_28_SL_4x_220121a.lef
+  Libraries have 334 usable logic and 46 usable sequential lib-cells.
+
+Segmentation Fault accessing address 0.
+
+Fatal internal error, code 11 (Segmentation fault)
+
+Dumping stack trace (tid:7ff03c7d84c0/main thread).
+
+Operating System: linux
+Product Version: 23.12-s086_1
+Build Date: Jul 24 2024 19:05:35
+Executable: /CMC/tools/cadence/DDI23.12.000_lnx86/GENUS231/tools.lnx86/synth/bin/64bit/genus
+Startup Options: genus.tcl 
+Current Directory: /home/v70259/mydata/ASIC_Design_Course/1_New_Labs/Lab3333/scripts
+Stack trace:
+Thread 4 (Thread 0x7ff036137700 (LWP 302290)):
+#0  0x00007ff0456851ff in select () from /usr/lib64/libc.so.6
+#1  0x000000000999eabc in RedirectOutputHelperThread::helper_thread(bool) ()
+#2  0x0000000009a2d22c in create_head(void*) ()
+#3  0x00007ff04aa981ca in start_thread () from /usr/lib64/libpthread.so.0
+#4  0x00007ff0455898d3 in clone () from /usr/lib64/libc.so.6
+Thread 3 (Thread 0x7ff039bd3700 (LWP 302283)):
+#0  0x00007ff04aaa21a0 in nanosleep () from /usr/lib64/libpthread.so.0
+#1  0x000000000924f9c4 in lic_recheck(void*) ()
+#2  0x0000000009a2d22c in create_head(void*) ()
+#3  0x00007ff04aa981ca in start_thread () from /usr/lib64/libpthread.so.0
+#4  0x00007ff0455898d3 in clone () from /usr/lib64/libc.so.6
+Thread 2 (Thread 0x7ff03a7e5700 (LWP 302282)):
+#0  0x00007ff045682ac1 in poll () from /usr/lib64/libc.so.6
+#1  0x00007ff04cb286ff in _xcb_conn_wait () from /usr/lib64/libxcb.so.1
+#2  0x00007ff04cb2a38a in xcb_wait_for_event () from /usr/lib64/libxcb.so.1
+#3  0x00007ff04476e3e0 in ?? () from /CMC/tools/cadence/DDI23.12.000_lnx86/GENUS231/tools.lnx86/synth/bin/64bit/../../../lib/64bit/../../Qt/v5/64bit/lib/libcdsQt5XcbQpa.so.5
+#4  0x00007ff04e188f6f in ?? () from /CMC/tools/cadence/DDI23.12.000_lnx86/GENUS231/tools.lnx86/synth/bin/64bit/../../../Qt/v5/64bit/lib/libcdsQt5Core.so.5
+#5  0x0000000009a2d22c in create_head(void*) ()
+#6  0x00007ff04aa981ca in start_thread () from /usr/lib64/libpthread.so.0
+#7  0x00007ff0455898d3 in clone () from /usr/lib64/libc.so.6
+Thread 1 (Thread 0x7ff03c7d84c0 (LWP 302241)):
+#0  0x00007ff04aaa2692 in waitpid () from /usr/lib64/libpthread.so.0
+#1  0x0000000009a2e139 in pstack_stacktrace(int, _IO_FILE*) ()
+#2  0x0000000009a2eb53 in dump_stack_trace_low(_IO_FILE*, _IO_FILE*, unsigned long*, bool, bool) ()
+#3  0x0000000009a308b6 in sig_exit(int) ()
+#4  0x00000000099b0945 in fatal_handler(int) ()
+#5  0x0000000009a30aac in segv_fatal_handler(int, siginfo_t*) ()
+#6  <signal handler called>
+#7  0x00007ff0455a2cca in ____strtoll_l_internal () from /usr/lib64/libc.so.6
+#8  0x000000000c04004a in strtol ()
+#9  0x00000000053c45da in PropConstRTHlp::PropConstRTHlp(bool) ()
+#10 0x00000000053ebcc8 in propagate_constants_for_gdef(GBI::Gdef*, gbbdd_struct*, bool, bool, bool, bool, Hasht*, bool, bool, bool, bool, bool, bool) ()
+#11 0x00000000053ecc0f in tio_basic_recur_old_interface(GBI::Gdef*, Hasht*) ()
+#12 0x0000000000fdd775 in c2g_crunch_case_solver(GBI::Gdef*, DfGraph*) ()
+#13 0x0000000000fb5931 in c2g_post_process(GBI::Gdef*, DfGraph*) ()
+#14 0x0000000000fb9cf8 in c2g_process_graph(DfGraph*, unsigned long&, long long&, int) ()
+#15 0x00000000010bb53d in XfmDfGraph::allocateDesign() ()
+#16 0x00000000013304d4 in HptDfGraph::allocateDesigns() ()
+#17 0x0000000001333403 in HptDfGraph::processDesign(HPTStruct*, HPTStruct*, Hasht*, HPTStruct*) [clone .part.0] ()
+#18 0x0000000001333e24 in HptDatabase::processDesign(HPTStruct*, Ident const&, bool, Hasht*, HptDfGraph*, char const*, bool) ()
+#19 0x000000000128e2a1 in HptDfGraph::getInstance(HPTStruct*, HptDfNode*&, int, int, bool, Hasht*) ()
+#20 0x00000000012910dc in HptDfGraph::createInstance(HPTStruct*, int, bool, char const*, char const*) ()
+#21 0x000000000129290b in HptDfGraph::HptInstantiate(HPTStruct*) ()
+#22 0x000000000139ac2e in HptDfGraph::HptComponentInstantiation(HPTStruct*) ()
+#23 0x000000000139bd03 in HptDfGraph::processConcurrentStmtAux(HPTStruct*, int) ()
+#24 0x000000000139c28c in HptDfGraph::HptConcurrentStatementsInternalNewOrder(HPTStruct*, int) ()
+#25 0x000000000139ca0a in HptDfGraph::HptConcurrentStatementsInternalNewOrderOptimized(HPTStruct*, int) ()
+#26 0x000000000139cc1f in HptDfGraph::HptConcurrentStatements(HPTStruct*, int) [clone .part.0] ()
+#27 0x0000000001333501 in HptDfGraph::processDesign(HPTStruct*, HPTStruct*, Hasht*, HPTStruct*) [clone .part.0] ()
+#28 0x0000000001333e24 in HptDatabase::processDesign(HPTStruct*, Ident const&, bool, Hasht*, HptDfGraph*, char const*, bool) ()
+#29 0x0000000001336690 in HptDatabase::processDesigns(Ident const&, int, int, int, int, int, int, Ident const&, int, Ident const&, char const*, DList*, DList*, int, Hasht*) ()
+#30 0x00000000014524b1 in hls_elaborate_one_design(Ident&, bool, char const*, DList*, DList*, bool&, Hasht*, bool) [clone .constprop.0] ()
+#31 0x0000000001463811 in hls_elaborate(LList*, char const*, DList*, DList*, bool&, bool) ()
+#32 0x000000000144f9b9 in elaborate_cmd(void*, Tcl_Interp*, int, Tcl_Obj* const*) ()
+#33 0x00000000095f6e06 in rc_cmd(void*, Tcl_Interp*, int, Tcl_Obj* const*) ()
+#34 0x000000000933a657 in TclEvalEx ()
+#35 0x0000000009406c0e in Tcl_FSEvalFileEx.part.0 ()
+#36 0x0000000009407e70 in Tcl_FSEvalFileEx ()
+#37 0x000000000940eac7 in Tcl_MainEx ()
+#38 0x000000000076430f in main ()
+
+Abnormal exit.

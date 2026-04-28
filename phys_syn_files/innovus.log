@@ -1,0 +1,52 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v21.17-s075_1, built Wed Mar 15 11:17:40 PDT 2023
+Options:	
+Date:		Sat Apr  4 17:15:39 2026
+Host:		vcl-vm0-175 (x86_64 w/Linux 4.18.0-553.27.1.el8_10.x86_64) (1core*4cpus*Intel(R) Xeon(R) Gold 6248R CPU @ 3.00GHz 36608KB)
+OS:		Rocky Linux 8.10 (Green Obsidian)
+
+License:
+		[17:15:39.078801] Configured Lic search path (21.01-s002): 6055@licaccess.cmc.ca
+
+		invs	Innovus Implementation System	21.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+**WARN: (IMPOPT-801):	Genus executable not found in PATH. Install Genus, add the path to the genus executable in the PATH variable and rerun Innovus.
+Change the soft stacksize limit to 0.2%RAM (30 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> win
+invalid command name "958"
+invalid command name "958"
+invalid command name "958"
+<CMD> set init_design_uniquify 1
+<CMD> set init_verilog ../run/netlist.v
+<CMD> set init_design_netlisttype Verilog
+<CMD> set init_design_settop 1
+<CMD> set init_top_cell sha256
+<CMD> set init_lef_file {../techlef/asap7_tech_4x_201209.lef ../lef/scaled/asap7sc7p5t_28_L_4x_220121a.lef ../lef/scaled/asap7sc7p5t_28_SL_4x_220121a.lef ../lef/scaled/asap7sc7p5t_28_R_4x_220121a.lef}
+<CMD> set fp_core_cntl aspect
+<CMD> set fp_aspect_ratio 1.0000
+<CMD> set extract_shrink_factor 1.0
+<CMD> set init_assign_buffer 0
+<CMD> set init_pwr_net VDD
+<CMD> set init_gnd_net VSS
+<CMD> set init_cpf_file {}
+<CMD> set init_mmmc_file ../scripts/mips_cpu.mmmc
+<CMD> init_design
+#% Begin Load MMMC data ... (date=04/04 17:17:40, mem=950.9M)
+**ERROR: (TCLCMD-989):	cannot open SDC file '../sdc/mips_cpu.sdc' for mode 'sdc'
+
+**INFO (INTERRUPT): The current script will stop before next command.
+**INFO (INTERRUPT): One more Ctrl-C to exit Innovus ...
+Innovus terminated by user interrupt.
+
+*** Memory Usage v#1 (Current mem = 1055.762M, initial mem = 486.906M) ***
+*** Message Summary: 1 warning(s), 1 error(s)
+
+--- Ending "Innovus" (totcpu=0:00:21.8, real=0:02:09, mem=1055.8M) ---

@@ -1,0 +1,341 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v21.17-s075_1, built Wed Mar 15 11:17:40 PDT 2023
+Options:	
+Date:		Sat Apr 11 20:56:54 2026
+Host:		vcl-vm0-175 (x86_64 w/Linux 4.18.0-553.27.1.el8_10.x86_64) (1core*4cpus*Intel(R) Xeon(R) Gold 6248R CPU @ 3.00GHz 36608KB)
+OS:		Rocky Linux 8.10 (Green Obsidian)
+
+License:
+		[20:56:55.078777] Configured Lic search path (21.01-s002): 6055@licaccess.cmc.ca
+
+		invs	Innovus Implementation System	21.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+**WARN: (IMPOPT-801):	Genus executable not found in PATH. Install Genus, add the path to the genus executable in the PATH variable and rerun Innovus.
+Change the soft stacksize limit to 0.2%RAM (30 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> win
+<CMD> encMessage warning 0
+Suppress "**WARN ..." messages.
+<CMD> encMessage debug 0
+<CMD> is_common_ui_mode
+<CMD> restoreDesign /home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Powerplan.dat ipdc
+#% Begin load design ... (date=04/11 20:57:58, mem=982.7M)
+Loading design 'ipdc' saved by 'Innovus' '21.17-s075_1' on 'Sat Apr 4 21:28:58 2026'.
+% Begin Load MMMC data ... (date=04/11 20:57:58, mem=986.3M)
+% End Load MMMC data ... (date=04/11 20:57:58, total cpu=0:00:00.0, real=0:00:00.0, peak res=986.9M, current mem=986.9M)
+rc_typ_25
+
+Loading LEF file /home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Powerplan.dat/libs/lef/asap7_tech_4x_201209.lef ...
+
+Loading LEF file /home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Powerplan.dat/libs/lef/asap7sc7p5t_28_L_4x_220121a.lef ...
+Set DBUPerIGU to M1 pitch 576.
+
+Loading LEF file /home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Powerplan.dat/libs/lef/asap7sc7p5t_28_SL_4x_220121a.lef ...
+
+Loading LEF file /home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Powerplan.dat/libs/lef/asap7sc7p5t_28_R_4x_220121a.lef ...
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+Loading view definition file from /home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Powerplan.dat/viewDefinition.tcl
+Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_AO_LVT_TT_nldm_211120.lib' ...
+Read 42 cells in library 'asap7sc7p5t_AO_LVT_TT_nldm_211120' 
+Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_INVBUF_LVT_TT_nldm_220122.lib' ...
+Read 37 cells in library 'asap7sc7p5t_INVBUF_LVT_TT_nldm_211120' 
+Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_OA_LVT_TT_nldm_211120.lib' ...
+Read 34 cells in library 'asap7sc7p5t_OA_LVT_TT_nldm_211120' 
+Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SEQ_LVT_TT_nldm_220123.lib' ...
+Read 33 cells in library 'asap7sc7p5t_SEQ_LVT_TT_nldm_220123' 
+Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib' ...
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib, Line 11387)
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib, Line 14287)
+Read 56 cells in library 'asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120' 
+Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_AO_SLVT_TT_nldm_211120.lib' ...
+Read 42 cells in library 'asap7sc7p5t_AO_SLVT_TT_nldm_211120' 
+Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_INVBUF_SLVT_TT_nldm_220122.lib' ...
+Read 37 cells in library 'asap7sc7p5t_INVBUF_SLVT_TT_nldm_211120' 
+Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_OA_SLVT_TT_nldm_211120.lib' ...
+Read 34 cells in library 'asap7sc7p5t_OA_SLVT_TT_nldm_211120' 
+Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SEQ_SLVT_TT_nldm_220123.lib' ...
+Read 33 cells in library 'asap7sc7p5t_SEQ_SLVT_TT_nldm_220123' 
+Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib' ...
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib, Line 11387)
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib, Line 14287)
+Read 56 cells in library 'asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120' 
+*** End library_loading (cpu=0.07min, real=0.07min, mem=75.0M, fe_cpu=0.41min, fe_real=1.15min, fe_mem=1153.6M) ***
+% Begin Load netlist data ... (date=04/11 20:58:03, mem=1018.6M)
+*** Begin netlist parsing (mem=1153.6M) ***
+Created 404 new cells from 10 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilogBinary netlist '/home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Powerplan.dat/vbin/ipdc.v.bin'
+
+*** Memory Usage v#1 (Current mem = 1192.641M, initial mem = 486.906M) ***
+*** End netlist parsing (cpu=0:00:00.3, real=0:00:00.0, mem=1192.6M) ***
+% End Load netlist data ... (date=04/11 20:58:03, total cpu=0:00:00.3, real=0:00:00.0, peak res=1083.4M, current mem=1083.4M)
+Set top cell to ipdc.
+Hooked 404 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell ipdc ...
+*** Netlist is unique.
+Set DBUPerIGU to techSite asap7sc7p5t width 864.
+** info: there are 645 modules.
+** info: there are 138258 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 1332.055M, initial mem = 486.906M) ***
+*info: set bottom ioPad orient R0
+Adjusting Core to Left to: 6.3360. Core to Bottom to: 6.3360.
+Start create_tracks
+Loading preference file /home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Powerplan.dat/gui.pref.tcl ...
+##  Process: 7             (AutoDetect)             
+##     Node: N7            (User Set)           
+##  Process: 7             (User Set)               
+##     Node: N7            (User Set)           
+Applying the recommended capacitance filtering threshold values for 7nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
+	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
+	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode will be 'medium' if Quantus QRC technology file is specified else 'low'.
+addRing command will ignore shorts while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will consider rows while creating rings.
+The ring targets are set to core/block ring wires.
+Change floorplan default-technical-site to 'asap7sc7p5t'.
+*Info: initialize multi-corner CTS.
+Total number of combinational cells: 338
+Total number of sequential cells: 66
+Total number of tristate cells: 0
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+Total number of physical cells: 0
+List of usable buffers: BUFx10_ASAP7_75t_SL BUFx12_ASAP7_75t_SL BUFx12f_ASAP7_75t_SL BUFx16f_ASAP7_75t_SL BUFx24_ASAP7_75t_SL BUFx2_ASAP7_75t_SL BUFx3_ASAP7_75t_SL BUFx4_ASAP7_75t_SL BUFx5_ASAP7_75t_SL BUFx4f_ASAP7_75t_SL BUFx6f_ASAP7_75t_SL BUFx8_ASAP7_75t_SL HB1xp67_ASAP7_75t_SL HB2xp67_ASAP7_75t_SL BUFx10_ASAP7_75t_L BUFx12_ASAP7_75t_L BUFx12f_ASAP7_75t_L BUFx16f_ASAP7_75t_L BUFx24_ASAP7_75t_L BUFx2_ASAP7_75t_L BUFx3_ASAP7_75t_L BUFx4_ASAP7_75t_L BUFx5_ASAP7_75t_L BUFx4f_ASAP7_75t_L BUFx6f_ASAP7_75t_L BUFx8_ASAP7_75t_L HB1xp67_ASAP7_75t_L
+Total number of usable buffers: 27
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CKINVDCx10_ASAP7_75t_SL CKINVDCx12_ASAP7_75t_SL CKINVDCx11_ASAP7_75t_SL CKINVDCx14_ASAP7_75t_SL CKINVDCx16_ASAP7_75t_SL CKINVDCx20_ASAP7_75t_SL CKINVDCx8_ASAP7_75t_SL CKINVDCx5p33_ASAP7_75t_SL CKINVDCx6p67_ASAP7_75t_SL CKINVDCx9p33_ASAP7_75t_SL INVx11_ASAP7_75t_SL INVx13_ASAP7_75t_SL INVx1_ASAP7_75t_SL INVx2_ASAP7_75t_SL INVx3_ASAP7_75t_SL INVx4_ASAP7_75t_SL INVx5_ASAP7_75t_SL INVx6_ASAP7_75t_SL INVx8_ASAP7_75t_SL INVxp67_ASAP7_75t_SL INVxp33_ASAP7_75t_SL CKINVDCx10_ASAP7_75t_L CKINVDCx12_ASAP7_75t_L CKINVDCx11_ASAP7_75t_L CKINVDCx14_ASAP7_75t_L CKINVDCx16_ASAP7_75t_L CKINVDCx20_ASAP7_75t_L CKINVDCx8_ASAP7_75t_L CKINVDCx5p33_ASAP7_75t_L CKINVDCx6p67_ASAP7_75t_L CKINVDCx9p33_ASAP7_75t_L INVx11_ASAP7_75t_L INVx13_ASAP7_75t_L INVx1_ASAP7_75t_L INVx2_ASAP7_75t_L INVx3_ASAP7_75t_L INVx4_ASAP7_75t_L INVx5_ASAP7_75t_L INVx6_ASAP7_75t_L INVx8_ASAP7_75t_L INVxp67_ASAP7_75t_L INVxp33_ASAP7_75t_L
+Total number of usable inverters: 42
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: HB3xp67_ASAP7_75t_SL HB4xp67_ASAP7_75t_SL HB2xp67_ASAP7_75t_L HB3xp67_ASAP7_75t_L HB4xp67_ASAP7_75t_L
+Total number of identified usable delay cells: 5
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+Reading floorplan file - /home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Powerplan.dat/ipdc.fp.gz (mem = 1589.1M).
+% Begin Load floorplan data ... (date=04/11 20:58:05, mem=1480.8M)
+*info: reset 138369 existing net BottomPreferredLayer and AvoidDetour
+Deleting old partition specification.
+Set FPlanBox to (0 0 1000160 1000160)
+Start create_tracks
+ ... processed partition successfully.
+Reading binary special route file /home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Powerplan.dat/ipdc.fp.spr.gz (Created by Innovus v21.17-s075_1 on Sat Apr  4 21:28:57 2026, version: 1)
+Convert 0 swires and 0 svias from compressed groups
+70 swires and 186 svias were compressed
+70 swires and 186 svias were decompressed from small or sparse groups
+Ending "Read special route file" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1482.4M, current mem=1482.4M)
+Extracting standard cell pins and blockage ...... 
+**WARN: (IMPTR-2106):	There is no track defined on layer M1. This can be due to out of range track value and the need to use 64bit version or a problem with the track in that layer. Check the track input for layer M1. You may need to run 'generateTracks' command before proceeding.
+Pin and blockage extraction finished
+% End Load floorplan data ... (date=04/11 20:58:06, total cpu=0:00:00.2, real=0:00:01.0, peak res=1483.3M, current mem=1483.3M)
+Reading congestion map file /home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Powerplan.dat/ipdc.route.congmap.gz ...
+% Begin Load SymbolTable ... (date=04/11 20:58:06, mem=1483.3M)
+% End Load SymbolTable ... (date=04/11 20:58:06, total cpu=0:00:00.3, real=0:00:00.0, peak res=1494.2M, current mem=1494.2M)
+Loading place ...
+% Begin Load placement data ... (date=04/11 20:58:06, mem=1494.2M)
+Reading placement file - /home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Powerplan.dat/ipdc.place.gz.
+** Reading stdCellPlacement_binary (Created by Innovus v21.17-s075_1 on Sat Apr  4 21:28:57 2026, version# 2) ...
+Read Views for adaptive view pruning ...
+Read 0 views from Binary DB for adaptive view pruning
+*** Checked 2 GNC rules.
+*** applyConnectGlobalNets disabled.
+*** Completed restorePlace (cpu=0:00:00.1 real=0:00:01.0 mem=1600.9M) ***
+Total net length = 6.914e+01 (3.457e+01 3.457e+01) (ext = 0.000e+00)
+% End Load placement data ... (date=04/11 20:58:07, total cpu=0:00:00.1, real=0:00:01.0, peak res=1496.5M, current mem=1495.3M)
+Reading PG file /home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Powerplan.dat/ipdc.pg.gz, version#2, (Created by Innovus v21.17-s075_1 on       Sat Apr  4 21:28:57 2026)
+*** Completed restorePGFile (cpu=0:00:00.0 real=0:00:00.0 mem=1597.9M) ***
+% Begin Load routing data ... (date=04/11 20:58:07, mem=1495.7M)
+Reading routing file - /home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Powerplan.dat/ipdc.route.gz.
+Reading Innovus routing data (Created by Innovus v21.17-s075_1 on Sat Apr  4 21:28:57 2026 Format: 20.1) ...
+*** Total 138339 nets are successfully restored.
+*** Completed restoreRoute (cpu=0:00:00.2 real=0:00:00.0 mem=1602.9M) ***
+% End Load routing data ... (date=04/11 20:58:07, total cpu=0:00:00.2, real=0:00:00.0, peak res=1501.4M, current mem=1500.4M)
+Loading Drc markers ...
+... 75 markers are loaded ...
+... 75 geometry drc markers are loaded ...
+... 0 antenna drc markers are loaded ...
+TAT_INFO: restoreCongMap REAL = 0 : CPU = 0 : MEM = 0.
+Reading property file /home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Powerplan.dat/ipdc.prop
+*** Completed restoreProperty (cpu=0:00:00.0 real=0:00:00.0 mem=1605.9M) ***
+Loading preRoute extraction data from directory '/home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Powerplan.dat/extraction/' ...
+Extraction setup Started 
+Initializing multi-corner RC extraction with 1 active RC Corners ...
+Process node set using 'setDesignMode' is less than or equal to 32nm, for which captable file(s) would be ignored as preRoute extraction would instead use technology file. For postRoute extraction, default value for effort level would be 'medium' and effort level 'low' would not be allowed.
+Generating auto layer map file.
+Loading preRoute extracted patterns from file '/home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Powerplan.dat/ipdc.techData.gz' ...
+Importing multi-corner technology file(s) for preRoute extraction...
+/home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Powerplan.dat/libs/mmmc/rc_typ_25/qrcTechFile_typ03_scaled4xV06
+Generating auto layer map file.
+Completed (cpu: 0:00:02.7 real: 0:00:03.0)
+Set Shrink Factor to 1.00000
+Summary of Active RC-Corners : 
+ 
+ Analysis View: view_tc
+    RC-Corner Name        : rc_typ_25
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+    RC-Corner Technology file: '/home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Powerplan.dat/libs/mmmc/rc_typ_25/qrcTechFile_typ03_scaled4xV06'
+Updating RC grid for preRoute extraction ...
+Initializing multi-corner resistance tables ...
+Default value for postRoute extraction mode's effortLevel (-effortLevel option of setExtractRCMode) changed to 'medium'.
+Start generating vias ..
+#Skip building auto via since it is not turned on.
+Via generation completed.
+% Begin Load power constraints ... (date=04/11 20:58:12, mem=1560.4M)
+% End Load power constraints ... (date=04/11 20:58:12, total cpu=0:00:00.0, real=0:00:00.0, peak res=1560.4M, current mem=1560.4M)
+delay_tc
+% Begin load AAE data ... (date=04/11 20:58:12, mem=1598.9M)
+% End load AAE data ... (date=04/11 20:58:12, total cpu=0:00:00.0, real=0:00:00.0, peak res=1598.9M, current mem=1598.9M)
+Total number of combinational cells: 338
+Total number of sequential cells: 66
+Total number of tristate cells: 0
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+Total number of physical cells: 0
+List of usable buffers: BUFx10_ASAP7_75t_SL BUFx12_ASAP7_75t_SL BUFx12f_ASAP7_75t_SL BUFx16f_ASAP7_75t_SL BUFx24_ASAP7_75t_SL BUFx2_ASAP7_75t_SL BUFx3_ASAP7_75t_SL BUFx4_ASAP7_75t_SL BUFx5_ASAP7_75t_SL BUFx4f_ASAP7_75t_SL BUFx6f_ASAP7_75t_SL BUFx8_ASAP7_75t_SL HB1xp67_ASAP7_75t_SL HB2xp67_ASAP7_75t_SL BUFx10_ASAP7_75t_L BUFx12_ASAP7_75t_L BUFx12f_ASAP7_75t_L BUFx16f_ASAP7_75t_L BUFx24_ASAP7_75t_L BUFx2_ASAP7_75t_L BUFx3_ASAP7_75t_L BUFx4_ASAP7_75t_L BUFx5_ASAP7_75t_L BUFx4f_ASAP7_75t_L BUFx6f_ASAP7_75t_L BUFx8_ASAP7_75t_L HB1xp67_ASAP7_75t_L
+Total number of usable buffers: 27
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CKINVDCx10_ASAP7_75t_SL CKINVDCx12_ASAP7_75t_SL CKINVDCx11_ASAP7_75t_SL CKINVDCx14_ASAP7_75t_SL CKINVDCx16_ASAP7_75t_SL CKINVDCx20_ASAP7_75t_SL CKINVDCx8_ASAP7_75t_SL CKINVDCx5p33_ASAP7_75t_SL CKINVDCx6p67_ASAP7_75t_SL CKINVDCx9p33_ASAP7_75t_SL INVx11_ASAP7_75t_SL INVx13_ASAP7_75t_SL INVx1_ASAP7_75t_SL INVx2_ASAP7_75t_SL INVx3_ASAP7_75t_SL INVx4_ASAP7_75t_SL INVx5_ASAP7_75t_SL INVx6_ASAP7_75t_SL INVx8_ASAP7_75t_SL INVxp67_ASAP7_75t_SL INVxp33_ASAP7_75t_SL CKINVDCx10_ASAP7_75t_L CKINVDCx12_ASAP7_75t_L CKINVDCx11_ASAP7_75t_L CKINVDCx14_ASAP7_75t_L CKINVDCx16_ASAP7_75t_L CKINVDCx20_ASAP7_75t_L CKINVDCx8_ASAP7_75t_L CKINVDCx5p33_ASAP7_75t_L CKINVDCx6p67_ASAP7_75t_L CKINVDCx9p33_ASAP7_75t_L INVx11_ASAP7_75t_L INVx13_ASAP7_75t_L INVx1_ASAP7_75t_L INVx2_ASAP7_75t_L INVx3_ASAP7_75t_L INVx4_ASAP7_75t_L INVx5_ASAP7_75t_L INVx6_ASAP7_75t_L INVx8_ASAP7_75t_L INVxp67_ASAP7_75t_L INVxp33_ASAP7_75t_L
+Total number of usable inverters: 42
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: HB3xp67_ASAP7_75t_SL HB4xp67_ASAP7_75t_SL HB2xp67_ASAP7_75t_L HB3xp67_ASAP7_75t_L HB4xp67_ASAP7_75t_L
+Total number of identified usable delay cells: 5
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+#% End load design ... (date=04/11 20:58:12, total cpu=0:00:12.5, real=0:00:14.0, peak res=1664.3M, current mem=1588.8M)
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPTR-2106           1  There is no track defined on layer %s. T...
+WARNING   NRDB-2106            1  Ignoring layer %s MINIMUMCUT rule with W...
+WARNING   NRDB-411             3  spacing table for %s %s is already defin...
+WARNING   TECHLIB-1277         4  The %s '%s' has been defined for %s %s '...
+*** Message Summary: 9 warning(s), 0 error(s)
+
+<CMD> setDrawView fplan
+<CMD> encMessage warning 1
+Un-suppress "**WARN ..." messages.
+<CMD> encMessage debug 0
+<CMD> place_opt_design
+**INFO: User settings:
+setDesignMode -bottomRoutingLayer    2
+setDesignMode -node                  N7
+setDesignMode -process               7
+setDesignMode -topRoutingLayer       7
+setExtractRCMode -coupling_c_th      0.1
+setExtractRCMode -engine             preRoute
+setExtractRCMode -relative_c_th      1
+setExtractRCMode -total_c_th         0
+setDelayCalMode -engine              aae
+setOptMode -holdTargetSlack          0.02
+setOptMode -setupTargetSlack         0.02
+setPlaceMode -place_detail_dpt_flow  true
+setAnalysisMode -analysisType        single
+
+*** place_opt_design #1 [begin] : totSession cpu/real = 0:00:32.2/0:01:20.1 (0.4), mem = 1702.3M
+No user sequential activity specified, applying default sequential activity of "0.2" for Dynamic Power reporting.
+'set_default_switching_activity' finished successfully.
+*** Starting GigaPlace ***
+Estimated cell power/ground rail width = 0.101 um
+*** GlobalPlace #1 [begin] (place_opt_design #1) : totSession cpu/real = 0:00:33.6/0:01:21.7 (0.4), mem = 1906.6M
+*** Start deleteBufferTree ***
+Info: Detect buffers to remove automatically.
+Analyzing netlist ...
+Updating netlist
+
+*summary: 4189 instances (buffers/inverters) removed
+*** Finish deleteBufferTree (0:00:09.3) ***
+Effort level <high> specified for tdgp_reg2reg_default path_group
+Deleted 4180 physical insts (cell - / prefix -).
+Did not delete 4180 physical insts as they were marked preplaced.
+INFO: #ExclusiveGroups=0
+INFO: There are no Exclusive Groups.
+No user-set net weight.
+Net fanout histogram:
+2		: 121381 (90.4%) nets
+3		: 2498 (1.9%) nets
+4     -	14	: 2486 (1.9%) nets
+15    -	39	: 7119 (5.3%) nets
+40    -	79	: 43 (0.0%) nets
+80    -	159	: 87 (0.1%) nets
+160   -	319	: 560 (0.4%) nets
+320   -	639	: 30 (0.0%) nets
+640   -	1279	: 11 (0.0%) nets
+1280  -	2559	: 0 (0.0%) nets
+2560  -	5119	: 0 (0.0%) nets
+5120+		: 1 (0.0%) nets
+Options: timingDriven clkGateAware ignoreScan pinGuide congEffort=auto gpeffort=medium 
+Scan chains were not defined.
+#std cell=138319 (4180 fixed + 134139 movable) #buf cell=0 #inv cell=4185 #block=0 (0 floating + 0 preplaced)
+#ioInst=0 #net=134216 #term=644786 #term/net=4.80, #fixedIo=0, #floatIo=0, #fixedPin=0, #floatPin=59
+stdCell: 138319 single + 0 double + 0 multi
+Total standard cell length = 193.6269 (mm), area = 0.2091 (mm^2)
+Average module density = 3.801.
+Density for the design = 3.801.
+       = stdcell_area 888061 sites (207167 um^2) / alloc_area 233640 sites (54504 um^2).
+Pin Density = 2.6644.
+            = total # of pins 644786 / total area 242000.
+Identified 2 spare or floating instances, with no clusters.
+**ERROR: (IMPSP-190):	Design has util 380.1% > 100%, placer cannot proceed. The problem may be caused by density screens (softBlockages and partial blockages) or user-specified cell padding. Please correct this problem first.
+**placeDesign ... cpu = 0: 0:11, real = 0: 0:11, mem = 2022.0M **
+*** GlobalPlace #1 [finish] (place_opt_design #1) : cpu/real = 0:00:11.1/0:00:11.2 (1.0), totSession cpu/real = 0:00:44.8/0:01:32.9 (0.5), mem = 2022.0M
+Enable CTE adjustment.
+**optDesign ... cpu = 0:00:00, real = 0:00:00, mem = 1788.1M, totSessionCpu=0:00:45 **
+**ERROR: Design must be placed before running "optDesign"
+**ERROR: Design must be placed before running "optDesign"
+**place_opt_design ... cpu = 0:00:13, real = 0:00:12, mem = 2022.0M **
+*** Finished GigaPlace ***
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+ERROR     IMPSP-190            1  Design has util %.1f%% > 100%%, placer c...
+*** Message Summary: 0 warning(s), 1 error(s)
+
+*** place_opt_design #1 [finish] : cpu/real = 0:00:12.7/0:00:12.8 (1.0), totSession cpu/real = 0:00:44.8/0:01:33.0 (0.5), mem = 2022.0M
+1
+**INFO (INTERRUPT): One more Ctrl-C to exit Innovus ...
+Innovus terminated by user interrupt.
+
+*** Memory Usage v#1 (Current mem = 2017.969M, initial mem = 486.906M) ***
+*** Message Summary: 10 warning(s), 1 error(s)
+
+--- Ending "Innovus" (totcpu=0:00:48.0, real=0:02:46, mem=2018.0M) ---

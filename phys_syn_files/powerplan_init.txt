@@ -1,0 +1,90 @@
+globalNetConnect VDD -type pgpin -pin VDD -inst *
+# and the VSS
+globalNetConnect VSS -type pgpin -pin VSS -inst *
+
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer Pad -stacked_via_bottom_layer M1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin { standardcell } -skip_via_on_wire_shape { noshape }
+addRing -nets {VDD VSS} -type core_rings -follow core -layer {top M7 bottom M7 left M6 right M6} -width $FP_RING_WIDTH -spacing $FP_RING_SPACE -offset $FP_RING_OFFSET -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+
+addStripe -skip_via_on_wire_shape blockring \
+-direction horizontal \
+-set_to_set_distance [expr 2*$cellheight] \
+-skip_via_on_pin Standardcell \
+-stacked_via_top_layer M1 \
+-layer M2 \
+-width 0.05 \
+-nets {VDD} \
+-stacked_via_bottom_layer M1 \
+-start_from bottom \
+-snap_wire_center_to_grid None \
+-start_offset -0.044 \
+-stop_offset -0.044
+addStripe -skip_via_on_wire_shape blockring \
+-direction horizontal \
+-set_to_set_distance [expr 2*$cellheight] \
+-skip_via_on_pin Standardcell \
+-stacked_via_top_layer M1 \
+-layer M2 \
+-width 0.05 \
+-nets {VSS} \
+-stacked_via_bottom_layer M1 \
+-start_from bottom \
+-snap_wire_center_to_grid None \
+-start_offset [expr $cellheight -0.044] \
+-stop_offset -0.044
+
+set m3pwrwidth 0.5
+set m3pwrspacing 0.360
+set m3pwrset2setdist 25
+
+addStripe -skip_via_on_wire_shape Noshape \
+-set_to_set_distance $m3pwrset2setdist \
+-skip_via_on_pin Standardcell \
+-stacked_via_top_layer Pad \
+-spacing $m3pwrspacing \
+-xleft_offset 0.360 \
+-layer M3 \
+-width $m3pwrwidth \
+-nets {VDD VSS} \
+-stacked_via_bottom_layer M2 \
+-start_from left
+
+set m4pwrwidth 0.5
+set m4pwrspacing 0.864
+set m4pwrset2setdist 50
+# looks like this |0.864|0.864|0.864|long space... repeat pattern
+addStripe -skip_via_on_wire_shape Noshape \
+-direction horizontal \
+-set_to_set_distance $m4pwrset2setdist \
+-skip_via_on_pin Standardcell \
+-stacked_via_top_layer M7 \
+-spacing $m4pwrspacing \
+-layer M4 \
+-width $m4pwrwidth \
+-nets {VDD VSS} \
+-stacked_via_bottom_layer M3 \
+-start_from bottom
+
+setSrouteMode -reset
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { corePin } -layerChangeRange { M1(1) M7(1) } -blockPinTarget { nearestTarget } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -deleteExistingRoutes -allowJogging 0 -crossoverViaLayerRange { M1(1) Pad(10) } -nets { VDD VSS } -allowLayerChange 0 -targetViaLayerRange { M1 (1) Pad(10) }
+editPowerVia -add_vias 1 -orthogonal_only 0
+verify_drc
+setOptMode -holdTargetSlack 0.020
+setOptMode -setupTargetSlack 0.020
+#setPlaceMode -place_detail_preroute_as_obs 3
+# this helps verify_drc realize that some metals are colored.
+colorizePowerMesh
+
+place_opt_design
+
+ccopt_design
+set_interactive_constraint_modes [all_constraint_modes -active]
+reset_propagated_clock [all_clocks]
+set_propagated_clock [all_clocks]
+
+routeDesign
+
+optDesign -postRoute
+optDesign -postRoute -hold
+report_timing
+

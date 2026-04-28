@@ -1,0 +1,874 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v21.17-s075_1, built Wed Mar 15 11:17:40 PDT 2023
+Options:	
+Date:		Tue Mar 24 14:17:08 2026
+Host:		vcl-vm0-175 (x86_64 w/Linux 4.18.0-553.27.1.el8_10.x86_64) (1core*4cpus*Intel(R) Xeon(R) Gold 6248R CPU @ 3.00GHz 36608KB)
+OS:		Rocky Linux 8.10 (Green Obsidian)
+
+License:
+		[14:17:08.078761] Configured Lic search path (21.01-s002): 6055@licaccess.cmc.ca
+
+		invs	Innovus Implementation System	21.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+**WARN: (IMPOPT-801):	Genus executable not found in PATH. Install Genus, add the path to the genus executable in the PATH variable and rerun Innovus.
+Change the soft stacksize limit to 0.2%RAM (30 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> win
+<CMD> set init_design_uniquify 1
+<CMD> set init_verilog ../run/netlist.v
+<CMD> set init_design_netlisttype Verilog
+<CMD> set init_design_settop 1
+<CMD> set init_top_cell sha256
+<CMD> set init_lef_file {../techlef/asap7_tech_4x_201209.lef ../lef/scaled/asap7sc7p5t_28_L_4x_220121a.lef ../lef/scaled/asap7sc7p5t_28_SL_4x_220121a.lef ../lef/scaled/asap7sc7p5t_28_R_4x_220121a.lef}
+<CMD> set fp_core_cntl aspect
+<CMD> set fp_aspect_ratio 1.0000
+<CMD> set extract_shrink_factor 1.0
+<CMD> set init_assign_buffer 0
+<CMD> set init_pwr_net VDD
+<CMD> set init_gnd_net VSS
+<CMD> set init_cpf_file {}
+<CMD> set init_mmmc_file ../scripts/sha256.mmmc
+<CMD> init_design
+#% Begin Load MMMC data ... (date=03/24 14:17:35, mem=999.8M)
+#% End Load MMMC data ... (date=03/24 14:17:35, total cpu=0:00:00.0, real=0:00:00.0, peak res=1001.2M, current mem=1001.2M)
+rc_typ_25
+
+Loading LEF file ../techlef/asap7_tech_4x_201209.lef ...
+
+Loading LEF file ../lef/scaled/asap7sc7p5t_28_L_4x_220121a.lef ...
+Set DBUPerIGU to M1 pitch 576.
+
+Loading LEF file ../lef/scaled/asap7sc7p5t_28_SL_4x_220121a.lef ...
+
+Loading LEF file ../lef/scaled/asap7sc7p5t_28_R_4x_220121a.lef ...
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+Loading view definition file from ../scripts/sha256.mmmc
+Reading tc timing library '/home/v72206/asap7_reference_design/lib/asap7sc7p5t_AO_LVT_TT_nldm_211120.lib' ...
+Read 42 cells in library 'asap7sc7p5t_AO_LVT_TT_nldm_211120' 
+Reading tc timing library '/home/v72206/asap7_reference_design/lib/asap7sc7p5t_INVBUF_LVT_TT_nldm_220122.lib' ...
+Read 37 cells in library 'asap7sc7p5t_INVBUF_LVT_TT_nldm_211120' 
+Reading tc timing library '/home/v72206/asap7_reference_design/lib/asap7sc7p5t_OA_LVT_TT_nldm_211120.lib' ...
+Read 34 cells in library 'asap7sc7p5t_OA_LVT_TT_nldm_211120' 
+Reading tc timing library '/home/v72206/asap7_reference_design/lib/asap7sc7p5t_SEQ_LVT_TT_nldm_220123.lib' ...
+Read 33 cells in library 'asap7sc7p5t_SEQ_LVT_TT_nldm_220123' 
+Reading tc timing library '/home/v72206/asap7_reference_design/lib/asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib' ...
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/v72206/asap7_reference_design/lib/asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib, Line 11387)
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/v72206/asap7_reference_design/lib/asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib, Line 14287)
+Read 56 cells in library 'asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120' 
+Reading tc timing library '/home/v72206/asap7_reference_design/lib/asap7sc7p5t_AO_SLVT_TT_nldm_211120.lib' ...
+Read 42 cells in library 'asap7sc7p5t_AO_SLVT_TT_nldm_211120' 
+Reading tc timing library '/home/v72206/asap7_reference_design/lib/asap7sc7p5t_INVBUF_SLVT_TT_nldm_220122.lib' ...
+Read 37 cells in library 'asap7sc7p5t_INVBUF_SLVT_TT_nldm_211120' 
+Reading tc timing library '/home/v72206/asap7_reference_design/lib/asap7sc7p5t_OA_SLVT_TT_nldm_211120.lib' ...
+Read 34 cells in library 'asap7sc7p5t_OA_SLVT_TT_nldm_211120' 
+Reading tc timing library '/home/v72206/asap7_reference_design/lib/asap7sc7p5t_SEQ_SLVT_TT_nldm_220123.lib' ...
+Read 33 cells in library 'asap7sc7p5t_SEQ_SLVT_TT_nldm_220123' 
+Reading tc timing library '/home/v72206/asap7_reference_design/lib/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib' ...
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/v72206/asap7_reference_design/lib/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib, Line 11387)
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/v72206/asap7_reference_design/lib/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib, Line 14287)
+Read 56 cells in library 'asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120' 
+*** End library_loading (cpu=0.07min, real=0.08min, mem=82.0M, fe_cpu=0.37min, fe_real=0.53min, fe_mem=1144.1M) ***
+#% Begin Load netlist data ... (date=03/24 14:17:40, mem=1030.1M)
+*** Begin netlist parsing (mem=1144.1M) ***
+Created 404 new cells from 10 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '../run/netlist.v'
+
+*** Memory Usage v#1 (Current mem = 1144.078M, initial mem = 486.906M) ***
+*** End netlist parsing (cpu=0:00:00.1, real=0:00:00.0, mem=1144.1M) ***
+#% End Load netlist data ... (date=03/24 14:17:40, total cpu=0:00:00.1, real=0:00:00.0, peak res=1064.1M, current mem=1064.1M)
+Set top cell to sha256.
+Hooked 404 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell sha256 ...
+*** Netlist is unique.
+Set DBUPerIGU to techSite asap7sc7p5t width 864.
+** info: there are 637 modules.
+** info: there are 9222 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 1213.992M, initial mem = 486.906M) ***
+Start create_tracks
+Extraction setup Started 
+Initializing multi-corner RC extraction with 1 active RC Corners ...
+Captable file(s) not specified in multi-corner setup. PreRoute extraction will use technology file. For postRoute extraction, default value for effort level would be 'medium' and effort level 'low' would not be allowed.
+Generating auto layer map file.
+Importing multi-corner technology file(s) for preRoute extraction...
+../qrc/qrcTechFile_typ03_scaled4xV06
+Generating auto layer map file.
+Completed (cpu: 0:00:03.0 real: 0:00:04.0)
+Set Shrink Factor to 1.00000
+Summary of Active RC-Corners : 
+ 
+ Analysis View: view_tc
+    RC-Corner Name        : rc_typ_25
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+    RC-Corner Technology file: '../qrc/qrcTechFile_typ03_scaled4xV06'
+Updating RC grid for preRoute extraction ...
+Initializing multi-corner resistance tables ...
+Default value for postRoute extraction mode's effortLevel (-effortLevel option of setExtractRCMode) changed to 'medium'.
+*Info: initialize multi-corner CTS.
+Reading timing constraints file '../sdc/sha256.sdc' ...
+Current (total cpu=0:00:26.4, real=0:00:36.0, peak res=1441.2M, current mem=1441.2M)
+sha256
+**WARN: (TCLNL-330):	set_input_delay on clock root 'clk' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File ../sdc/sha256.sdc, Line 10).
+
+INFO (CTE): Reading of timing constraints file ../sdc/sha256.sdc completed, with 1 WARNING
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=1460.1M, current mem=1460.1M)
+Current (total cpu=0:00:26.5, real=0:00:36.0, peak res=1460.1M, current mem=1460.1M)
+Total number of combinational cells: 338
+Total number of sequential cells: 66
+Total number of tristate cells: 0
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+Total number of physical cells: 0
+List of usable buffers: BUFx10_ASAP7_75t_SL BUFx12_ASAP7_75t_SL BUFx12f_ASAP7_75t_SL BUFx16f_ASAP7_75t_SL BUFx24_ASAP7_75t_SL BUFx2_ASAP7_75t_SL BUFx3_ASAP7_75t_SL BUFx4_ASAP7_75t_SL BUFx5_ASAP7_75t_SL BUFx4f_ASAP7_75t_SL BUFx6f_ASAP7_75t_SL BUFx8_ASAP7_75t_SL HB1xp67_ASAP7_75t_SL HB2xp67_ASAP7_75t_SL BUFx10_ASAP7_75t_L BUFx12_ASAP7_75t_L BUFx12f_ASAP7_75t_L BUFx16f_ASAP7_75t_L BUFx24_ASAP7_75t_L BUFx2_ASAP7_75t_L BUFx3_ASAP7_75t_L BUFx4_ASAP7_75t_L BUFx5_ASAP7_75t_L BUFx4f_ASAP7_75t_L BUFx6f_ASAP7_75t_L BUFx8_ASAP7_75t_L HB1xp67_ASAP7_75t_L
+Total number of usable buffers: 27
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CKINVDCx10_ASAP7_75t_SL CKINVDCx12_ASAP7_75t_SL CKINVDCx11_ASAP7_75t_SL CKINVDCx14_ASAP7_75t_SL CKINVDCx16_ASAP7_75t_SL CKINVDCx20_ASAP7_75t_SL CKINVDCx8_ASAP7_75t_SL CKINVDCx5p33_ASAP7_75t_SL CKINVDCx6p67_ASAP7_75t_SL CKINVDCx9p33_ASAP7_75t_SL INVx11_ASAP7_75t_SL INVx13_ASAP7_75t_SL INVx1_ASAP7_75t_SL INVx2_ASAP7_75t_SL INVx3_ASAP7_75t_SL INVx4_ASAP7_75t_SL INVx5_ASAP7_75t_SL INVx6_ASAP7_75t_SL INVx8_ASAP7_75t_SL INVxp67_ASAP7_75t_SL INVxp33_ASAP7_75t_SL CKINVDCx10_ASAP7_75t_L CKINVDCx12_ASAP7_75t_L CKINVDCx11_ASAP7_75t_L CKINVDCx14_ASAP7_75t_L CKINVDCx16_ASAP7_75t_L CKINVDCx20_ASAP7_75t_L CKINVDCx8_ASAP7_75t_L CKINVDCx5p33_ASAP7_75t_L CKINVDCx6p67_ASAP7_75t_L CKINVDCx9p33_ASAP7_75t_L INVx11_ASAP7_75t_L INVx13_ASAP7_75t_L INVx1_ASAP7_75t_L INVx2_ASAP7_75t_L INVx3_ASAP7_75t_L INVx4_ASAP7_75t_L INVx5_ASAP7_75t_L INVx6_ASAP7_75t_L INVx8_ASAP7_75t_L INVxp67_ASAP7_75t_L INVxp33_ASAP7_75t_L
+Total number of usable inverters: 42
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: HB3xp67_ASAP7_75t_SL HB4xp67_ASAP7_75t_SL HB2xp67_ASAP7_75t_L HB3xp67_ASAP7_75t_L HB4xp67_ASAP7_75t_L
+Total number of identified usable delay cells: 5
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+#% Begin Load MMMC data post ... (date=03/24 14:17:44, mem=1482.4M)
+#% End Load MMMC data post ... (date=03/24 14:17:44, total cpu=0:00:00.0, real=0:00:00.0, peak res=1482.4M, current mem=1482.4M)
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   TCLNL-330            1  set_input_delay on clock root '%s' is no...
+WARNING   TECHLIB-1277         4  The %s '%s' has been defined for %s %s '...
+*** Message Summary: 5 warning(s), 0 error(s)
+
+<CMD> setDesignMode -process 7 -node N7
+##  Process: 7             (User Set)               
+##     Node: N7            (User Set)           
+Applying the recommended capacitance filtering threshold values for 7nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
+	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
+	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode is 'medium'.
+Process node set using 'setDesignMode' is less than or equal to 32nm, for which captable file(s) would be ignored as preRoute extraction would instead use technology file. For postRoute extraction, default value for effort level would be 'medium' and effort level 'low' would not be allowed.
+<CMD> setMultiCpuUsage -localCpu 4
+<CMD> setDesignMode -bottomRoutingLayer 2
+<CMD> setDesignMode -topRoutingLayer 7
+invalid command name "fpiGetSnapRul"
+<CMD> floorPlan -site asap7sc7p5t -s 178.2 178.2 6.22 6.22 6.22 6.22 -noSnap
+Start create_tracks
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+<CMD> addWellTap -cell TAPCELL_ASAP7_75t_L -cellInterval 12.960 -inRowOffset 1.296
+Multithreaded Timing Analysis is initialized with 4 threads
+
+Estimated cell power/ground rail width = 0.135 um
+**WARN: (IMPSP-378):	Center of Cell XOR2xp5_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell XOR2x2_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell XOR2x1_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell XNOR2xp5_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell XNOR2x2_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell XNOR2x1_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell TIELOx1_ASAP7_75t_R's M1(1) Pin 'L' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell TIEHIx1_ASAP7_75t_R's M1(1) Pin 'H' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFLx4_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFLx3_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFLx2_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFLx1_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFHx4_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFHx3_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFHx2_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFHx1_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell OR5x2_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell OR5x1_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell OR4x2_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell OR4x1_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (EMS-27):	Message (IMPSP-378) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+WARNING (IMPSP-382): Found 452 cells with pin-to-track misalignment. All floorplan's track offset and cell's pin-offsets did not allow any alignment.
+**WARN: (IMPSP-377):	Center of Cell INVx1_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell INVx1_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DFFASRHQNx1_ASAP7_75t_SL's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DFFASRHQNx1_ASAP7_75t_SL's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DFFASRHQNx1_ASAP7_75t_SL's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DFFASRHQNx1_ASAP7_75t_SL's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell AND4x1_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell AND5x1_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell AOI211xp5_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell AND5x1_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell AND5x1_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell AND5x1_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell AND5x1_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell AND5x1_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell AND5x1_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell AND5x1_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell AND5x1_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell AND5x1_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell AND5x1_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell AND5x1_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (EMS-27):	Message (IMPSP-377) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+For 2475 new insts, Inserted 2475 well-taps <TAPCELL_ASAP7_75t_L> cells (prefix WELLTAP).
+<CMD> add_tracks -snap_m1_track_to_cell_pins
+Start create_tracks
+<CMD> add_tracks -mode replace -offsets {M5 vertical 0}
+Start create_tracks
+<CMD> deleteAllFPObjects
+There is no pin guide defined.
+**WARN: (IMPFP-6001):	NO matching routing blockage found. Nothing deleted. 
+There is no pin blockage which matches the wildcard name [*].
+<CMD> addWellTap -cell TAPCELL_ASAP7_75t_L -cellInterval 12.960 -inRowOffset 1.296
+For 2475 new insts, Inserted 2475 well-taps <TAPCELL_ASAP7_75t_L> cells (prefix WELLTAP).
+<CMD> setPinAssignMode -pinEditInBatch true
+<CMD> editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Left -layer 3
+**ERROR: (IMPTCM-113):	Option "-spacing" is required when option "[ -unit ]" is specified. Type 'man editPin' for more details.
+**ERROR: (IMPPTN-1599):	Invalid syntax of editPin command, errorCode [-2]
+
+invalid command name "-spreadType"
+<CMD> editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Right -layer 3 -spreadType center -spacing 2 -pin {error {read_data[0]} {read_data[1]} {read_data [2]} {read_data[3]} {read_data[4]} {read_data[5]} {read_data[6]} {read_data[7]} { read_data[8]} {read_data[9]} {read_data[10]} {read_data[11]} {read_data[12]} { read_data[13]} {read_data[14]} {read_data[15]} {read_data[16]} {read_data[17]} { read_data[18]} {read_data[19]} {read_data[20]} {read_data[21]} {read_data[22]} { read_data[23]} {read_data[24]} {read_data[25]} {read_data[26]} {read_data[27]} { read_data[28]} {read_data[29]} {read_data[30]} {read_data[31]}}
+**WARN: (IMPPTN-1235):	Cannot find pin read_data [2] on partition sha256
+**WARN: (IMPPTN-1235):	Cannot find pin  read_data[8] on partition sha256
+**WARN: (IMPPTN-1235):	Cannot find pin  read_data[13] on partition sha256
+**WARN: (IMPPTN-1235):	Cannot find pin  read_data[18] on partition sha256
+**WARN: (IMPPTN-1235):	Cannot find pin  read_data[23] on partition sha256
+**WARN: (IMPPTN-1235):	Cannot find pin  read_data[28] on partition sha256
+**WARN: (IMPTR-2106):	There is no track defined on layer M1. This can be due to out of range track value and the need to use 64bit version or a problem with the track in that layer. Check the track input for layer M1. You may need to run 'generateTracks' command before proceeding.
+Successfully spread [27] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1898.7M).
+<CMD> editPin -snap TRACK -pin *
+Updated attributes of 77 pin(s) of partition sha256
+editPin : finished (cpu = 0:00:00.4 real = 0:00:01.0, mem = 1898.7M).
+<CMD> setPinAssignMode -pinEditInBatch false
+<CMD> legalizePin
+#% Begin legalizePin (date=03/24 14:19:36, mem=1622.6M)
+
+Start pin legalization for the partition [sha256]:
+Moving Pin [read_data[31]] to LEGAL location ( 190.640   69.328 2 )
+Moving Pin [read_data[30]] to LEGAL location ( 190.640   71.320 4 )
+Moving Pin [read_data[29]] to LEGAL location ( 190.640   73.360 2 )
+Moving Pin [read_data[27]] to LEGAL location ( 190.640   75.340 2 )
+Moving Pin [read_data[26]] to LEGAL location ( 190.640   77.320 2 )
+Moving Pin [read_data[25]] to LEGAL location ( 190.640   79.384 4 )
+Moving Pin [read_data[24]] to LEGAL location ( 190.640   81.352 2 )
+Moving Pin [read_data[22]] to LEGAL location ( 190.640   83.416 4 )
+Moving Pin [read_data[21]] to LEGAL location ( 190.640   85.384 2 )
+Moving Pin [read_data[20]] to LEGAL location ( 190.640   87.448 4 )
+Moving Pin [read_data[19]] to LEGAL location ( 190.640   89.380 2 )
+Moving Pin [read_data[17]] to LEGAL location ( 190.640   91.480 4 )
+Moving Pin [read_data[16]] to LEGAL location ( 190.640   93.520 2 )
+Moving Pin [read_data[15]] to LEGAL location ( 190.640   95.512 4 )
+Moving Pin [read_data[14]] to LEGAL location ( 190.640   97.552 2 )
+Moving Pin [read_data[12]] to LEGAL location ( 190.640   99.544 4 )
+Moving Pin [read_data[11]] to LEGAL location ( 190.640  101.584 2 )
+Moving Pin [read_data[10]] to LEGAL location ( 190.640  103.576 4 )
+Moving Pin [read_data[9]] to LEGAL location ( 190.640  105.580 2 )
+Moving Pin [read_data[7]] to LEGAL location ( 190.640  107.608 4 )
+Moving Pin [read_data[6]] to LEGAL location ( 190.640  109.576 2 )
+Moving Pin [read_data[5]] to LEGAL location ( 190.640  111.640 4 )
+Moving Pin [read_data[4]] to LEGAL location ( 190.640  113.608 2 )
+Moving Pin [read_data[3]] to LEGAL location ( 190.640  115.672 4 )
+Moving Pin [read_data[1]] to LEGAL location ( 190.640  117.640 2 )
+Moving Pin [read_data[0]] to LEGAL location ( 190.640  119.704 4 )
+Moving Pin [error] to LEGAL location ( 190.640  121.780 2 )
+Summary report for top level: [sha256] 
+	Total Pads                         : 0
+	Total Pins                         : 77
+	Legally Assigned Pins              : 27
+	Illegally Assigned Pins            : 0
+	Unplaced Pins                      : 50
+	Constant/Spl Net Pins              : 0
+	Internal Pins                      : 0
+	Legally Assigned Feedthrough Pins  : 0
+	Illegally Assigned Feedthrough Pins: 0
+End of Summary report
+27 pin(s) of the Partition sha256 were legalized.
+End pin legalization for the partition [sha256].
+
+#% End legalizePin (date=03/24 14:19:36, total cpu=0:00:00.0, real=0:00:00.0, peak res=1622.9M, current mem=1622.9M)
+<CMD> zoomBox -9.40375 -28.68475 190.00775 168.52325
+<CMD> zoomBox -9.40375 -48.40550 190.00775 148.80250
+<CMD> zoomBox -9.40375 -8.96400 190.00775 188.24400
+<CMD> zoomBox -9.40375 -28.68475 190.00775 168.52325
+<CMD> zoomBox -9.40375 -68.12625 190.00775 129.08175
+<CMD> zoomBox 153.03900 31.38225 173.53275 51.64950
+<CMD> zoomBox 155.83000 33.09175 173.24975 50.31900
+<CMD> zoomBox 170.26400 41.93300 171.78625 43.43850
+<CMD> zoomBox 170.26400 41.48150 171.78625 42.98700
+<CMD> zoomBox 170.26400 41.33100 171.78625 42.83650
+<CMD> zoomOut
+<CMD> zoomOut
+<CMD> zoomOut
+<CMD> zoomOut
+<CMD> zoomOut
+<CMD> zoomOut
+<CMD> zoomIn
+<CMD> zoomIn
+<CMD> zoomOut
+<CMD> setPinAssignMode -pinEditInBatch true
+<CMD> editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Left -layer 3 -spreadType center -spacing 2.016 -pin {reset_n clk {address[0]} {address[1]} { address[2]} {address[3]} {address[4]} {address[5]} {address[6]} {address[7]} cs we {write_data[0]} {write_data[1]} {write_data[2]} {write_data[3]} {write_data[4]} { write_data[5]} {write_data[6]} {write_data[7]} {write_data[8]} {write_data[9]} { write_data[10]} {write_data[11]} {write_data[12]} {write_data[13]} {write_data[14]} {write_data[15]} {write_data[16]} {write_data[17]} {write_data[18]} {write_data [19]} {write_data[20]} {write_data[21]} {write_data[22]} {write_data[23]} { write_data[24]} {write_data[25]} {write_data[26]} {write_data[27]} {write_data[28]} {write_data[29]} {write_data[30]} {write_data[31]}}
+**WARN: (IMPPTN-1235):	Cannot find pin  address[2] on partition sha256
+**WARN: (IMPPTN-1235):	Cannot find pin  write_data[5] on partition sha256
+**WARN: (IMPPTN-1235):	Cannot find pin  write_data[10] on partition sha256
+**WARN: (IMPPTN-1235):	Cannot find pin write_data [19] on partition sha256
+**WARN: (IMPPTN-1235):	Cannot find pin  write_data[24] on partition sha256
+Successfully spread [39] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1940.2M).
+<CMD> editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Right -layer 3 -spreadType center -spacing 2 -pin {error {read_data[0]} {read_data[1]} {read_data [2]} {read_data[3]} {read_data[4]} {read_data[5]} {read_data[6]} {read_data[7]} { read_data[8]} {read_data[9]} {read_data[10]} {read_data[11]} {read_data[12]} { read_data[13]} {read_data[14]} {read_data[15]} {read_data[16]} {read_data[17]} { read_data[18]} {read_data[19]} {read_data[20]} {read_data[21]} {read_data[22]} { read_data[23]} {read_data[24]} {read_data[25]} {read_data[26]} {read_data[27]} { read_data[28]} {read_data[29]} {read_data[30]} {read_data[31]}}
+**WARN: (IMPPTN-1235):	Cannot find pin read_data [2] on partition sha256
+**WARN: (IMPPTN-1235):	Cannot find pin  read_data[8] on partition sha256
+**WARN: (IMPPTN-1235):	Cannot find pin  read_data[13] on partition sha256
+**WARN: (IMPPTN-1235):	Cannot find pin  read_data[18] on partition sha256
+**WARN: (IMPPTN-1235):	Cannot find pin  read_data[23] on partition sha256
+**WARN: (IMPPTN-1235):	Cannot find pin  read_data[28] on partition sha256
+Successfully spread [27] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1940.2M).
+<CMD> editPin -snap TRACK -pin *
+Updated attributes of 77 pin(s) of partition sha256
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1940.2M).
+<CMD> setPinAssignMode -pinEditInBatch false
+<CMD> legalizePin
+#% Begin legalizePin (date=03/24 14:20:19, mem=1643.3M)
+
+Start pin legalization for the partition [sha256]:
+Moving Pin [clk] to LEGAL location (   0.000   58.960 2 )
+Moving Pin [reset_n] to LEGAL location (   0.000   56.920 4 )
+Moving Pin [cs] to LEGAL location (   0.000   75.016 2 )
+Moving Pin [we] to LEGAL location (   0.000   77.080 4 )
+Moving Pin [address[7]] to LEGAL location (   0.000   73.048 4 )
+Moving Pin [address[6]] to LEGAL location (   0.000   71.020 2 )
+Moving Pin [address[5]] to LEGAL location (   0.000   69.016 4 )
+Moving Pin [address[4]] to LEGAL location (   0.000   67.024 2 )
+Moving Pin [address[3]] to LEGAL location (   0.000   64.984 4 )
+Moving Pin [address[1]] to LEGAL location (   0.000   62.992 2 )
+Moving Pin [address[0]] to LEGAL location (   0.000   60.952 4 )
+Moving Pin [write_data[31]] to LEGAL location (   0.000  133.528 4 )
+Moving Pin [write_data[30]] to LEGAL location (   0.000  131.500 2 )
+Moving Pin [write_data[29]] to LEGAL location (   0.000  129.496 4 )
+Moving Pin [write_data[28]] to LEGAL location (   0.000  127.504 2 )
+Moving Pin [write_data[27]] to LEGAL location (   0.000  125.464 4 )
+Moving Pin [write_data[26]] to LEGAL location (   0.000  123.472 2 )
+Moving Pin [write_data[25]] to LEGAL location (   0.000  121.432 4 )
+Moving Pin [write_data[23]] to LEGAL location (   0.000  119.440 2 )
+Moving Pin [write_data[22]] to LEGAL location (   0.000  117.400 4 )
+Moving Pin [write_data[21]] to LEGAL location (   0.000  115.300 2 )
+Moving Pin [write_data[20]] to LEGAL location (   0.000  113.368 4 )
+Moving Pin [write_data[18]] to LEGAL location (   0.000  111.304 2 )
+Moving Pin [write_data[17]] to LEGAL location (   0.000  109.336 4 )
+Moving Pin [write_data[16]] to LEGAL location (   0.000  107.272 2 )
+Moving Pin [write_data[15]] to LEGAL location (   0.000  105.304 4 )
+Moving Pin [write_data[14]] to LEGAL location (   0.000  103.240 2 )
+Moving Pin [write_data[13]] to LEGAL location (   0.000  101.260 2 )
+Moving Pin [write_data[12]] to LEGAL location (   0.000   99.280 2 )
+Moving Pin [write_data[11]] to LEGAL location (   0.000   97.240 4 )
+Moving Pin [write_data[9]] to LEGAL location (   0.000   95.248 2 )
+Moving Pin [write_data[8]] to LEGAL location (   0.000   93.208 4 )
+Moving Pin [write_data[7]] to LEGAL location (   0.000   91.216 2 )
+Moving Pin [write_data[6]] to LEGAL location (   0.000   89.176 4 )
+Moving Pin [write_data[4]] to LEGAL location (   0.000   87.220 2 )
+Moving Pin [write_data[3]] to LEGAL location (   0.000   85.144 4 )
+Moving Pin [write_data[2]] to LEGAL location (   0.000   83.080 2 )
+Moving Pin [write_data[1]] to LEGAL location (   0.000   81.112 4 )
+Moving Pin [write_data[0]] to LEGAL location (   0.000   79.048 2 )
+Moving Pin [read_data[31]] to LEGAL location ( 190.640   69.328 2 )
+Moving Pin [read_data[30]] to LEGAL location ( 190.640   71.320 4 )
+Moving Pin [read_data[29]] to LEGAL location ( 190.640   73.360 2 )
+Moving Pin [read_data[27]] to LEGAL location ( 190.640   75.340 2 )
+Moving Pin [read_data[26]] to LEGAL location ( 190.640   77.320 2 )
+Moving Pin [read_data[25]] to LEGAL location ( 190.640   79.384 4 )
+Moving Pin [read_data[24]] to LEGAL location ( 190.640   81.352 2 )
+Moving Pin [read_data[22]] to LEGAL location ( 190.640   83.416 4 )
+Moving Pin [read_data[21]] to LEGAL location ( 190.640   85.384 2 )
+Moving Pin [read_data[20]] to LEGAL location ( 190.640   87.448 4 )
+Moving Pin [read_data[19]] to LEGAL location ( 190.640   89.380 2 )
+Moving Pin [read_data[17]] to LEGAL location ( 190.640   91.480 4 )
+Moving Pin [read_data[16]] to LEGAL location ( 190.640   93.520 2 )
+Moving Pin [read_data[15]] to LEGAL location ( 190.640   95.512 4 )
+Moving Pin [read_data[14]] to LEGAL location ( 190.640   97.552 2 )
+Moving Pin [read_data[12]] to LEGAL location ( 190.640   99.544 4 )
+Moving Pin [read_data[11]] to LEGAL location ( 190.640  101.584 2 )
+Moving Pin [read_data[10]] to LEGAL location ( 190.640  103.576 4 )
+Moving Pin [read_data[9]] to LEGAL location ( 190.640  105.580 2 )
+Moving Pin [read_data[7]] to LEGAL location ( 190.640  107.608 4 )
+Moving Pin [read_data[6]] to LEGAL location ( 190.640  109.576 2 )
+Moving Pin [read_data[5]] to LEGAL location ( 190.640  111.640 4 )
+Moving Pin [read_data[4]] to LEGAL location ( 190.640  113.608 2 )
+Moving Pin [read_data[3]] to LEGAL location ( 190.640  115.672 4 )
+Moving Pin [read_data[1]] to LEGAL location ( 190.640  117.640 2 )
+Moving Pin [read_data[0]] to LEGAL location ( 190.640  119.704 4 )
+Moving Pin [error] to LEGAL location ( 190.640  121.780 2 )
+Summary report for top level: [sha256] 
+	Total Pads                         : 0
+	Total Pins                         : 77
+	Legally Assigned Pins              : 66
+	Illegally Assigned Pins            : 0
+	Unplaced Pins                      : 11
+	Constant/Spl Net Pins              : 0
+	Internal Pins                      : 0
+	Legally Assigned Feedthrough Pins  : 0
+	Illegally Assigned Feedthrough Pins: 0
+End of Summary report
+66 pin(s) of the Partition sha256 were legalized.
+End pin legalization for the partition [sha256].
+
+#% End legalizePin (date=03/24 14:20:19, total cpu=0:00:00.0, real=0:00:00.0, peak res=1643.3M, current mem=1643.3M)
+<CMD> gui_select -rect {-0.31350 -2.53950 28.29975 6.31700}
+<CMD> zoomOut
+<CMD> zoomIn
+<CMD> deselectAll
+<CMD> globalNetConnect VDD -type pgpin -pin VDD -inst *
+<CMD> globalNetConnect VSS -type pgpin -pin VSS -inst *
+<CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer Pad -stacked_via_bottom_layer M1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin { standardcell } -skip_via_on_wire_shape { noshape }
+The ring targets are set to core/block ring wires.
+addRing command will consider rows while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will ignore shorts while creating rings.
+<CMD> addRing -nets {VDD VSS} -type core_rings -follow core -layer {top M7 bottom M7 left M6 right M6} -width 2.176 -spacing 0.384 -offset 0.384 -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+#% Begin addRing (date=03/24 14:21:53, mem=1643.9M)
+
+viaInitial starts at Tue Mar 24 14:21:53 2026
+viaInitial ends at Tue Mar 24 14:21:53 2026
+setAddStripeMode -use_exact_spacing true is set by default for this design under 20nm node. 
+Setting -use_cce to 1. ViaGen will call CCE to colorize via and may re-colorize surrounding vias to resolve color conflict within the local range.
+Setting -optimize_cross_via to 1. ViaGen will try to generate vias with the minimum enclosure.
+setViaGenMode -optimize_cross_via true is set by default for this design of 12nm node or under. 
+Setting -disable_via_merging to 1. ViaGen disables via merging with the via created earlier.
+setViaGenMode -disable_via_merging true is set by default for this design of 12nm node or under. 
+Setting -keep_existing_via to 1. ViaGen will keep the existing vias.
+setViaGenMode -keep_existing_via 1 is set by default for this design of 12nm node or under. 
+
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1940.2M)
+Ring generation is complete.
+vias are now being generated.
+addRing created 8 wires.
+ViaGen created 8 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|   M6   |        4       |       NA       |
+|   V6   |        8       |        0       |
+|   M7   |        4       |       NA       |
++--------+----------------+----------------+
+setAddStripeMode -use_exact_spacing is reset to default value: false.
+setViaGenMode -disable_via_merging is reset to default value: false.
+setViaGenMode -keep_existing_via is reset to default value: 0.
+setViaGenMode -optimize_cross_via is reset to default value: false.
+#% End addRing (date=03/24 14:21:53, total cpu=0:00:00.1, real=0:00:00.0, peak res=1647.2M, current mem=1647.2M)
+<CMD> addStripe -skip_via_on_wire_shape blockring -direction horizontal -set_to_set_distance 2.16 -skip_via_on_pin Standardcell -stacked_via_top_layer M1 -layer M2 -width 0.072 -nets VDD -stacked_via_bottom_layer M1 -start_from bottom -snap_wire_center_to_grid None -start_offset -0.044 -stop_offset -0.044
+#% Begin addStripe (date=03/24 14:26:20, mem=1647.1M)
+**WARN: (IMPPP-4022):	Option "-stacked_via_top_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_top_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_top_layer layerName"..
+**WARN: (IMPPP-4022):	Option "-stacked_via_bottom_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_bottom_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_bottom_layer layerName"..
+setAddStripeMode -use_exact_spacing true is set by default for this design under 20nm node. 
+Setting -use_cce to 1. ViaGen will call CCE to colorize via and may re-colorize surrounding vias to resolve color conflict within the local range.
+Setting -optimize_cross_via to 1. ViaGen will try to generate vias with the minimum enclosure.
+setViaGenMode -optimize_cross_via true is set by default for this design of 12nm node or under. 
+Setting -disable_via_merging to 1. ViaGen disables via merging with the via created earlier.
+setViaGenMode -disable_via_merging true is set by default for this design of 12nm node or under. 
+Setting -keep_existing_via to 1. ViaGen will keep the existing vias.
+setViaGenMode -keep_existing_via 1 is set by default for this design of 12nm node or under. 
+
+**WARN: (IMPPP-2030):	Layer M2 allows on grid right way wires only. Snap wire center to routing grid automatically.
+Initialize fgc environment(mem: 1940.2M) ...  done(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1940.2M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1940.2M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1940.2M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1940.2M)
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  -use_exact_spacing  1
+The core ring for VDD is incomplete. The core ring will not be used as a boundary for stripes. In this situation, the power planner will generate stripes only within the core area.
+**WARN: (IMPPP-4055):	The run time of addStripe will degrade with multiple cpu setting according to the number of stripe sets, ignore the setting of setMultiCpuUsage in addStripe.
+Type 'man IMPPP-4055' for more detail.
+Completing 10% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1940.2M)
+Completing 20% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1940.2M)
+Completing 30% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1940.2M)
+Completing 40% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1940.2M)
+Completing 50% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1940.2M)
+Completing 60% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1940.2M)
+Completing 70% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1940.2M)
+Completing 80% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1940.2M)
+Completing 90% stripe generation(cpu: 0:00:00.0, real: 0:00:01.0, peak mem: 1940.2M)
+Completing 100% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1940.2M)
+Stripe generation is complete.
+addStripe created 83 wires.
+ViaGen created 0 via, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|   M2   |       83       |       NA       |
++--------+----------------+----------------+
+setAddStripeMode -use_exact_spacing is reset to default value: false.
+setViaGenMode -disable_via_merging is reset to default value: false.
+setViaGenMode -keep_existing_via is reset to default value: 0.
+setViaGenMode -optimize_cross_via is reset to default value: false.
+#% End addStripe (date=03/24 14:26:21, total cpu=0:00:00.1, real=0:00:01.0, peak res=1648.3M, current mem=1648.3M)
+<CMD> addStripe -skip_via_on_wire_shape blockring -direction horizontal -set_to_set_distance 2.16 -skip_via_on_pin Standardcell -stacked_via_top_layer M1 -layer M2 -width 0.072 -nets VSS -stacked_via_bottom_layer M1 -start_from bottom -snap_wire_center_to_grid None -start_offset 1.036 -stop_offset -0.044
+#% Begin addStripe (date=03/24 14:26:21, mem=1648.3M)
+**WARN: (IMPPP-4022):	Option "-stacked_via_top_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_top_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_top_layer layerName"..
+**WARN: (IMPPP-4022):	Option "-stacked_via_bottom_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_bottom_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_bottom_layer layerName"..
+setAddStripeMode -use_exact_spacing true is set by default for this design under 20nm node. 
+Setting -use_cce to 1. ViaGen will call CCE to colorize via and may re-colorize surrounding vias to resolve color conflict within the local range.
+Setting -optimize_cross_via to 1. ViaGen will try to generate vias with the minimum enclosure.
+setViaGenMode -optimize_cross_via true is set by default for this design of 12nm node or under. 
+Setting -disable_via_merging to 1. ViaGen disables via merging with the via created earlier.
+setViaGenMode -disable_via_merging true is set by default for this design of 12nm node or under. 
+Setting -keep_existing_via to 1. ViaGen will keep the existing vias.
+setViaGenMode -keep_existing_via 1 is set by default for this design of 12nm node or under. 
+
+**WARN: (IMPPP-2030):	Layer M2 allows on grid right way wires only. Snap wire center to routing grid automatically.
+Initialize fgc environment(mem: 1938.2M) ...  done(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1938.2M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1938.2M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1938.2M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1938.2M)
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  -use_exact_spacing  1
+The core ring for VSS is incomplete. The core ring will not be used as a boundary for stripes. In this situation, the power planner will generate stripes only within the core area.
+**WARN: (IMPPP-4055):	The run time of addStripe will degrade with multiple cpu setting according to the number of stripe sets, ignore the setting of setMultiCpuUsage in addStripe.
+Type 'man IMPPP-4055' for more detail.
+Completing 10% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1938.2M)
+Completing 20% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1938.2M)
+Completing 30% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1938.2M)
+Completing 40% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1938.2M)
+Completing 50% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1938.2M)
+Completing 60% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1938.2M)
+Completing 70% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1938.2M)
+Completing 80% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1938.2M)
+Completing 90% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1938.2M)
+Completing 100% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1938.2M)
+Stripe generation is complete.
+addStripe created 83 wires.
+ViaGen created 0 via, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|   M2   |       83       |       NA       |
++--------+----------------+----------------+
+setAddStripeMode -use_exact_spacing is reset to default value: false.
+setViaGenMode -disable_via_merging is reset to default value: false.
+setViaGenMode -keep_existing_via is reset to default value: 0.
+setViaGenMode -optimize_cross_via is reset to default value: false.
+#% End addStripe (date=03/24 14:26:21, total cpu=0:00:00.0, real=0:00:00.0, peak res=1648.3M, current mem=1648.3M)
+<CMD> addStripe -skip_via_on_wire_shape Noshape -set_to_set_distance 12.960 -skip_via_on_pin Standardcell -stacked_via_top_layer Pad -spacing 0.360 -xleft_offset 0.360 -layer M3 -width 0.936 -nets {VDD VSS} -stacked_via_bottom_layer M2 -start_from left
+#% Begin addStripe (date=03/24 14:26:21, mem=1648.3M)
+**WARN: (IMPPP-4022):	Option "-stacked_via_top_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_top_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_top_layer layerName"..
+**WARN: (IMPPP-4022):	Option "-xleft_offset" is obsolete and has been replaced by "-start_offset". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "-start_offset"..
+**WARN: (IMPPP-4022):	Option "-stacked_via_bottom_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_bottom_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_bottom_layer layerName"..
+setAddStripeMode -use_exact_spacing true is set by default for this design under 20nm node. 
+Setting -use_cce to 1. ViaGen will call CCE to colorize via and may re-colorize surrounding vias to resolve color conflict within the local range.
+Setting -optimize_cross_via to 1. ViaGen will try to generate vias with the minimum enclosure.
+setViaGenMode -optimize_cross_via true is set by default for this design of 12nm node or under. 
+Setting -disable_via_merging to 1. ViaGen disables via merging with the via created earlier.
+setViaGenMode -disable_via_merging true is set by default for this design of 12nm node or under. 
+Setting -keep_existing_via to 1. ViaGen will keep the existing vias.
+setViaGenMode -keep_existing_via 1 is set by default for this design of 12nm node or under. 
+
+**WARN: (IMPPP-2030):	Layer M3 allows on grid right way wires only. Snap wire center to routing grid automatically.
+Initialize fgc environment(mem: 1938.2M) ...  done(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1938.2M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1938.2M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1938.2M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1938.2M)
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  -use_exact_spacing  1
+**WARN: (IMPPP-4055):	The run time of addStripe will degrade with multiple cpu setting according to the number of stripe sets, ignore the setting of setMultiCpuUsage in addStripe.
+Type 'man IMPPP-4055' for more detail.
+Completing 10% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1938.2M)
+Completing 20% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1938.2M)
+Completing 30% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1938.2M)
+Completing 40% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1938.2M)
+Completing 50% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1938.2M)
+Completing 60% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1938.2M)
+Completing 70% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1938.2M)
+Completing 80% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1938.2M)
+Completing 90% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1938.2M)
+Completing 100% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1938.2M)
+*** Stripes and vias are being generated (current mem: 1938.227)***
+Start to generate stripes.
+Stripe generate is completed (cpu time: 0:00:00.0, peak mem: 1938.227M)
+Start to generate vias.
+    Completing 10% (cpu time: 0:00:00.0, peak mem: 1938.227M)
+    Completing 20% (cpu time: 0:00:00.0, peak mem: 1938.227M)
+    Completing 30% (cpu time: 0:00:00.0, peak mem: 1938.227M)
+    Completing 40% (cpu time: 0:00:00.0, peak mem: 1938.227M)
+    Completing 50% (cpu time: 0:00:00.0, peak mem: 1938.227M)
+    Completing 60% (cpu time: 0:00:00.0, peak mem: 1938.227M)
+    Completing 70% (cpu time: 0:00:00.0, peak mem: 1938.227M)
+    Completing 80% (cpu time: 0:00:00.0, peak mem: 1938.227M)
+    Completing 90% (cpu time: 0:00:00.0, peak mem: 1938.227M)
+    Completing 100% (cpu time: 0:00:00.0, peak mem: 1938.227M)
+  stripes and vias are completed(total cpu time: 0:00:00.1, peak mem: 1938.227M)
+Stripe generation is complete.
+addStripe created 28 wires.
+ViaGen created 2548 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|   V2   |      2324      |        0       |
+|   M3   |       28       |       NA       |
+|   V3   |       56       |        0       |
+|   V4   |       56       |        0       |
+|   V5   |       56       |        0       |
+|   V6   |       56       |        0       |
++--------+----------------+----------------+
+setAddStripeMode -use_exact_spacing is reset to default value: false.
+setViaGenMode -disable_via_merging is reset to default value: false.
+setViaGenMode -keep_existing_via is reset to default value: 0.
+setViaGenMode -optimize_cross_via is reset to default value: false.
+#% End addStripe (date=03/24 14:26:21, total cpu=0:00:00.2, real=0:00:00.0, peak res=1648.6M, current mem=1648.6M)
+<CMD> addStripe -skip_via_on_wire_shape Noshape -direction horizontal -set_to_set_distance 21.6 -skip_via_on_pin Standardcell -stacked_via_top_layer M7 -spacing 0.864 -layer M4 -width 0.864 -nets {VDD VSS} -stacked_via_bottom_layer M3 -start_from bottom
+#% Begin addStripe (date=03/24 14:26:30, mem=1649.2M)
+**WARN: (IMPPP-4022):	Option "-stacked_via_top_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_top_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_top_layer layerName"..
+**WARN: (IMPPP-4022):	Option "-stacked_via_bottom_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_bottom_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_bottom_layer layerName"..
+setAddStripeMode -use_exact_spacing true is set by default for this design under 20nm node. 
+Setting -use_cce to 1. ViaGen will call CCE to colorize via and may re-colorize surrounding vias to resolve color conflict within the local range.
+Setting -optimize_cross_via to 1. ViaGen will try to generate vias with the minimum enclosure.
+setViaGenMode -optimize_cross_via true is set by default for this design of 12nm node or under. 
+Setting -disable_via_merging to 1. ViaGen disables via merging with the via created earlier.
+setViaGenMode -disable_via_merging true is set by default for this design of 12nm node or under. 
+Setting -keep_existing_via to 1. ViaGen will keep the existing vias.
+setViaGenMode -keep_existing_via 1 is set by default for this design of 12nm node or under. 
+
+**WARN: (IMPPP-2030):	Layer M4 allows on grid right way wires only. Snap wire center to routing grid automatically.
+Initialize fgc environment(mem: 1940.5M) ...  done(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1940.5M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1940.5M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1940.5M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1940.5M)
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  -use_exact_spacing  1
+**WARN: (IMPPP-4055):	The run time of addStripe will degrade with multiple cpu setting according to the number of stripe sets, ignore the setting of setMultiCpuUsage in addStripe.
+Type 'man IMPPP-4055' for more detail.
+*** Stripes and vias are being generated (current mem: 1940.461)***
+Start to generate stripes.
+Stripe generate is completed (cpu time: 0:00:00.0, peak mem: 1940.461M)
+Start to generate vias.
+    Completing 10% (cpu time: 0:00:00.0, peak mem: 1940.461M)
+    Completing 20% (cpu time: 0:00:00.0, peak mem: 1940.461M)
+    Completing 30% (cpu time: 0:00:00.0, peak mem: 1940.461M)
+    Completing 40% (cpu time: 0:00:00.0, peak mem: 1940.461M)
+    Completing 50% (cpu time: 0:00:00.0, peak mem: 1940.461M)
+    Completing 60% (cpu time: 0:00:00.0, peak mem: 1940.461M)
+    Completing 70% (cpu time: 0:00:00.0, peak mem: 1940.461M)
+    Completing 80% (cpu time: 0:00:00.0, peak mem: 1940.461M)
+    Completing 90% (cpu time: 0:00:00.0, peak mem: 1940.461M)
+    Completing 100% (cpu time: 0:00:00.0, peak mem: 1940.461M)
+  stripes and vias are completed(total cpu time: 0:00:00.0, peak mem: 1940.461M)
+Stripe generation is complete.
+addStripe created 18 wires.
+ViaGen created 324 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|   V3   |       252      |        0       |
+|   M4   |       18       |       NA       |
+|   V4   |       36       |        0       |
+|   V5   |       36       |        0       |
++--------+----------------+----------------+
+setAddStripeMode -use_exact_spacing is reset to default value: false.
+setViaGenMode -disable_via_merging is reset to default value: false.
+setViaGenMode -keep_existing_via is reset to default value: 0.
+setViaGenMode -optimize_cross_via is reset to default value: false.
+#% End addStripe (date=03/24 14:26:30, total cpu=0:00:00.1, real=0:00:00.0, peak res=1649.2M, current mem=1649.2M)
+<CMD> setLayerPreference M4 -isVisible 0
+<CMD> setLayerPreference M4 -isVisible 1
+<CMD> setLayerPreference M3 -isVisible 0
+<CMD> setLayerPreference M3 -isVisible 1
+<CMD> setSrouteMode -reset
+<CMD> setSrouteMode -viaConnectToShape { noshape }
+<CMD> sroute -connect { corePin } -layerChangeRange { M1(1) M7(1) } -blockPinTarget { nearestTarget } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -deleteExistingRoutes -allowJogging 0 -crossoverViaLayerRange { M1(1) Pad(10) } -nets { VDD VSS } -allowLayerChange 0 -targetViaLayerRange { M1 (1) Pad(10) }
+#% Begin sroute (date=03/24 14:27:26, mem=1649.4M)
+#% End sroute (date=03/24 14:27:26, total cpu=0:00:00.0, real=0:00:00.0, peak res=1649.4M, current mem=1649.4M)
+<CMD> editPowerVia -add_vias 1 -orthogonal_only 0
+#% Begin editPowerVia (date=03/24 14:27:26, mem=1649.4M)
+setAddStripeMode -use_exact_spacing true is set by default for this design under 20nm node. 
+Setting -use_cce to 1. ViaGen will call CCE to colorize via and may re-colorize surrounding vias to resolve color conflict within the local range.
+Setting -optimize_cross_via to 1. ViaGen will try to generate vias with the minimum enclosure.
+setViaGenMode -optimize_cross_via true is set by default for this design of 12nm node or under. 
+Setting -disable_via_merging to 1. ViaGen disables via merging with the via created earlier.
+setViaGenMode -disable_via_merging true is set by default for this design of 12nm node or under. 
+Setting -keep_existing_via to 1. ViaGen will keep the existing vias.
+setViaGenMode -keep_existing_via 1 is set by default for this design of 12nm node or under. 
+ViaGen engine uses clone via flow to insert special vias. Open fgc and cce engine automatically.
+
+Multi-CPU acceleration using 4 CPU(s).
+Clone Via Engine is enabled.
+**WARN: (IMPPP-610):	The power planner failed to find a matching VIARULE, so no via was created between layer: M3 & M4, size: 178.20 x 0.86 at (95.32, 49.42).
+Type 'man IMPPP-610' for more detail.
+**WARN: (IMPPP-528):	ViaGen failed to add via between layer M2 & M4 at (95.32, 49.42).
+Type 'man IMPPP-528' for more detail.
+**WARN: (IMPPP-610):	The power planner failed to find a matching VIARULE, so no via was created between layer: M3 & M4, size: 178.20 x 0.86 at (95.32, 92.62).
+Type 'man IMPPP-610' for more detail.
+**WARN: (IMPPP-528):	ViaGen failed to add via between layer M2 & M4 at (95.32, 92.62).
+Type 'man IMPPP-528' for more detail.
+**WARN: (IMPPP-610):	The power planner failed to find a matching VIARULE, so no via was created between layer: M3 & M4, size: 178.20 x 0.86 at (95.32, 135.82).
+Type 'man IMPPP-610' for more detail.
+**WARN: (IMPPP-528):	ViaGen failed to add via between layer M2 & M4 at (95.32, 135.82).
+Type 'man IMPPP-528' for more detail.
+**WARN: (IMPPP-610):	The power planner failed to find a matching VIARULE, so no via was created between layer: M3 & M4, size: 178.20 x 0.86 at (95.32, 179.02).
+Type 'man IMPPP-610' for more detail.
+**WARN: (IMPPP-528):	ViaGen failed to add via between layer M2 & M4 at (95.32, 179.02).
+Type 'man IMPPP-528' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the V6 layer at (1.188000, 1.144000) (3.188000, 3.232000).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-528):	ViaGen failed to add via between layer M6 & M7 at (2.19, 2.19).
+Type 'man IMPPP-528' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the V6 layer at (1.188000, 187.408005) (3.188000, 189.496002).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-528):	ViaGen failed to add via between layer M6 & M7 at (2.19, 188.45).
+Type 'man IMPPP-528' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the V6 layer at (3.748000, 3.704000) (5.748000, 5.792000).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-528):	ViaGen failed to add via between layer M6 & M7 at (4.75, 4.75).
+Type 'man IMPPP-528' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the V6 layer at (3.748000, 184.848007) (5.748000, 186.936005).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-528):	ViaGen failed to add via between layer M6 & M7 at (4.75, 185.89).
+Type 'man IMPPP-528' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the V6 layer at (184.891998, 3.704000) (186.891998, 5.792000).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-528):	ViaGen failed to add via between layer M6 & M7 at (185.89, 4.75).
+Type 'man IMPPP-528' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the V6 layer at (184.891998, 184.848007) (186.891998, 186.936005).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-528):	ViaGen failed to add via between layer M6 & M7 at (185.89, 185.89).
+Type 'man IMPPP-528' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the V6 layer at (187.451996, 1.144000) (189.451996, 3.232000).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-528):	ViaGen failed to add via between layer M6 & M7 at (188.45, 2.19).
+Type 'man IMPPP-528' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the V6 layer at (187.451996, 187.408005) (189.451996, 189.496002).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-528):	ViaGen failed to add via between layer M6 & M7 at (188.45, 188.45).
+Type 'man IMPPP-528' for more detail.
+ViaGen created 0 via, deleted 0 via to avoid violation.
+setAddStripeMode -use_exact_spacing is reset to default value: false.
+setViaGenMode -disable_via_merging is reset to default value: false.
+setViaGenMode -keep_existing_via is reset to default value: 0.
+setViaGenMode -optimize_cross_via is reset to default value: false.
+#% End editPowerVia (date=03/24 14:27:27, total cpu=0:00:00.2, real=0:00:01.0, peak res=1656.7M, current mem=1650.3M)
+<CMD> verify_drc
+#-check_same_via_cell true               # bool, default=false, user setting
+ *** Starting Verify DRC (MEM: 1960.5) ***
+
+  VERIFY DRC ...... Starting Verification
+  VERIFY DRC ...... Initializing
+  VERIFY DRC ...... Deleting Existing Violations
+  VERIFY DRC ...... Creating Sub-Areas
+  VERIFY DRC ...... Using new threading
+ VERIFY DRC ...... Thread : 0 finished.
+ VERIFY DRC ...... Thread : 3 finished.
+
+  Verification Complete : 0 Viols.
+
+ *** End Verify DRC (CPU: 0:00:00.0  ELAPSED TIME: 0.00  MEM: 260.1M) ***
+
+<CMD> setOptMode -holdTargetSlack 0.020
+<CMD> setOptMode -setupTargetSlack 0.020
+<CMD> colorizePowerMesh
+#% Begin colorizePowerMesh (date=03/24 14:27:33, mem=1653.1M)
+colorize geometry ... done
+clear drc markers and check special mask spacing by verify_drc ... 
+ VERIFY DRC ...... Thread : 0 finished.
+ VERIFY DRC ...... Thread : 2 finished.
+
+  Verification Complete : 72 Viols.
+
+ Violation Summary By Layer and Type:
+
+	         ColChg   Totals
+	M6           40       40
+	M7           32       32
+	Totals       72       72
+
+ *** End Verify DRC (CPU: 0:00:00.0  ELAPSED TIME: 0.00  MEM: 264.1M) ***
+
+Un-suppress "**WARN ..." messages.
+#% End colorizePowerMesh (date=03/24 14:27:33, total cpu=0:00:00.1, real=0:00:00.0, peak res=1653.1M, current mem=1650.7M)
+<CMD> zoomSelected -margin 50
+<CMD> gui_select -rect {56.23125 26.07375 131.85175 -18.88975}
+<CMD> gui_select -rect {131.17050 -16.16475 87.56950 10.40475}
+<CMD> deselectAll
+<CMD> zoomIn
+<CMD> zoomIn
+<CMD> zoomOut
+<CMD> fit
+<CMD> zoomIn
+<CMD> zoomOut
+<CMD> zoomSelected -margin 50
+<CMD> zoomSelected -margin 50
+<CMD> zoomOut
+<CMD> zoomOut
+<CMD> zoomOut
+<CMD> zoomSelected -margin 50
+<CMD> zoomOut
+<CMD> zoomSelected -margin 50
+<CMD> zoomOut
+<CMD> zoomOut
+<CMD> gui_select -rect {-49.56775 123.34950 26.02275 51.49175}
+<CMD> deselectAll
+<CMD> zoomSelected -margin 50
+<CMD> gui_select -rect {-18.56850 103.82900 43.61525 40.58200}
+<CMD> deselectAll
+<CMD> zoomSelected -margin 50
+<CMD> gui_select -rect {-14.13850 92.30325 33.74225 42.08700}
+<CMD> deselectAll
+<CMD> zoomSelected -margin 50
+
+--------------------------------------------------------------------------------
+Exiting Innovus on Thu Mar 26 17:34:06 2026
+  Total CPU time:     1:58:10
+  Total real time:    51:16:59
+  Peak memory (main): 1783.94MB
+
+
+*** Memory Usage v#1 (Current mem = 1950.102M, initial mem = 486.906M) ***
+*** Message Summary: 9630 warning(s), 2 error(s)
+
+--- Ending "Innovus" (totcpu=1:58:10, real=51:16:58, mem=1950.1M) ---

@@ -1,0 +1,2 @@
+MacroModel pin image_size_r_reg[1]/CLK  12.20ps 12.20ps 12.20ps 12.20ps 0pf view_tc
+MacroModel pin image_size_r_reg[0]/CLK  10.40ps 10.40ps 10.40ps 10.40ps 0pf view_tc

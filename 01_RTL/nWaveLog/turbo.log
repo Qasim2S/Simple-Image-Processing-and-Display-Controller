@@ -1,0 +1,3 @@
+Command Line: /CMC/tools/synopsys/verdi_vS-2021.09-SP1-1/verdi/S-2021.09-SP1-1/platform/LINUXAMD64/bin/Novas -nWave
+uname(Linux vcl-vm0-175 4.18.0-553.27.1.el8_10.x86_64 #1 SMP Wed Nov 6 14:29:02 UTC 2024 x86_64)
+au time 1642545.350935 9307.616236 13881.437205 delta 242401280 242401280 total 747851776 747851776

@@ -1,0 +1,72 @@
+ 
+****************************************
+check_design summary:
+Version:     U-2022.12
+Date:        Fri Apr 17 03:19:58 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                              58
+    Cells do not drive (LINT-1)                                    58
+--------------------------------------------------------------------------------
+
+Warning: In design 'ipdc', cell 'C87878' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C87882' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C87891' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C87931' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C87977' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C87980' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C87984' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C87987' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C87990' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C87994' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C87997' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88001' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88005' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88008' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88012' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88015' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88018' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88022' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88025' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88029' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88033' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88036' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88040' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88043' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88046' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88050' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88053' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88057' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88063' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88067' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88072' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88076' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88081' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88085' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88090' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88094' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88099' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88103' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88108' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88112' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88117' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88121' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88126' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88130' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88135' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88139' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88144' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88148' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88153' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88157' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88162' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88166' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88197' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88213' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C88214' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C89928' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C89929' does not drive any nets. (LINT-1)
+Warning: In design 'ipdc', cell 'C89930' does not drive any nets. (LINT-1)
+1

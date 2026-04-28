@@ -1,0 +1,83 @@
+set init_design_uniquify 1
+set init_verilog {../outputs/ipdc_syn.v}
+set init_design_netlisttype {Verilog}
+set init_design_settop {1}
+set init_top_cell {ipdc}
+set DB_PATH "../db"
+set LEF_PATH "../lef/scaled"
+set TLEF_PATH "../techlef"
+set CELL_LEF "$LEF_PATH/asap7sc7p5t_28_L_4x_220121a.lef $LEF_PATH/asap7sc7p5t_28_SL_4x_220121a.lef $LEF_PATH/asap7sc7p5t_28_R_4x_220121a.lef"
+set TECH_LEF $TLEF_PATH/asap7_tech_4x_201209.lef
+#tech lef first, cell lef later
+set init_lef_file "$TECH_LEF $CELL_LEF"
+set fp_core_cntl {aspect}
+set fp_aspect_ratio {1.0000}
+set extract_shrink_factor {1.0}
+set init_assign_buffer {0}
+set init_pwr_net {VDD}
+set init_gnd_net {VSS}
+# here starts the timing libraries
+set init_cpf_file {}
+set init_mmmc_file {../scripts/ipdc.mmmc}
+init_design
+
+setDesignMode -process 7 -node N7
+setMultiCpuUsage -localCpu 4
+setDesignMode -bottomRoutingLayer 2
+setDesignMode -topRoutingLayer 7
+
+set FP_RING_OFFSET 0.384
+set FP_RING_WIDTH 2.176
+set FP_RING_SPACE 0.384
+set FP_RING_SIZE [expr {$FP_RING_SPACE + 2*$FP_RING_WIDTH + $FP_RING_OFFSET + 1.1}]
+#set FP_RING_SIZE [expr {$FP_RING_SPACE + 2*$FP_RING_WIDTH + $FP_RING_OFFSET}]
+set FP_TARGET 800
+set FP_MUL 5
+set cellheight [expr 0.270 * 4 ]
+set cellhgrid 0.216
+set fpxdim [expr $cellhgrid * $FP_TARGET*$FP_MUL]
+set fpydim [expr $cellheight * $FP_TARGET ]
+# this command prints the snapping rules, it is useful for debugging
+fpiGetSnapRule
+
+floorPlan -site asap7sc7p5t -s $fpxdim $fpydim $FP_RING_SIZE $FP_RING_SIZE $FP_RING_SIZE $FP_RING_SIZE -noSnap
+
+addWellTap -cell TAPCELL_ASAP7_75t_L -cellInterval 12.960 -inRowOffset 1.296
+add_tracks -snap_m1_track_to_cell_pins
+add_tracks -mode replace -offsets {M5 vertical 0}
+deleteAllFPObjects
+addWellTap -cell TAPCELL_ASAP7_75t_L -cellInterval 12.960 -inRowOffset 1.296
+
+setPinAssignMode -pinEditInBatch true
+
+# LEFT SIDE (inputs)
+editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Left -layer 3 \
+-spreadType center -spacing 2.0 -pin {
+i_rst_n i_clk i_op_valid 
+{i_op_mode[0]} {i_op_mode[1]} {i_op_mode[2]} {i_op_mode[3]}
+i_in_valid
+{i_in_data[0]} {i_in_data[1]} {i_in_data[2]} {i_in_data[3]}
+{i_in_data[4]} {i_in_data[5]} {i_in_data[6]} {i_in_data[7]}
+{i_in_data[8]} {i_in_data[9]} {i_in_data[10]} {i_in_data[11]}
+{i_in_data[12]} {i_in_data[13]} {i_in_data[14]} {i_in_data[15]}
+{i_in_data[16]} {i_in_data[17]} {i_in_data[18]} {i_in_data[19]}
+{i_in_data[20]} {i_in_data[21]} {i_in_data[22]} {i_in_data[23]}
+}
+
+# RIGHT SIDE (outputs)
+editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Right -layer 3 \
+-spreadType center -spacing 2.0 -pin {
+o_op_ready o_in_ready o_out_valid
+{o_out_data[0]} {o_out_data[1]} {o_out_data[2]} {o_out_data[3]}
+{o_out_data[4]} {o_out_data[5]} {o_out_data[6]} {o_out_data[7]}
+{o_out_data[8]} {o_out_data[9]} {o_out_data[10]} {o_out_data[11]}
+{o_out_data[12]} {o_out_data[13]} {o_out_data[14]} {o_out_data[15]}
+{o_out_data[16]} {o_out_data[17]} {o_out_data[18]} {o_out_data[19]}
+{o_out_data[20]} {o_out_data[21]} {o_out_data[22]} {o_out_data[23]}
+}
+
+editPin -snap TRACK -pin *
+setPinAssignMode -pinEditInBatch false
+
+legalizePin
+

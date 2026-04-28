@@ -1,0 +1,39 @@
+ 
+****************************************
+Report : area
+Design : ipdc
+Version: U-2022.12
+Date   : Sat Apr  4 13:42:48 2026
+****************************************
+
+Library(s) Used:
+
+    asap7sc7p5t_INVBUF_SLVT_TT_nldm_211120 (File: /home/v72206/MiniProject_03/MiniProject_03/lib/db/asap7sc7p5t_INVBUF_SLVT_TT_nldm_211120.db)
+    asap7sc7p5t_AO_LVT_TT_nldm_211120 (File: /home/v72206/MiniProject_03/MiniProject_03/lib/db/asap7sc7p5t_AO_LVT_TT_nldm_211120.db)
+    asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120 (File: /home/v72206/MiniProject_03/MiniProject_03/lib/db/asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.db)
+    asap7sc7p5t_OA_LVT_TT_nldm_211120 (File: /home/v72206/MiniProject_03/MiniProject_03/lib/db/asap7sc7p5t_OA_LVT_TT_nldm_211120.db)
+    asap7sc7p5t_INVBUF_LVT_TT_nldm_211120 (File: /home/v72206/MiniProject_03/MiniProject_03/lib/db/asap7sc7p5t_INVBUF_LVT_TT_nldm_211120.db)
+    asap7sc7p5t_OA_SLVT_TT_nldm_211120 (File: /home/v72206/MiniProject_03/MiniProject_03/lib/db/asap7sc7p5t_OA_SLVT_TT_nldm_211120.db)
+    asap7sc7p5t_AO_SLVT_TT_nldm_211120 (File: /home/v72206/MiniProject_03/MiniProject_03/lib/db/asap7sc7p5t_AO_SLVT_TT_nldm_211120.db)
+    asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120 (File: /home/v72206/MiniProject_03/MiniProject_03/lib/db/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.db)
+    asap7sc7p5t_SEQ_SLVT_TT_nldm_220123 (File: /home/v72206/MiniProject_03/MiniProject_03/lib/db/asap7sc7p5t_SEQ_SLVT_TT_nldm_220123.db)
+    asap7sc7p5t_SEQ_LVT_TT_nldm_220123 (File: /home/v72206/MiniProject_03/MiniProject_03/lib/db/asap7sc7p5t_SEQ_LVT_TT_nldm_220123.db)
+
+Number of ports:                          277
+Number of nets:                        138221
+Number of cells:                       137978
+Number of combinational cells:         131736
+Number of sequential cells:              6234
+Number of macros/black boxes:               0
+Number of buf/inv:                       6742
+Number of references:                     150
+
+Combinational area:              11348.751266
+Buf/Inv area:                      359.265784
+Noncombinational area:            1819.234012
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 13167.985278
+Total area:                 undefined
+1

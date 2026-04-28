@@ -1,0 +1,120 @@
+[04/04 18:45:06      0s] 
+[04/04 18:45:06      0s] Cadence Innovus(TM) Implementation System.
+[04/04 18:45:06      0s] Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+[04/04 18:45:06      0s] 
+[04/04 18:45:06      0s] Version:	v21.17-s075_1, built Wed Mar 15 11:17:40 PDT 2023
+[04/04 18:45:06      0s] Options:	
+[04/04 18:45:06      0s] Date:		Sat Apr  4 18:45:06 2026
+[04/04 18:45:06      0s] Host:		vcl-vm0-175 (x86_64 w/Linux 4.18.0-553.27.1.el8_10.x86_64) (1core*4cpus*Intel(R) Xeon(R) Gold 6248R CPU @ 3.00GHz 36608KB)
+[04/04 18:45:06      0s] OS:		Rocky Linux 8.10 (Green Obsidian)
+[04/04 18:45:06      0s] 
+[04/04 18:45:06      0s] License:
+[04/04 18:45:06      0s] 		[18:45:06.078785] Configured Lic search path (21.01-s002): 6055@licaccess.cmc.ca
+
+[04/04 18:45:06      0s] 		invs	Innovus Implementation System	21.1	checkout succeeded
+[04/04 18:45:06      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[04/04 18:45:20     12s] Reset Parastics called with the command setExtractRCMode -reset**WARN: (IMPOPT-801):	Genus executable not found in PATH. Install Genus, add the path to the genus executable in the PATH variable and rerun Innovus.
+[04/04 18:45:22     14s] @(#)CDS: Innovus v21.17-s075_1 (64bit) 03/15/2023 11:17 (Linux 3.10.0-693.el7.x86_64)
+[04/04 18:45:22     14s] @(#)CDS: NanoRoute 21.17-s075_1 NR230308-2354/21_17-UB (database version 18.20.604) {superthreading v2.17}
+[04/04 18:45:22     14s] @(#)CDS: AAE 21.17-s026 (64bit) 03/15/2023 (Linux 3.10.0-693.el7.x86_64)
+[04/04 18:45:22     14s] @(#)CDS: CTE 21.17-s025_1 () Mar 14 2023 11:00:06 ( )
+[04/04 18:45:22     14s] @(#)CDS: SYNTECH 21.17-s007_1 () Feb 20 2023 06:56:35 ( )
+[04/04 18:45:22     14s] @(#)CDS: CPE v21.17-s068
+[04/04 18:45:22     14s] @(#)CDS: IQuantus/TQuantus 21.1.1-s939 (64bit) Wed Nov 9 09:34:24 PST 2022 (Linux 3.10.0-693.el7.x86_64)
+[04/04 18:45:22     14s] @(#)CDS: OA 22.60-p087 Thu Feb  9 09:35:26 2023
+[04/04 18:45:22     14s] @(#)CDS: SGN 20.10-d001 (01-Jun-2020) (64 bit executable, Qt5.9.0)
+[04/04 18:45:22     14s] @(#)CDS: RCDB 11.15.0
+[04/04 18:45:22     14s] @(#)CDS: STYLUS 21.12-s019_1 (12/20/2022 05:13 PST)
+[04/04 18:45:22     14s] @(#)CDS: SystemPlanner-21.17Rel-10251 (21.17) (2023-02-02 17:22:51+0800)
+[04/04 18:45:22     14s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_1519903_vcl-vm0-175_v72206_O3Jjuh.
+
+[04/04 18:45:22     14s] Change the soft stacksize limit to 0.2%RAM (30 mbytes). Set global soft_stack_size_limit to change the value.
+[04/04 18:45:24     16s] 
+[04/04 18:45:24     16s] **INFO:  MMMC transition support version v31-84 
+[04/04 18:45:24     16s] 
+[04/04 18:45:24     16s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[04/04 18:45:24     16s] <CMD> suppressMessage ENCEXT-2799
+[04/04 18:45:24     16s] <CMD> win
+[04/04 18:45:28     16s] <CMD> set init_design_uniquify 1
+[04/04 18:45:28     16s] <CMD> set init_verilog ../run/netlist.v
+[04/04 18:45:28     16s] <CMD> set init_design_netlisttype Verilog
+[04/04 18:45:28     16s] <CMD> set init_design_settop 1
+[04/04 18:45:28     16s] <CMD> set init_top_cell ipdc
+[04/04 18:45:28     16s] <CMD> set init_lef_file {../techlef/asap7_tech_4x_201209.lef ../lef/scaled/asap7sc7p5t_28_L_4x_220121a.lef ../lef/scaled/asap7sc7p5t_28_SL_4x_220121a.lef ../lef/scaled/asap7sc7p5t_28_R_4x_220121a.lef}
+[04/04 18:45:28     16s] <CMD> set fp_core_cntl aspect
+[04/04 18:45:28     16s] <CMD> set fp_aspect_ratio 1.0000
+[04/04 18:45:28     16s] <CMD> set extract_shrink_factor 1.0
+[04/04 18:45:28     16s] <CMD> set init_assign_buffer 0
+[04/04 18:45:28     16s] <CMD> set init_pwr_net VDD
+[04/04 18:45:28     16s] <CMD> set init_gnd_net VSS
+[04/04 18:45:28     16s] <CMD> set init_cpf_file {}
+[04/04 18:45:28     16s] <CMD> set init_mmmc_file ../scripts/ipdc.mmmc
+[04/04 18:45:28     16s] <CMD> init_design
+[04/04 18:45:28     16s] #% Begin Load MMMC data ... (date=04/04 18:45:28, mem=972.1M)
+[04/04 18:45:28     17s] #% End Load MMMC data ... (date=04/04 18:45:28, total cpu=0:00:00.0, real=0:00:00.0, peak res=973.4M, current mem=973.4M)
+[04/04 18:45:28     17s] 
+[04/04 18:45:28     17s] Loading LEF file ../techlef/asap7_tech_4x_201209.lef ...
+[04/04 18:45:28     17s] 
+[04/04 18:45:28     17s] Loading LEF file ../lef/scaled/asap7sc7p5t_28_L_4x_220121a.lef ...
+[04/04 18:45:28     17s] Set DBUPerIGU to M1 pitch 576.
+[04/04 18:45:28     17s] 
+[04/04 18:45:28     17s] Loading LEF file ../lef/scaled/asap7sc7p5t_28_SL_4x_220121a.lef ...
+[04/04 18:45:28     17s] 
+[04/04 18:45:28     17s] Loading LEF file ../lef/scaled/asap7sc7p5t_28_R_4x_220121a.lef ...
+[04/04 18:45:28     17s] 
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+[04/04 18:45:28     17s] Loading view definition file from ../scripts/ipdc.mmmc
+[04/04 18:45:28     17s] Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_AO_LVT_TT_nldm_211120.lib' ...
+[04/04 18:45:29     18s] Read 42 cells in library 'asap7sc7p5t_AO_LVT_TT_nldm_211120' 
+[04/04 18:45:29     18s] Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_INVBUF_LVT_TT_nldm_220122.lib' ...
+[04/04 18:45:29     18s] Read 37 cells in library 'asap7sc7p5t_INVBUF_LVT_TT_nldm_211120' 
+[04/04 18:45:29     18s] Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_OA_LVT_TT_nldm_211120.lib' ...
+[04/04 18:45:30     19s] Read 34 cells in library 'asap7sc7p5t_OA_LVT_TT_nldm_211120' 
+[04/04 18:45:30     19s] Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SEQ_LVT_TT_nldm_220123.lib' ...
+[04/04 18:45:30     19s] Read 33 cells in library 'asap7sc7p5t_SEQ_LVT_TT_nldm_220123' 
+[04/04 18:45:30     19s] Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib' ...
+[04/04 18:45:30     19s] **WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib, Line 11387)
+[04/04 18:45:30     19s] **WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib, Line 14287)
+[04/04 18:45:30     19s] Read 56 cells in library 'asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120' 
+[04/04 18:45:30     19s] Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_AO_SLVT_TT_nldm_211120.lib' ...
+[04/04 18:45:31     20s] Read 42 cells in library 'asap7sc7p5t_AO_SLVT_TT_nldm_211120' 
+[04/04 18:45:31     20s] Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_INVBUF_SLVT_TT_nldm_220122.lib' ...
+[04/04 18:45:31     20s] Read 37 cells in library 'asap7sc7p5t_INVBUF_SLVT_TT_nldm_211120' 
+[04/04 18:45:31     20s] Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_OA_SLVT_TT_nldm_211120.lib' ...
+[04/04 18:45:32     21s] Read 34 cells in library 'asap7sc7p5t_OA_SLVT_TT_nldm_211120' 
+[04/04 18:45:32     21s] Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SEQ_SLVT_TT_nldm_220123.lib' ...
+[04/04 18:45:32     21s] Read 33 cells in library 'asap7sc7p5t_SEQ_SLVT_TT_nldm_220123' 
+[04/04 18:45:32     21s] Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib' ...
+[04/04 18:45:32     21s] **WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib, Line 11387)
+[04/04 18:45:32     21s] **WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib, Line 14287)
+[04/04 18:45:32     21s] Read 56 cells in library 'asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120' 
+[04/04 18:45:32     21s] Ending "PreSetAnalysisView" (total cpu=0:00:04.3, real=0:00:04.0, peak res=1150.9M, current mem=1006.6M)
+[04/04 18:45:32     21s] *** End library_loading (cpu=0.07min, real=0.07min, mem=92.0M, fe_cpu=0.36min, fe_real=0.43min, fe_mem=1145.3M) ***
+[04/04 18:45:32     21s] #% Begin Load netlist data ... (date=04/04 18:45:32, mem=1006.0M)
+[04/04 18:45:32     21s] *** Begin netlist parsing (mem=1145.3M) ***
+[04/04 18:45:32     21s] Created 404 new cells from 10 timing libraries.
+[04/04 18:45:32     21s] Reading netlist ...
+[04/04 18:45:32     21s] Backslashed names will retain backslash and a trailing blank character.
+[04/04 18:45:32     21s] Reading verilog netlist '../run/netlist.v'
+[04/04 18:45:32     21s] 
+[04/04 18:45:32     21s] *** Memory Usage v#1 (Current mem = 1145.305M, initial mem = 486.906M) ***
+[04/04 18:45:32     21s] *** End netlist parsing (cpu=0:00:00.1, real=0:00:00.0, mem=1145.3M) ***
+[04/04 18:45:32     21s] #% End Load netlist data ... (date=04/04 18:45:32, total cpu=0:00:00.1, real=0:00:00.0, peak res=1040.0M, current mem=1040.0M)
+[04/04 18:45:32     21s] **ERROR: (IMPSYC-300):	Cell ipdc not found.
+**ERROR: (IMPVL-904):	Can't set top cell to "ipdc" because it does not exist.  Exiting!
+[04/04 18:49:16     77s] **INFO (INTERRUPT): One more Ctrl-C to exit Innovus ...
+[04/04 18:49:17     77s] Innovus terminated by user interrupt.
+[04/04 18:49:17     77s] 
+[04/04 18:49:17     77s] *** Memory Usage v#1 (Current mem = 1147.305M, initial mem = 486.906M) ***
+[04/04 18:49:17     78s] 
+[04/04 18:49:17     78s] *** Summary of all messages that are not suppressed in this session:
+[04/04 18:49:17     78s] Severity  ID               Count  Summary                                  
+[04/04 18:49:17     78s] ERROR     IMPSYC-300           1  Cell %s not found.                       
+[04/04 18:49:17     78s] ERROR     IMPVL-904            2  Can't set top cell to "%s" because it do...
+[04/04 18:49:17     78s] WARNING   IMPOPT-801           1  Genus executable not found in PATH%s. In...
+[04/04 18:49:17     78s] WARNING   TECHLIB-1277         4  The %s '%s' has been defined for %s %s '...
+[04/04 18:49:17     78s] *** Message Summary: 5 warning(s), 3 error(s)
+[04/04 18:49:17     78s] 
+[04/04 18:49:17     78s] --- Ending "Innovus" (totcpu=0:01:18, real=0:04:11, mem=1147.3M) ---

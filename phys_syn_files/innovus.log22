@@ -1,0 +1,429 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v21.17-s075_1, built Wed Mar 15 11:17:40 PDT 2023
+Options:	
+Date:		Tue Apr 21 02:36:14 2026
+Host:		vcl-vm0-175 (x86_64 w/Linux 4.18.0-553.27.1.el8_10.x86_64) (1core*4cpus*Intel(R) Xeon(R) Gold 6248R CPU @ 3.00GHz 36608KB)
+OS:		Rocky Linux 8.10 (Green Obsidian)
+
+License:
+		[02:36:14.078721] Configured Lic search path (21.01-s002): 6055@licaccess.cmc.ca
+
+		invs	Innovus Implementation System	21.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+**WARN: (IMPOPT-801):	Genus executable not found in PATH. Install Genus, add the path to the genus executable in the PATH variable and rerun Innovus.
+Change the soft stacksize limit to 0.2%RAM (30 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> win
+<CMD> encMessage warning 0
+Suppress "**WARN ..." messages.
+<CMD> encMessage debug 0
+<CMD> is_common_ui_mode
+<CMD> restoreDesign /home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Routing.dat ipdc
+#% Begin load design ... (date=04/21 02:36:46, mem=988.1M)
+Loading design 'ipdc' saved by 'Innovus' '21.17-s075_1' on 'Tue Apr 21 01:55:00 2026'.
+% Begin Load MMMC data ... (date=04/21 02:36:47, mem=991.3M)
+% End Load MMMC data ... (date=04/21 02:36:47, total cpu=0:00:00.0, real=0:00:00.0, peak res=991.3M, current mem=991.2M)
+rc_typ_25
+
+Loading LEF file /home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Routing.dat/libs/lef/asap7_tech_4x_201209.lef ...
+
+Loading LEF file /home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Routing.dat/libs/lef/asap7sc7p5t_28_L_4x_220121a.lef ...
+Set DBUPerIGU to M1 pitch 576.
+
+Loading LEF file /home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Routing.dat/libs/lef/asap7sc7p5t_28_SL_4x_220121a.lef ...
+
+Loading LEF file /home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Routing.dat/libs/lef/asap7sc7p5t_28_R_4x_220121a.lef ...
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+Loading view definition file from /home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Routing.dat/viewDefinition.tcl
+Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_AO_LVT_TT_nldm_211120.lib' ...
+Read 42 cells in library 'asap7sc7p5t_AO_LVT_TT_nldm_211120' 
+Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_INVBUF_LVT_TT_nldm_220122.lib' ...
+Read 37 cells in library 'asap7sc7p5t_INVBUF_LVT_TT_nldm_211120' 
+Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_OA_LVT_TT_nldm_211120.lib' ...
+Read 34 cells in library 'asap7sc7p5t_OA_LVT_TT_nldm_211120' 
+Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SEQ_LVT_TT_nldm_220123.lib' ...
+Read 33 cells in library 'asap7sc7p5t_SEQ_LVT_TT_nldm_220123' 
+Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib' ...
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib, Line 11387)
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib, Line 14287)
+Read 56 cells in library 'asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120' 
+Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_AO_SLVT_TT_nldm_211120.lib' ...
+Read 42 cells in library 'asap7sc7p5t_AO_SLVT_TT_nldm_211120' 
+Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_INVBUF_SLVT_TT_nldm_220122.lib' ...
+Read 37 cells in library 'asap7sc7p5t_INVBUF_SLVT_TT_nldm_211120' 
+Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_OA_SLVT_TT_nldm_211120.lib' ...
+Read 34 cells in library 'asap7sc7p5t_OA_SLVT_TT_nldm_211120' 
+Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SEQ_SLVT_TT_nldm_220123.lib' ...
+Read 33 cells in library 'asap7sc7p5t_SEQ_SLVT_TT_nldm_220123' 
+Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib' ...
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib, Line 11387)
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib, Line 14287)
+Read 56 cells in library 'asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120' 
+*** End library_loading (cpu=0.07min, real=0.08min, mem=69.0M, fe_cpu=0.39min, fe_real=0.63min, fe_mem=1146.8M) ***
+% Begin Load netlist data ... (date=04/21 02:36:52, mem=1019.5M)
+*** Begin netlist parsing (mem=1146.8M) ***
+Created 404 new cells from 10 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilogBinary netlist '/home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Routing.dat/ipdc.v.bin'
+
+*** Memory Usage v#1 (Current mem = 1191.922M, initial mem = 486.906M) ***
+*** End netlist parsing (cpu=0:00:00.4, real=0:00:00.0, mem=1191.9M) ***
+% End Load netlist data ... (date=04/21 02:36:52, total cpu=0:00:00.4, real=0:00:00.0, peak res=1087.7M, current mem=1087.7M)
+Set top cell to ipdc.
+Hooked 404 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell ipdc ...
+*** Netlist is unique.
+Set DBUPerIGU to techSite asap7sc7p5t width 864.
+** info: there are 645 modules.
+** info: there are 151029 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 1343.836M, initial mem = 486.906M) ***
+*info: set bottom ioPad orient R0
+Adjusting Core to Left to: 6.3360. Core to Bottom to: 6.3360.
+Start create_tracks
+Loading preference file /home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Routing.dat/gui.pref.tcl ...
+##  Process: 7             (AutoDetect)             
+##     Node: N7            (User Set)           
+##  Process: 7             (User Set)               
+##     Node: N7            (User Set)           
+Applying the recommended capacitance filtering threshold values for 7nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
+	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
+	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode will be 'medium' if Quantus QRC technology file is specified else 'low'.
+**WARN: (IMPOPT-3602):	The specified path group name tdgp_reg2reg_default is not defined.
+Type 'man IMPOPT-3602' for more detail.
+Effort level <high> specified for tdgp_reg2reg_default path_group
+Slack adjustment of -0 applied on tdgp_reg2reg_default path_group
+**WARN: (IMPOPT-3602):	The specified path group name reg2reg is not defined.
+Type 'man IMPOPT-3602' for more detail.
+Effort level <high> specified for reg2reg path_group
+Slack adjustment of -0 applied on reg2reg path_group
+addRing command will ignore shorts while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will consider rows while creating rings.
+The ring targets are set to core/block ring wires.
+Change floorplan default-technical-site to 'asap7sc7p5t'.
+*Info: initialize multi-corner CTS.
+Total number of combinational cells: 338
+Total number of sequential cells: 66
+Total number of tristate cells: 0
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+Total number of physical cells: 0
+List of usable buffers: BUFx10_ASAP7_75t_SL BUFx12_ASAP7_75t_SL BUFx12f_ASAP7_75t_SL BUFx16f_ASAP7_75t_SL BUFx24_ASAP7_75t_SL BUFx2_ASAP7_75t_SL BUFx3_ASAP7_75t_SL BUFx4_ASAP7_75t_SL BUFx5_ASAP7_75t_SL BUFx4f_ASAP7_75t_SL BUFx6f_ASAP7_75t_SL BUFx8_ASAP7_75t_SL HB1xp67_ASAP7_75t_SL HB2xp67_ASAP7_75t_SL BUFx10_ASAP7_75t_L BUFx12_ASAP7_75t_L BUFx12f_ASAP7_75t_L BUFx16f_ASAP7_75t_L BUFx24_ASAP7_75t_L BUFx2_ASAP7_75t_L BUFx3_ASAP7_75t_L BUFx4_ASAP7_75t_L BUFx5_ASAP7_75t_L BUFx4f_ASAP7_75t_L BUFx6f_ASAP7_75t_L BUFx8_ASAP7_75t_L HB1xp67_ASAP7_75t_L
+Total number of usable buffers: 27
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CKINVDCx10_ASAP7_75t_SL CKINVDCx12_ASAP7_75t_SL CKINVDCx11_ASAP7_75t_SL CKINVDCx14_ASAP7_75t_SL CKINVDCx16_ASAP7_75t_SL CKINVDCx20_ASAP7_75t_SL CKINVDCx8_ASAP7_75t_SL CKINVDCx5p33_ASAP7_75t_SL CKINVDCx6p67_ASAP7_75t_SL CKINVDCx9p33_ASAP7_75t_SL INVx11_ASAP7_75t_SL INVx13_ASAP7_75t_SL INVx1_ASAP7_75t_SL INVx2_ASAP7_75t_SL INVx3_ASAP7_75t_SL INVx4_ASAP7_75t_SL INVx5_ASAP7_75t_SL INVx6_ASAP7_75t_SL INVx8_ASAP7_75t_SL INVxp67_ASAP7_75t_SL INVxp33_ASAP7_75t_SL CKINVDCx10_ASAP7_75t_L CKINVDCx12_ASAP7_75t_L CKINVDCx11_ASAP7_75t_L CKINVDCx14_ASAP7_75t_L CKINVDCx16_ASAP7_75t_L CKINVDCx20_ASAP7_75t_L CKINVDCx8_ASAP7_75t_L CKINVDCx5p33_ASAP7_75t_L CKINVDCx6p67_ASAP7_75t_L CKINVDCx9p33_ASAP7_75t_L INVx11_ASAP7_75t_L INVx13_ASAP7_75t_L INVx1_ASAP7_75t_L INVx2_ASAP7_75t_L INVx3_ASAP7_75t_L INVx4_ASAP7_75t_L INVx5_ASAP7_75t_L INVx6_ASAP7_75t_L INVx8_ASAP7_75t_L INVxp67_ASAP7_75t_L INVxp33_ASAP7_75t_L
+Total number of usable inverters: 42
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: HB3xp67_ASAP7_75t_SL HB4xp67_ASAP7_75t_SL HB2xp67_ASAP7_75t_L HB3xp67_ASAP7_75t_L HB4xp67_ASAP7_75t_L
+Total number of identified usable delay cells: 5
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+% Begin Load MMMC data post ... (date=04/21 02:36:54, mem=1490.5M)
+% End Load MMMC data post ... (date=04/21 02:36:54, total cpu=0:00:00.0, real=0:00:00.0, peak res=1490.5M, current mem=1490.5M)
+Reading floorplan file - /home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Routing.dat/ipdc.fp.gz (mem = 1592.6M).
+% Begin Load floorplan data ... (date=04/21 02:36:54, mem=1491.1M)
+*info: reset 151145 existing net BottomPreferredLayer and AvoidDetour
+Deleting old partition specification.
+Set FPlanBox to (0 0 2209760 2209760)
+Start create_tracks
+ ... processed partition successfully.
+Reading binary special route file /home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Routing.dat/ipdc.fp.spr.gz (Created by Innovus v21.17-s075_1 on Tue Apr 21 01:54:44 2026, version: 1)
+Ending "Read special route file" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1492.6M, current mem=1492.6M)
+There are 166 nets with weight being set
+There are 1442 nets with bottomPreferredRoutingLayer being set
+There are 166 nets with avoidDetour being set
+Extracting standard cell pins and blockage ...... 
+**WARN: (IMPTR-2106):	There is no track defined on layer M1. This can be due to out of range track value and the need to use 64bit version or a problem with the track in that layer. Check the track input for layer M1. You may need to run 'generateTracks' command before proceeding.
+Pin and blockage extraction finished
+% End Load floorplan data ... (date=04/21 02:36:55, total cpu=0:00:00.3, real=0:00:01.0, peak res=1496.0M, current mem=1494.1M)
+Reading congestion map file /home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Routing.dat/ipdc.route.congmap.gz ...
+% Begin Load SymbolTable ... (date=04/21 02:36:55, mem=1494.1M)
+Un-suppress "**WARN ..." messages.
+% End Load SymbolTable ... (date=04/21 02:36:55, total cpu=0:00:00.4, real=0:00:00.0, peak res=1508.7M, current mem=1508.6M)
+Loading place ...
+% Begin Load placement data ... (date=04/21 02:36:55, mem=1508.6M)
+Reading placement file - /home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Routing.dat/ipdc.place.gz.
+** Reading stdCellPlacement_binary (Created by Innovus v21.17-s075_1 on Tue Apr 21 01:54:52 2026, version# 2) ...
+Read Views for adaptive view pruning ...
+Read 0 views from Binary DB for adaptive view pruning
+*** Checked 2 GNC rules.
+*** applyConnectGlobalNets disabled.
+*** Completed restorePlace (cpu=0:00:00.4 real=0:00:01.0 mem=1631.7M) ***
+Total net length = 3.544e+06 (1.653e+06 1.891e+06) (ext = 1.562e+04)
+% End Load placement data ... (date=04/21 02:36:56, total cpu=0:00:00.4, real=0:00:01.0, peak res=1533.2M, current mem=1530.4M)
+Reading PG file /home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Routing.dat/ipdc.pg.gz, version#2, (Created by Innovus v21.17-s075_1 on       Tue Apr 21 01:54:45 2026)
+*** Completed restorePGFile (cpu=0:00:00.0 real=0:00:00.0 mem=1631.7M) ***
+% Begin Load routing data ... (date=04/21 02:36:56, mem=1533.6M)
+Reading routing file - /home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Routing.dat/ipdc.route.gz.
+Reading Innovus routing data (Created by Innovus v21.17-s075_1 on Tue Apr 21 01:54:52 2026 Format: 20.1) ...
+*** Total 151110 nets are successfully restored.
+*** Completed restoreRoute (cpu=0:00:01.7 real=0:00:02.0 mem=1947.7M) ***
+% End Load routing data ... (date=04/21 02:36:58, total cpu=0:00:01.8, real=0:00:02.0, peak res=1850.8M, current mem=1850.8M)
+Loading Drc markers ...
+... 203648 markers are loaded ...
+... 203639 geometry drc markers are loaded ...
+... 0 antenna drc markers are loaded ...
+TAT_INFO: restoreCongMap REAL = 0 : CPU = 0 : MEM = 0.
+Reading property file /home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Routing.dat/ipdc.prop
+*** Completed restoreProperty (cpu=0:00:00.1 real=0:00:01.0 mem=2465.7M) ***
+Reading dirtyarea snapshot file /home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Routing.dat/ipdc.db.da.gz (Create by Innovus v21.17-s075_1 on Tue Apr 21 01:54:57 2026, version: 4).
+Loading preRoute extraction data from directory '/home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Routing.dat/extraction/' ...
+Extraction setup Started 
+Initializing multi-corner RC extraction with 1 active RC Corners ...
+Process node set using 'setDesignMode' is less than or equal to 32nm, for which captable file(s) would be ignored as preRoute extraction would instead use technology file. For postRoute extraction, default value for effort level would be 'medium' and effort level 'low' would not be allowed.
+Generating auto layer map file.
+Loading preRoute extracted patterns from file '/home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Routing.dat/ipdc.techData.gz' ...
+Completed (cpu: 0:00:00.6 real: 0:00:01.0)
+Set Shrink Factor to 1.00000
+Summary of Active RC-Corners : 
+ 
+ Analysis View: view_tc
+    RC-Corner Name        : rc_typ_25
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+    RC-Corner Technology file: '/home/v72206/MiniProject_03/MiniProject_03/phys_syn_files/Routing.dat/libs/mmmc/rc_typ_25/qrcTechFile_typ03_scaled4xV06'
+Restored RC grid for preRoute extraction.
+Initializing multi-corner resistance tables ...
+Default value for postRoute extraction mode's effortLevel (-effortLevel option of setExtractRCMode) changed to 'medium'.
+Start generating vias ..
+#Skip building auto via since it is not turned on.
+Via generation completed.
+% Begin Load power constraints ... (date=04/21 02:37:11, mem=2451.3M)
+'set_default_switching_activity' finished successfully.
+% End Load power constraints ... (date=04/21 02:37:11, total cpu=0:00:00.1, real=0:00:00.0, peak res=2458.3M, current mem=2458.3M)
+delay_tc
+% Begin load AAE data ... (date=04/21 02:37:11, mem=2490.7M)
+AAE DB initialization (MEM=2642.62 CPU=0:00:00.5 REAL=0:00:01.0) 
+% End load AAE data ... (date=04/21 02:37:13, total cpu=0:00:01.1, real=0:00:01.0, peak res=2516.6M, current mem=2516.6M)
+Restoring CCOpt config...
+  Extracting original clock gating for i_clk...
+    clock_tree i_clk contains 6210 sinks and 0 clock gates.
+  Extracting original clock gating for i_clk done.
+  The skew group i_clk/sdc was created. It contains 6210 sinks and 1 sources.
+  The skew group i_clk/sdc was created. It contains 6210 sinks and 1 sources.
+Restoring CCOpt config done.
+Total number of combinational cells: 338
+Total number of sequential cells: 66
+Total number of tristate cells: 0
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+Total number of physical cells: 0
+List of usable buffers: BUFx10_ASAP7_75t_SL BUFx12_ASAP7_75t_SL BUFx12f_ASAP7_75t_SL BUFx16f_ASAP7_75t_SL BUFx24_ASAP7_75t_SL BUFx2_ASAP7_75t_SL BUFx3_ASAP7_75t_SL BUFx4_ASAP7_75t_SL BUFx5_ASAP7_75t_SL BUFx4f_ASAP7_75t_SL BUFx6f_ASAP7_75t_SL BUFx8_ASAP7_75t_SL HB1xp67_ASAP7_75t_SL HB2xp67_ASAP7_75t_SL BUFx10_ASAP7_75t_L BUFx12_ASAP7_75t_L BUFx12f_ASAP7_75t_L BUFx16f_ASAP7_75t_L BUFx24_ASAP7_75t_L BUFx2_ASAP7_75t_L BUFx3_ASAP7_75t_L BUFx4_ASAP7_75t_L BUFx5_ASAP7_75t_L BUFx4f_ASAP7_75t_L BUFx6f_ASAP7_75t_L BUFx8_ASAP7_75t_L HB1xp67_ASAP7_75t_L
+Total number of usable buffers: 27
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CKINVDCx10_ASAP7_75t_SL CKINVDCx12_ASAP7_75t_SL CKINVDCx11_ASAP7_75t_SL CKINVDCx14_ASAP7_75t_SL CKINVDCx16_ASAP7_75t_SL CKINVDCx20_ASAP7_75t_SL CKINVDCx8_ASAP7_75t_SL CKINVDCx5p33_ASAP7_75t_SL CKINVDCx6p67_ASAP7_75t_SL CKINVDCx9p33_ASAP7_75t_SL INVx11_ASAP7_75t_SL INVx13_ASAP7_75t_SL INVx1_ASAP7_75t_SL INVx2_ASAP7_75t_SL INVx3_ASAP7_75t_SL INVx4_ASAP7_75t_SL INVx5_ASAP7_75t_SL INVx6_ASAP7_75t_SL INVx8_ASAP7_75t_SL INVxp67_ASAP7_75t_SL INVxp33_ASAP7_75t_SL CKINVDCx10_ASAP7_75t_L CKINVDCx12_ASAP7_75t_L CKINVDCx11_ASAP7_75t_L CKINVDCx14_ASAP7_75t_L CKINVDCx16_ASAP7_75t_L CKINVDCx20_ASAP7_75t_L CKINVDCx8_ASAP7_75t_L CKINVDCx5p33_ASAP7_75t_L CKINVDCx6p67_ASAP7_75t_L CKINVDCx9p33_ASAP7_75t_L INVx11_ASAP7_75t_L INVx13_ASAP7_75t_L INVx1_ASAP7_75t_L INVx2_ASAP7_75t_L INVx3_ASAP7_75t_L INVx4_ASAP7_75t_L INVx5_ASAP7_75t_L INVx6_ASAP7_75t_L INVx8_ASAP7_75t_L INVxp67_ASAP7_75t_L INVxp33_ASAP7_75t_L
+Total number of usable inverters: 42
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: HB3xp67_ASAP7_75t_SL HB4xp67_ASAP7_75t_SL HB2xp67_ASAP7_75t_L HB3xp67_ASAP7_75t_L HB4xp67_ASAP7_75t_L
+Total number of identified usable delay cells: 5
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+**WARN: (IMPCTE-107):	The following globals have been obsoleted since version . They will be removed in the next release. 
+timing_enable_separate_device_slew_effect_sensitivities
+#% End load design ... (date=04/21 02:37:13, total cpu=0:00:25.0, real=0:00:27.0, peak res=2523.5M, current mem=2510.5M)
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPOPT-3602          2  The specified path group name %s is not ...
+WARNING   IMPTR-2106           1  There is no track defined on layer %s. T...
+WARNING   NRDB-2106            1  Ignoring layer %s MINIMUMCUT rule with W...
+WARNING   NRDB-411             3  spacing table for %s %s is already defin...
+WARNING   IMPCTE-107           1  The following globals have been obsolete...
+WARNING   TECHLIB-1277         4  The %s '%s' has been defined for %s %s '...
+*** Message Summary: 12 warning(s), 0 error(s)
+
+<CMD> setDrawView fplan
+<CMD> encMessage warning 1
+<CMD> encMessage debug 0
+<CMD> report_timing
+AAE_INFO: opIsDesignInPostRouteState() is 1
+#################################################################################
+# Design Stage: PostRoute
+# Design Name: ipdc
+# Design Mode: 7nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Extraction called for design 'ipdc' of instances=172529 and nets=151145 using extraction engine 'preRoute' .
+PreRoute RC Extraction called for design ipdc.
+RC Extraction called in multi-corner(1) mode.
+RCMode: PreRoute
+      RC Corner Indexes            0   
+Capacitance Scaling Factor   : 1.00000 
+Resistance Scaling Factor    : 1.00000 
+Clock Cap. Scaling Factor    : 1.00000 
+Clock Res. Scaling Factor    : 1.00000 
+Shrink Factor                : 1.00000
+PreRoute extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
+Using Quantus QRC technology file ...
+Updating RC grid for preRoute extraction ...
+Initializing multi-corner resistance tables ...
+PreRoute RC Extraction DONE (CPU Time: 0:00:01.9  Real Time: 0:00:02.0  MEM: 2659.234M)
+Calculate delays in Single mode...
+Start delay calculation (fullDC) (1 T). (MEM=2867.63)
+siFlow : Timing analysis mode is single, using late cdB files
+Total number of fetched objects 151113
+End delay calculation. (MEM=3088.05 CPU=0:00:37.6 REAL=0:00:38.0)
+End delay calculation (fullDC). (MEM=3088.05 CPU=0:00:44.3 REAL=0:00:44.0)
+Path 1: VIOLATED Setup Check with Pin o_out_data_r_reg[18]/CLK 
+Endpoint:   o_out_data_r_reg[18]/D (v) checked with  leading edge of 'i_clk'
+Beginpoint: image_size_r_reg[1]/QN (v) triggered by  leading edge of 'i_clk'
+Path Groups: {i_clk}
+Analysis View: view_tc
+Other End Arrival Time         11.123
+- Setup                         7.235
++ Phase Shift                 1500.000
+= Required Time               1503.888
+- Arrival Time                1714.922
+= Slack Time                  -211.034
+     Clock Rise Edge                 0.000
+     + Clock Network Latency (Prop)  0.523
+     = Beginpoint Arrival Time       0.523
+     +--------------------------------------------------------------------------------------------------------+ 
+     |          Instance           |      Arc      |           Cell           |  Delay  |  Arrival | Required | 
+     |                             |               |                          |         |   Time   |   Time   | 
+     |-----------------------------+---------------+--------------------------+---------+----------+----------| 
+     | image_size_r_reg[1]         | CLK ^         |                          |         |    0.523 | -210.511 | 
+     | image_size_r_reg[1]         | CLK ^ -> QN v | DFFASRHQNx1_ASAP7_75t_SL |  45.900 |   46.423 | -164.611 | 
+     | FE_OFC582_disp_mat_0        | A v -> Y v    | BUFx3_ASAP7_75t_SL       |  20.600 |   67.023 | -144.011 | 
+     | U11028                      | B v -> Y ^    | NOR2x1p5_ASAP7_75t_SL    |  10.100 |   77.123 | -133.911 | 
+     | FE_OCPC911_n10078           | A ^ -> Y ^    | BUFx3_ASAP7_75t_SL       |  14.700 |   91.823 | -119.211 | 
+     | U18312                      | A ^ -> Y v    | NAND2xp5_ASAP7_75t_SL    |  11.500 |  103.323 | -107.711 | 
+     | FE_OFC13724_n130030         | A v -> Y ^    | INVx2_ASAP7_75t_SL       |   8.600 |  111.923 |  -99.111 | 
+     | U10682                      | B ^ -> Y ^    | XNOR2x1_ASAP7_75t_SL     |  17.300 |  129.223 |  -81.811 | 
+     | FE_OFC14327_n9873           | A ^ -> Y ^    | BUFx12f_ASAP7_75t_SL     |  17.500 |  146.723 |  -64.311 | 
+     | FE_OFC15341_FE_DBTN32_n9873 | A ^ -> Y v    | INVx5_ASAP7_75t_SL       |  13.800 |  160.523 |  -50.511 | 
+     | FE_OFC723_n9873             | A v -> Y ^    | INVx1_ASAP7_75t_L        |  22.400 |  182.923 |  -28.111 | 
+     | U58225                      | B ^ -> Y v    | NAND2xp5_ASAP7_75t_SL    |  10.300 |  193.223 |  -17.811 | 
+     | FE_OFC5247_n16596           | A v -> Y v    | BUFx5_ASAP7_75t_SL       |  18.900 |  212.123 |    1.089 | 
+     | U57972                      | A v -> Y ^    | NOR5xp2_ASAP7_75t_SL     | 363.700 |  575.823 |  364.789 | 
+     | U58249                      | A ^ -> Y v    | NOR4xp25_ASAP7_75t_SL    |  29.600 |  605.423 |  394.389 | 
+     | U58250                      | A2 v -> Y ^   | AOI21xp5_ASAP7_75t_SL    |  18.300 |  623.723 |  412.689 | 
+     | FE_OFC9444_n17425           | A ^ -> Y ^    | BUFx3_ASAP7_75t_SL       |  19.800 |  643.523 |  432.489 | 
+     | FE_RC_183_0                 | B ^ -> Y v    | NOR2x1_ASAP7_75t_SL      |  20.600 |  664.123 |  453.089 | 
+     | FE_RC_182_0                 | B v -> Y ^    | NAND2x1p5_ASAP7_75t_SL   |  20.400 |  684.523 |  473.489 | 
+     | U140014                     | A ^ -> Y v    | NAND2x1p5_ASAP7_75t_SL   |  12.400 |  696.923 |  485.889 | 
+     | FE_RC_5517_0                | A v -> Y ^    | NAND3xp33_ASAP7_75t_SL   |  15.400 |  712.323 |  501.289 | 
+     | FE_RC_101_0                 | B ^ -> Y v    | OAI31xp67_ASAP7_75t_SL   |  10.800 |  723.123 |  512.089 | 
+     | U140020                     | A v -> Y ^    | INVx1_ASAP7_75t_SL       |   9.100 |  732.223 |  521.189 | 
+     | U138565                     | A1 ^ -> Y ^   | AO21x1_ASAP7_75t_SL      |  11.800 |  744.023 |  532.989 | 
+     | FE_RC_578_0                 | B ^ -> Y v    | OAI21xp5_ASAP7_75t_SL    |   8.300 |  752.323 |  541.289 | 
+     | FE_RC_576_0                 | A2 v -> Y v   | AO21x2_ASAP7_75t_SL      |  22.100 |  774.423 |  563.389 | 
+     | FE_OFC13463_n132797         | A v -> Y ^    | INVx3_ASAP7_75t_SL       |  14.800 |  789.223 |  578.189 | 
+     | U11097                      | A ^ -> Y v    | NAND2xp5_ASAP7_75t_SL    |  12.700 |  801.923 |  590.889 | 
+     | U140057                     | B v -> Y ^    | NAND2x1_ASAP7_75t_SL     |  14.600 |  816.523 |  605.489 | 
+     | U140058                     | A ^ -> Y v    | INVx1_ASAP7_75t_SL       |   7.700 |  824.223 |  613.189 | 
+     | U140059                     | A1 v -> Y ^   | OAI21xp5_ASAP7_75t_SL    |   8.600 |  832.823 |  621.789 | 
+     | FE_RC_7_1                   | B3 ^ -> Y v   | OAI33xp33_ASAP7_75t_SL   |  18.500 |  851.323 |  640.289 | 
+     | FE_RC_668_0                 | A2 v -> Y ^   | OAI21x1_ASAP7_75t_SL     |  16.700 |  868.023 |  656.989 | 
+     | FE_OFC4496_n133061          | A ^ -> Y v    | INVx2_ASAP7_75t_SL       |  10.100 |  878.123 |  667.089 | 
+     | FE_OCPC17121_n133064        | A v -> Y v    | HB1xp67_ASAP7_75t_SL     |  29.900 |  908.023 |  696.989 | 
+     | U18083                      | A2 v -> Y ^   | OAI22xp33_ASAP7_75t_L    |  38.500 |  946.523 |  735.489 | 
+     | U10506                      | B ^ -> Y v    | NAND2xp5_ASAP7_75t_SL    |  14.200 |  960.723 |  749.689 | 
+     | U140204                     | B v -> Y ^    | NAND3xp33_ASAP7_75t_SL   |  13.900 |  974.623 |  763.589 | 
+     | U140205                     | C ^ -> Y v    | A2O1A1Ixp33_ASAP7_75t_SL |  13.500 |  988.123 |  777.089 | 
+     | U9794                       | A1 v -> Y ^   | OAI21xp5_ASAP7_75t_SL    |  26.300 | 1014.423 |  803.389 | 
+     | FE_OFC12250_n133206         | A ^ -> Y ^    | BUFx2_ASAP7_75t_SL       |  28.100 | 1042.523 |  831.489 | 
+     | U17418                      | B2 ^ -> Y v   | OAI22xp33_ASAP7_75t_L    |  22.300 | 1064.823 |  853.789 | 
+     | U140218                     | A v -> Y ^    | INVx1_ASAP7_75t_SL       |   9.200 | 1074.023 |  862.989 | 
+     | U12625                      | A1 ^ -> Y v   | AOI221xp5_ASAP7_75t_SL   |  14.400 | 1088.423 |  877.389 | 
+     | U44934                      | A v -> Y ^    | NOR4xp25_ASAP7_75t_SL    |  27.100 | 1115.523 |  904.489 | 
+     | U10302                      | A2 ^ -> Y v   | OAI31xp67_ASAP7_75t_SL   |  18.100 | 1133.623 |  922.589 | 
+     | U140230                     | A v -> Y ^    | INVx1_ASAP7_75t_SL       |  24.100 | 1157.723 |  946.689 | 
+     | U17740                      | A1 ^ -> Y v   | OAI22xp33_ASAP7_75t_L    |  26.400 | 1184.123 |  973.089 | 
+     | U140238                     | A v -> Y ^    | INVx1_ASAP7_75t_SL       |  13.100 | 1197.223 |  986.189 | 
+     | U10558                      | B2 ^ -> Y v   | AOI221xp5_ASAP7_75t_SL   |  11.200 | 1208.422 |  997.389 | 
+     | U44936                      | C v -> Y ^    | NOR4xp25_ASAP7_75t_SL    |  18.800 | 1227.222 | 1016.189 | 
+     | U140254                     | B1 ^ -> Y v   | OAI321xp33_ASAP7_75t_SL  |  16.500 | 1243.722 | 1032.689 | 
+     | FE_OFC398_n133439           | A v -> Y v    | BUFx3_ASAP7_75t_SL       |  23.400 | 1267.122 | 1056.089 | 
+     | FE_OFC399_n133439           | A v -> Y ^    | INVx4_ASAP7_75t_SL       |  15.700 | 1282.823 | 1071.789 | 
+     | FE_OFC400_n133439           | A ^ -> Y v    | INVx1_ASAP7_75t_SL       |  13.800 | 1296.623 | 1085.589 | 
+     | U17441                      | B2 v -> Y ^   | OAI22xp5_ASAP7_75t_SL    |  23.000 | 1319.623 | 1108.589 | 
+     | U140284                     | B ^ -> Y v    | NAND2xp5_ASAP7_75t_SL    |  13.200 | 1332.823 | 1121.789 | 
+     | U11747                      | A1 v -> Y ^   | AOI21xp5_ASAP7_75t_SL    |  10.100 | 1342.923 | 1131.889 | 
+     | U140289                     | C ^ -> Y v    | A2O1A1Ixp33_ASAP7_75t_SL |  13.800 | 1356.723 | 1145.689 | 
+     | FE_OCPC16298_n133514        | A v -> Y v    | BUFx3_ASAP7_75t_SL       |  21.000 | 1377.723 | 1166.689 | 
+     | U140291                     | A v -> Y ^    | INVx2_ASAP7_75t_SL       |  11.300 | 1389.023 | 1177.989 | 
+     | U140298                     | B1 ^ -> Y v   | OAI22xp5_ASAP7_75t_SL    |  17.200 | 1406.223 | 1195.189 | 
+     | U16926                      | A v -> Y ^    | INVx1_ASAP7_75t_SL       |  13.900 | 1420.123 | 1209.089 | 
+     | U9755                       | A1 ^ -> Y v   | AOI211xp5_ASAP7_75t_SL   |  11.200 | 1431.323 | 1220.289 | 
+     | U140305                     | B1 v -> Y ^   | OAI331xp33_ASAP7_75t_SL  |  22.700 | 1454.022 | 1242.989 | 
+     | FE_RC_4654_0                | B ^ -> Y v    | NAND2xp5_ASAP7_75t_SL    |   9.600 | 1463.622 | 1252.589 | 
+     | FE_OCPC15879_n133629        | A v -> Y v    | BUFx3_ASAP7_75t_SL       |  19.600 | 1483.222 | 1272.189 | 
+     | FE_OFC9189_n133629          | A v -> Y v    | BUFx3_ASAP7_75t_SL       |  19.400 | 1502.622 | 1291.589 | 
+     | U16941                      | B2 v -> Y ^   | OAI22xp5_ASAP7_75t_SL    |  20.500 | 1523.122 | 1312.089 | 
+     | U140391                     | A ^ -> Y v    | INVx1_ASAP7_75t_SL       |  12.700 | 1535.822 | 1324.789 | 
+     | U12468                      | A v -> Y v    | AND3x1_ASAP7_75t_SL      |  12.300 | 1548.122 | 1337.089 | 
+     | FE_RC_622_0                 | B v -> Y v    | AO21x1_ASAP7_75t_SL      |  15.400 | 1563.522 | 1352.489 | 
+     | FE_RC_383_1                 | A2 v -> Y ^   | AOI21x1_ASAP7_75t_SL     |  13.300 | 1576.822 | 1365.789 | 
+     | FE_RC_619_0_dup             | B ^ -> Y v    | OAI21x1_ASAP7_75t_SL     |  13.300 | 1590.122 | 1379.089 | 
+     | U16821                      | B v -> Y ^    | NAND2x1p5_ASAP7_75t_SL   |  15.300 | 1605.422 | 1394.389 | 
+     | U140401                     | A ^ -> Y v    | INVx1_ASAP7_75t_SL       |   7.800 | 1613.222 | 1402.188 | 
+     | FE_RC_905_0                 | B1 v -> Y ^   | OAI22x1_ASAP7_75t_SL     |  13.400 | 1626.622 | 1415.589 | 
+     | U10775                      | B ^ -> Y ^    | AND2x4_ASAP7_75t_SL      |  15.500 | 1642.122 | 1431.089 | 
+     | U16896                      | A2 ^ -> Y v   | OAI32xp33_ASAP7_75t_SL   |  11.900 | 1654.022 | 1442.989 | 
+     | U140402                     | A v -> Y ^    | INVx1_ASAP7_75t_SL       |  16.300 | 1670.322 | 1459.288 | 
+     | U10615                      | B ^ -> Y ^    | AND3x2_ASAP7_75t_SL      |  27.100 | 1697.422 | 1486.388 | 
+     | FE_RC_4800_0                | B2 ^ -> Y v   | AOI321xp33_ASAP7_75t_SL  |  17.300 | 1714.722 | 1503.688 | 
+     | o_out_data_r_reg[18]        | D v           | DFFHQNx1_ASAP7_75t_L     |   0.200 | 1714.922 | 1503.888 | 
+     +--------------------------------------------------------------------------------------------------------+ 
+
+<CMD> setDrawView fplan
+<CMD> setDrawView place
+<CMD> zoomBox 12.26775 -7.42250 534.57050 509.10900
+<CMD> zoomBox -31.01700 -27.62200 583.45675 580.06200
+<CMD> zoomBox -148.36975 -81.95225 702.11325 759.13325
+
+--------------------------------------------------------------------------------
+Exiting Innovus on Tue Apr 21 04:56:20 2026
+  Total CPU time:     0:05:30
+  Total real time:    2:20:08
+  Peak memory (main): 2884.89MB
+
+
+*** Memory Usage v#1 (Current mem = 3120.047M, initial mem = 486.906M) ***
+*** Message Summary: 13 warning(s), 0 error(s)
+
+--- Ending "Innovus" (totcpu=0:05:27, real=2:20:06, mem=3120.0M) ---

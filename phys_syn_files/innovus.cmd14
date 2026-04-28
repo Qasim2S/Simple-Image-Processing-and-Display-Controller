@@ -1,0 +1,233 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Sat Apr  4 21:51:07 2026                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v21.17-s075_1 (64bit) 03/15/2023 11:17 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 21.17-s075_1 NR230308-2354/21_17-UB (database version 18.20.604) {superthreading v2.17}
+#@(#)CDS: AAE 21.17-s026 (64bit) 03/15/2023 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 21.17-s025_1 () Mar 14 2023 11:00:06 ( )
+#@(#)CDS: SYNTECH 21.17-s007_1 () Feb 20 2023 06:56:35 ( )
+#@(#)CDS: CPE v21.17-s068
+#@(#)CDS: IQuantus/TQuantus 21.1.1-s939 (64bit) Wed Nov 9 09:34:24 PST 2022 (Linux 3.10.0-693.el7.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+win
+set init_design_uniquify 1
+set init_verilog ../outputs/ipdc_syn.v
+set init_design_netlisttype Verilog
+set init_design_settop 1
+set init_top_cell ipdc
+set init_lef_file {../techlef/asap7_tech_4x_201209.lef ../lef/scaled/asap7sc7p5t_28_L_4x_220121a.lef ../lef/scaled/asap7sc7p5t_28_SL_4x_220121a.lef ../lef/scaled/asap7sc7p5t_28_R_4x_220121a.lef}
+set fp_core_cntl aspect
+set fp_aspect_ratio 1.0000
+set extract_shrink_factor 1.0
+set init_assign_buffer 0
+set init_pwr_net VDD
+set init_gnd_net VSS
+set init_cpf_file {}
+set init_mmmc_file ../scripts/ipdc.mmmc
+init_design
+setDesignMode -process 7 -node N7
+setMultiCpuUsage -localCpu 4
+setDesignMode -bottomRoutingLayer 2
+setDesignMode -topRoutingLayer 7
+floorPlan -site core -r 1.0 0.7 10 10 10 10
+addWellTap -cell TAPCELL_ASAP7_75t_L -cellInterval 12.960 -inRowOffset 1.296
+add_tracks -snap_m1_track_to_cell_pins
+add_tracks -mode replace -offsets {M5 vertical 0}
+deleteAllFPObjects
+addWellTap -cell TAPCELL_ASAP7_75t_L -cellInterval 12.960 -inRowOffset 1.296
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Left -layer 3 -spreadType center -spacing 2.0 -pin {
+i_rst_n i_clk i_op_valid 
+{i_op_mode[0]} {i_op_mode[1]} {i_op_mode[2]} {i_op_mode[3]}
+i_in_valid
+{i_in_data[0]} {i_in_data[1]} {i_in_data[2]} {i_in_data[3]}
+{i_in_data[4]} {i_in_data[5]} {i_in_data[6]} {i_in_data[7]}
+{i_in_data[8]} {i_in_data[9]} {i_in_data[10]} {i_in_data[11]}
+{i_in_data[12]} {i_in_data[13]} {i_in_data[14]} {i_in_data[15]}
+{i_in_data[16]} {i_in_data[17]} {i_in_data[18]} {i_in_data[19]}
+{i_in_data[20]} {i_in_data[21]} {i_in_data[22]} {i_in_data[23]}
+}
+editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Right -layer 3 -spreadType center -spacing 2.0 -pin {
+o_op_ready o_in_ready o_out_valid
+{o_out_data[0]} {o_out_data[1]} {o_out_data[2]} {o_out_data[3]}
+{o_out_data[4]} {o_out_data[5]} {o_out_data[6]} {o_out_data[7]}
+{o_out_data[8]} {o_out_data[9]} {o_out_data[10]} {o_out_data[11]}
+{o_out_data[12]} {o_out_data[13]} {o_out_data[14]} {o_out_data[15]}
+{o_out_data[16]} {o_out_data[17]} {o_out_data[18]} {o_out_data[19]}
+{o_out_data[20]} {o_out_data[21]} {o_out_data[22]} {o_out_data[23]}
+}
+editPin -snap TRACK -pin *
+setPinAssignMode -pinEditInBatch false
+legalizePin
+globalNetConnect VDD -type pgpin -pin VDD -inst *
+globalNetConnect VSS -type pgpin -pin VSS -inst *
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer Pad -stacked_via_bottom_layer M1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin { standardcell } -skip_via_on_wire_shape { noshape }
+addRing -nets {VDD VSS} -type core_rings -follow core -layer {top M7 bottom M7 left M6 right M6} -width 1.5 -spacing 0.384 -offset 0.384 -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+addStripe -skip_via_on_wire_shape blockring -direction horizontal -set_to_set_distance 2.16 -skip_via_on_pin Standardcell -stacked_via_top_layer M1 -layer M2 -width 0.072 -nets VDD -stacked_via_bottom_layer M1 -start_from bottom -snap_wire_center_to_grid None -start_offset -0.044 -stop_offset -0.044
+addStripe -skip_via_on_wire_shape blockring -direction horizontal -set_to_set_distance 2.16 -skip_via_on_pin Standardcell -stacked_via_top_layer M1 -layer M2 -width 0.072 -nets VSS -stacked_via_bottom_layer M1 -start_from bottom -snap_wire_center_to_grid None -start_offset 1.036 -stop_offset -0.044
+addStripe -skip_via_on_wire_shape Noshape -set_to_set_distance 12.960 -skip_via_on_pin Standardcell -stacked_via_top_layer Pad -spacing 0.360 -xleft_offset 0.360 -layer M3 -width 0.936 -nets {VDD VSS} -stacked_via_bottom_layer M2 -start_from left
+addStripe -skip_via_on_wire_shape Noshape -direction horizontal -set_to_set_distance 21.6 -skip_via_on_pin Standardcell -stacked_via_top_layer M7 -spacing 0.864 -layer M4 -width 0.864 -nets {VDD VSS} -stacked_via_bottom_layer M3 -start_from bottom
+setSrouteMode -reset
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { corePin } -layerChangeRange { M1(1) M7(1) } -blockPinTarget { nearestTarget } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -deleteExistingRoutes -allowJogging 0 -crossoverViaLayerRange { M1(1) Pad(10) } -nets { VDD VSS } -allowLayerChange 0 -targetViaLayerRange { M1 (1) Pad(10) }
+editPowerVia -add_vias 1 -orthogonal_only 0
+verify_drc
+setOptMode -holdTargetSlack 0.020
+setOptMode -setupTargetSlack 0.020
+colorizePowerMesh
+place_opt_design
+setDrawView fplan
+gui_select -rect {1541.52375 666.46425 1099.32975 233.78000}
+zoomOut
+zoomBox -789.29750 -430.88675 2623.40025 1699.13425
+zoomBox -557.39550 -332.73300 1908.27875 1206.20725
+zoomBox -466.82850 -294.40000 1628.99475 1013.69925
+zoomBox -390.20450 -261.45875 1391.24525 850.42550
+zoomBox -240.95250 -151.57400 1046.14500 651.76250
+zoomBox -182.90125 -109.35475 911.13175 573.48125
+zoomBox -240.73275 -150.91450 1046.36500 652.42225
+zoomBox -185.98000 -59.65950 908.05325 623.17675
+setDrawView ameba
+setDrawView place
+zoomBox 38.77200 79.68275 389.49425 298.58450
+zoomBox 60.16275 91.12725 358.27675 277.19375
+zoomBox 135.66100 131.51950 248.09500 201.69475
+zoomBox 149.83950 139.26625 231.07325 189.96800
+zoomBox 164.08425 147.04925 213.97200 178.18650
+zoomBox 126.64250 126.59225 258.91975 209.15250
+zoomBox 116.03450 120.79625 271.65475 217.92600
+zoomBox -33.84925 38.90500 451.58950 341.88950
+zoomBox -501.39150 -216.54400 1012.87425 728.57850
+zoomBox -275.58400 -110.26950 818.47300 572.58150
+zoomBox -179.13750 -9.33725 750.81100 571.08625
+zoomBox -275.58425 -109.70900 818.47300 573.14225
+setDrawView fplan
+zoomBox -131.66250 -52.70100 798.28650 527.72275
+zoomBox -275.58475 -109.70925 818.47300 573.14225
+zoomBox -444.90500 -176.77775 842.22175 626.57700
+zoomBox -305.71050 -65.95000 788.34725 616.90150
+zoomBox -237.11375 -51.74475 692.83525 528.67900
+zoomBox -181.34875 -41.89450 609.10800 451.46575
+zoomBox -134.48850 -35.14225 537.39975 384.21400
+zoomBox -95.00200 -30.20650 476.10325 326.24650
+zoomBox -61.63325 -26.30375 423.80625 276.68125
+zoomBox 48.37450 -14.93750 203.99600 82.19300
+zoomBox 56.24400 -14.06025 188.52250 68.50075
+zoomBox 81.97375 -8.78075 140.66675 27.85225
+zoomBox 97.12875 -3.70150 119.26550 10.11500
+zoomBox 63.50350 -17.08500 159.07975 42.56850
+zoomBox -29.24200 -53.99900 268.89700 132.08325
+zoomBox -200.38625 -122.11625 471.54450 297.26650
+zoomBox -393.69275 -199.05425 700.43475 483.84075
+zoomBox -541.91250 -289.43750 745.29650 513.96850
+zoomBox -716.28875 -395.77075 798.07500 549.41300
+zoomBox -1446.73025 -841.18825 1019.15800 697.88550
+zoomBox -669.93125 -307.22950 844.43250 637.95425
+zoomBox -331.54075 -77.00900 762.58700 605.88625
+zoomBox -124.74725 91.05425 665.76025 584.44625
+zoomBox 24.89075 215.28250 596.03250 571.75825
+zoomBox 240.05100 403.24625 493.47025 561.41675
+zoomBox 339.82600 498.52700 435.40300 558.18100
+zoomBox 373.43475 530.62200 415.84300 557.09100
+zoomBox 377.71650 532.74475 413.76375 555.24350
+zoomBox 381.36225 534.49975 412.00250 553.62375
+zoomBox 384.46625 535.94975 410.51075 552.20525
+zoomBox 330.73400 509.47725 443.18300 579.66175
+zoomBox 286.79575 487.83000 469.90000 602.11375
+zoomBox 306.52150 524.84250 365.22125 561.47975
+zoomBox 312.19950 533.72650 342.84150 552.85150
+zoomBox 305.34975 530.04000 347.76100 556.51075
+zoomBox 300.99375 527.69550 350.88950 558.83775
+zoomBox 295.86900 524.93750 354.57000 561.57550
+zoomBox 226.88375 455.73325 442.30850 590.18975
+zoomBox 104.75925 339.45375 590.27275 642.48500
+zoomBox -261.44350 -13.96400 1025.88025 789.51375
+zoomBox -163.43325 262.96975 508.55800 682.39025
+zoomBox -56.25150 464.78000 159.17375 599.23675
+zoomBox -26.96175 515.50075 68.62350 575.16000
+zoomBox -13.17850 534.29900 29.23375 560.77050
+zoomBox -9.40575 538.14700 21.23725 557.27275
+zoomBox -7.92975 539.55525 18.11700 555.81225
+zoomBox -10.05000 538.58150 20.59325 557.70725
+zoomBox -40.00775 524.82325 55.58050 584.48425
+zoomBox -157.72975 470.75850 193.06700 689.70675
+zoomBox -589.74950 272.34925 697.62325 1075.85750
+zoomBox -1334.26800 -69.57800 1567.14700 1741.32800
+zoomBox -1848.30650 -305.65475 2167.49300 2200.78950
+zoomBox -910.40600 -78.28525 1185.86700 1230.09475
+zoomBox -597.68425 -29.91950 916.87325 915.38525
+zoomBox -741.36750 -52.14175 1040.46500 1059.98150
+zoomBox -1343.23950 -145.22775 1558.17675 1665.67900
+zoomBox -731.16625 -121.00000 1050.66625 991.12325
+zoomBox -584.74350 -114.60725 929.81425 830.69750
+zoomBox -458.99025 -98.82350 828.38375 704.68550
+zoomBox -352.10025 -85.40725 742.16775 597.57550
+zoomBox -261.24375 -74.00350 668.88425 506.53200
+zoomBox -353.78325 -111.95400 740.48525 571.02900
+zoomBox 71.57000 -66.08275 642.78500 290.43875
+zoomBox 141.24775 -57.49500 626.78050 245.54825
+zoomBox 429.93450 -19.25500 585.58550 77.89400
+zoomBox 506.91000 -4.81175 556.80850 26.33225
+zoomBox 523.68650 -2.90400 554.33050 16.22225
+zoomBox 527.69150 -2.44875 553.73900 13.80875
+zoomBox 531.09100 -2.05275 553.23175 11.76625
+zoomBox 543.69050 0.12250 550.78900 4.55300
+zoomBox 547.35275 0.85525 550.03025 2.52650
+zoomBox 548.21125 1.11475 549.60925 1.98725
+zoomBox 545.69825 0.38775 550.82975 3.59050
+zoomBox 541.36050 -0.90175 552.92525 6.31625
+zoomBox 543.21100 -0.24975 546.91875 2.06450
+zoomBox 543.85900 -0.02675 545.79500 1.18150
+zoomBox 541.47050 -0.83125 547.51025 2.93850
+zoomBox 532.08500 -3.99050 554.25075 9.84425
+zoomBox 480.61025 -13.46600 561.95950 37.30775
+zoomBox 342.82525 -49.36875 596.58400 109.01375
+zoomBox 180.50175 -193.92850 972.07125 300.12625
+zoomBox -302.91725 -631.64850 2166.28625 909.49450
+zoomBox -70.69150 17.18625 602.14325 437.13325
+zoomBox 25.71525 103.63275 376.93975 322.84800
+zoomBox 92.89400 142.57600 248.73450 239.84325
+zoomBox 120.21250 158.01700 201.56250 208.79125
+zoomBox 141.08675 168.37675 177.18275 190.90600
+zoomBox 149.04450 172.32625 167.88750 184.08700
+zoomBox 120.20825 158.01450 201.56500 208.79300
+zoomBox 139.40550 164.10400 175.50400 186.63475
+zoomBox 147.16800 167.14975 166.01175 178.91100
+zoomBox 152.33050 170.06775 160.69175 175.28650
+zoomBox 155.03450 171.97750 158.18850 173.94600
+zoomBox 155.93750 172.73275 157.33750 173.60650
+zoomBox 153.56750 170.93850 159.61250 174.71150
+zoomBox 145.33075 164.72400 167.51800 178.57200
+zoomBox 115.03725 142.05425 196.46200 192.87525
+zoomBox 3.86400 58.85950 302.68325 245.36625
+zoomBox -404.12500 -246.45050 692.49850 438.00250
+zoomBox -1592.67500 -1133.45100 1828.10625 1001.61525
+zoomBox -1352.48000 -948.77550 1555.18400 866.03075
+zoomBox -944.94350 -677.67250 1155.84400 633.52525
+zoomBox -283.25475 -190.34750 509.05700 304.17050
+zoomBox -83.60725 -11.29900 170.39025 147.23250
+zoomBox -21.10475 39.13900 60.32150 89.96075
+zoomBox -6.91775 54.61575 29.21200 77.16600
+zoomBox -2.64925 64.08275 8.93350 71.31200
+zoomBox -4.23525 62.53725 11.79625 72.54325
+zoomBox -7.82650 59.03800 18.27850 75.33125
+zoomBox -4.27025 62.48000 11.76175 72.48625
+zoomBox -2.08600 64.59350 7.75975 70.73875
+zoomBox -9.95275 57.13050 20.76025 76.30000
+zoomBox -34.49350 33.85050 61.31400 93.64825
+zoomBox -67.76700 2.47550 115.77025 117.02950
+zoomBox -155.04125 -79.81900 258.60625 178.35725
+zoomBox -298.69850 -215.27975 493.72075 279.30550
+zoomBox -573.90075 -474.77975 944.12650 472.69050
+zoomBox -935.66000 -815.89800 1536.19425 726.89950
+zoomBox -481.56050 -304.22100 1036.46725 643.24950
+zoomBox -280.52975 -86.39775 816.24525 598.14975
+getIoFlowFlag
+zoomBox -213.63650 -32.62075 718.62225 549.24450
+zoomBox -280.71725 -86.21050 816.05775 598.33700

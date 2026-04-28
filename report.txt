@@ -1,0 +1,7 @@
+StudentID: 400378059
+
+Clock period: 2 (ns)
+
+Area : 215060 (um^2)
+
+Use DesignWare? No (Yes/No) 

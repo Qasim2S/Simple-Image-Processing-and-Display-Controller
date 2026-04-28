@@ -1,0 +1,71 @@
+[04/04 17:15:39      0s] 
+[04/04 17:15:39      0s] Cadence Innovus(TM) Implementation System.
+[04/04 17:15:39      0s] Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+[04/04 17:15:39      0s] 
+[04/04 17:15:39      0s] Version:	v21.17-s075_1, built Wed Mar 15 11:17:40 PDT 2023
+[04/04 17:15:39      0s] Options:	
+[04/04 17:15:39      0s] Date:		Sat Apr  4 17:15:39 2026
+[04/04 17:15:39      0s] Host:		vcl-vm0-175 (x86_64 w/Linux 4.18.0-553.27.1.el8_10.x86_64) (1core*4cpus*Intel(R) Xeon(R) Gold 6248R CPU @ 3.00GHz 36608KB)
+[04/04 17:15:39      0s] OS:		Rocky Linux 8.10 (Green Obsidian)
+[04/04 17:15:39      0s] 
+[04/04 17:15:39      0s] License:
+[04/04 17:15:39      0s] 		[17:15:39.078801] Configured Lic search path (21.01-s002): 6055@licaccess.cmc.ca
+
+[04/04 17:15:39      0s] 		invs	Innovus Implementation System	21.1	checkout succeeded
+[04/04 17:15:39      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[04/04 17:15:53     12s] Reset Parastics called with the command setExtractRCMode -reset**WARN: (IMPOPT-801):	Genus executable not found in PATH. Install Genus, add the path to the genus executable in the PATH variable and rerun Innovus.
+[04/04 17:15:55     15s] @(#)CDS: Innovus v21.17-s075_1 (64bit) 03/15/2023 11:17 (Linux 3.10.0-693.el7.x86_64)
+[04/04 17:15:55     15s] @(#)CDS: NanoRoute 21.17-s075_1 NR230308-2354/21_17-UB (database version 18.20.604) {superthreading v2.17}
+[04/04 17:15:55     15s] @(#)CDS: AAE 21.17-s026 (64bit) 03/15/2023 (Linux 3.10.0-693.el7.x86_64)
+[04/04 17:15:55     15s] @(#)CDS: CTE 21.17-s025_1 () Mar 14 2023 11:00:06 ( )
+[04/04 17:15:55     15s] @(#)CDS: SYNTECH 21.17-s007_1 () Feb 20 2023 06:56:35 ( )
+[04/04 17:15:55     15s] @(#)CDS: CPE v21.17-s068
+[04/04 17:15:55     15s] @(#)CDS: IQuantus/TQuantus 21.1.1-s939 (64bit) Wed Nov 9 09:34:24 PST 2022 (Linux 3.10.0-693.el7.x86_64)
+[04/04 17:15:55     15s] @(#)CDS: OA 22.60-p087 Thu Feb  9 09:35:26 2023
+[04/04 17:15:55     15s] @(#)CDS: SGN 20.10-d001 (01-Jun-2020) (64 bit executable, Qt5.9.0)
+[04/04 17:15:55     15s] @(#)CDS: RCDB 11.15.0
+[04/04 17:15:55     15s] @(#)CDS: STYLUS 21.12-s019_1 (12/20/2022 05:13 PST)
+[04/04 17:15:55     15s] @(#)CDS: SystemPlanner-21.17Rel-10251 (21.17) (2023-02-02 17:22:51+0800)
+[04/04 17:15:55     15s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_1503056_vcl-vm0-175_v72206_YIHE5C.
+
+[04/04 17:15:55     15s] Change the soft stacksize limit to 0.2%RAM (30 mbytes). Set global soft_stack_size_limit to change the value.
+[04/04 17:15:57     17s] 
+[04/04 17:15:57     17s] **INFO:  MMMC transition support version v31-84 
+[04/04 17:15:57     17s] 
+[04/04 17:15:57     17s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[04/04 17:15:57     17s] <CMD> suppressMessage ENCEXT-2799
+[04/04 17:15:57     17s] <CMD> win
+[04/04 17:16:33     18s] invalid command name "958"
+[04/04 17:16:48     19s] invalid command name "958"
+[04/04 17:17:38     21s] invalid command name "958"
+[04/04 17:17:40     21s] <CMD> set init_design_uniquify 1
+[04/04 17:17:40     21s] <CMD> set init_verilog ../run/netlist.v
+[04/04 17:17:40     21s] <CMD> set init_design_netlisttype Verilog
+[04/04 17:17:40     21s] <CMD> set init_design_settop 1
+[04/04 17:17:40     21s] <CMD> set init_top_cell sha256
+[04/04 17:17:40     21s] <CMD> set init_lef_file {../techlef/asap7_tech_4x_201209.lef ../lef/scaled/asap7sc7p5t_28_L_4x_220121a.lef ../lef/scaled/asap7sc7p5t_28_SL_4x_220121a.lef ../lef/scaled/asap7sc7p5t_28_R_4x_220121a.lef}
+[04/04 17:17:40     21s] <CMD> set fp_core_cntl aspect
+[04/04 17:17:40     21s] <CMD> set fp_aspect_ratio 1.0000
+[04/04 17:17:40     21s] <CMD> set extract_shrink_factor 1.0
+[04/04 17:17:40     21s] <CMD> set init_assign_buffer 0
+[04/04 17:17:40     21s] <CMD> set init_pwr_net VDD
+[04/04 17:17:40     21s] <CMD> set init_gnd_net VSS
+[04/04 17:17:40     21s] <CMD> set init_cpf_file {}
+[04/04 17:17:40     21s] <CMD> set init_mmmc_file ../scripts/mips_cpu.mmmc
+[04/04 17:17:40     21s] <CMD> init_design
+[04/04 17:17:40     21s] #% Begin Load MMMC data ... (date=04/04 17:17:40, mem=950.9M)
+[04/04 17:17:40     21s] **ERROR: (TCLCMD-989):	cannot open SDC file '../sdc/mips_cpu.sdc' for mode 'sdc'
+
+[04/04 17:17:48     21s] **INFO (INTERRUPT): The current script will stop before next command.
+[04/04 17:17:48     21s] **INFO (INTERRUPT): One more Ctrl-C to exit Innovus ...
+[04/04 17:17:48     21s] Innovus terminated by user interrupt.
+[04/04 17:17:48     21s] 
+[04/04 17:17:48     21s] *** Memory Usage v#1 (Current mem = 1055.762M, initial mem = 486.906M) ***
+[04/04 17:17:48     21s] 
+[04/04 17:17:48     21s] *** Summary of all messages that are not suppressed in this session:
+[04/04 17:17:48     21s] Severity  ID               Count  Summary                                  
+[04/04 17:17:48     21s] WARNING   IMPOPT-801           1  Genus executable not found in PATH%s. In...
+[04/04 17:17:48     21s] ERROR     TCLCMD-989           1  cannot open SDC file '%s' for mode '%s'  
+[04/04 17:17:48     21s] *** Message Summary: 1 warning(s), 1 error(s)
+[04/04 17:17:48     21s] 
+[04/04 17:17:48     21s] --- Ending "Innovus" (totcpu=0:00:21.8, real=0:02:09, mem=1055.8M) ---

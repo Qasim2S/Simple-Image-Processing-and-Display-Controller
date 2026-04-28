@@ -1,0 +1,51 @@
+xmverilog(64): 24.03-s013: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+TOOL:	xmverilog	24.03-s013: Started on Apr 22, 2026 at 05:33:06 EDT
+ncverilog
+	-f rtl_01.f
+		../00_TESTBED/testbed_temp.v
+		./ipdc.v
+	+notimingchecks
+	+access+r
+	+define+tb2
+xmverilog: *W,NCEXDEP: Executable (ncverilog) is deprecated. Use (xmverilog) instead.
+file: ../00_TESTBED/testbed_temp.v
+        $fscanf(fp, "%b\n", dummy);
+              |
+xmvlog: *W,NOSYST (../00_TESTBED/testbed_temp.v,125|14): System function '$fscanf' invoked as a task. Return value will be ignored.
+	module worklib.testbed:v
+		errors: 0, warnings: 1
+file: ./ipdc.v
+	module worklib.ipdc:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.ipdc:v <0x5c0d1fbc>
+			streams:  38, words: 135092
+		worklib.testbed:v <0x4b570859>
+			streams:  19, words: 15494
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                   Instances  Unique
+		Modules:                   2       2
+		Registers:                89      89
+		Scalar wires:              7       -
+		Vectored wires:           18       -
+		Always blocks:             8       8
+		Initial blocks:           12      12
+		Cont. assignments:        14      19
+		Pseudo assignments:        1       -
+		Process Clocks:            1       1
+		Simulation timescale:  100ps
+	Writing initial simulation snapshot: worklib.testbed:v
+Loading snapshot worklib.testbed:v .................... Done
+xcelium> source /CMC/tools/cadence/XCELIUMMAIN24.03.013_lnx86/tools/xcelium/files/xmsimrc
+xcelium> run
+Golden file has 320 lines
+PASSING
+Simulation complete via $finish(1) at time 6695 NS + 0
+../00_TESTBED/testbed_temp.v:200 	$finish;
+xcelium> exit
+TOOL:	xmverilog	24.03-s013: Exiting on Apr 22, 2026 at 05:33:08 EDT  (total: 00:00:02)

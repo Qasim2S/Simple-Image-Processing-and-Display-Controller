@@ -1,0 +1,32 @@
+ 
+****************************************
+Report : area
+Design : ipdc
+Version: U-2022.12
+Date   : Fri Apr 17 03:20:08 2026
+****************************************
+
+Library(s) Used:
+
+    gtech (File: /CMC/tools/synopsys/syn_vU-2022.12/syn/U-2022.12/libraries/syn/gtech.db)
+
+Number of ports:                        12625
+Number of nets:                         33989
+Number of cells:                        18588
+Number of combinational cells:          10889
+Number of sequential cells:              6547
+Number of macros/black boxes:               0
+Number of buf/inv:                       1618
+Number of references:                      49
+
+Combinational area:                  0.000000
+Buf/Inv area:                        0.000000
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                     0.000000
+Total area:                 undefined
+
+Information: This design contains unmapped logic. (RPT-7)
+1

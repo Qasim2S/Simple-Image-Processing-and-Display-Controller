@@ -1,0 +1,138 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Sat Apr  4 19:35:23 2026                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v21.17-s075_1 (64bit) 03/15/2023 11:17 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 21.17-s075_1 NR230308-2354/21_17-UB (database version 18.20.604) {superthreading v2.17}
+#@(#)CDS: AAE 21.17-s026 (64bit) 03/15/2023 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 21.17-s025_1 () Mar 14 2023 11:00:06 ( )
+#@(#)CDS: SYNTECH 21.17-s007_1 () Feb 20 2023 06:56:35 ( )
+#@(#)CDS: CPE v21.17-s068
+#@(#)CDS: IQuantus/TQuantus 21.1.1-s939 (64bit) Wed Nov 9 09:34:24 PST 2022 (Linux 3.10.0-693.el7.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+win
+set init_design_uniquify 1
+set init_verilog ../outputs/ipdc_syn.v
+set init_design_netlisttype Verilog
+set init_design_settop 1
+set init_top_cell ipdc
+set init_lef_file {../techlef/asap7_tech_4x_201209.lef ../lef/scaled/asap7sc7p5t_28_L_4x_220121a.lef ../lef/scaled/asap7sc7p5t_28_SL_4x_220121a.lef ../lef/scaled/asap7sc7p5t_28_R_4x_220121a.lef}
+set fp_core_cntl aspect
+set fp_aspect_ratio 1.0000
+set extract_shrink_factor 1.0
+set init_assign_buffer 0
+set init_pwr_net VDD
+set init_gnd_net VSS
+set init_cpf_file {}
+set init_mmmc_file ../scripts/ipdc.mmmc
+init_design
+setDesignMode -process 7 -node N7
+setMultiCpuUsage -localCpu 4
+setDesignMode -bottomRoutingLayer 2
+setDesignMode -topRoutingLayer 7
+floorPlan -site asap7sc7p5t -s 178.2 178.2 6.22 6.22 6.22 6.22 -noSnap
+addWellTap -cell TAPCELL_ASAP7_75t_L -cellInterval 12.960 -inRowOffset 1.296
+add_tracks -snap_m1_track_to_cell_pins
+add_tracks -mode replace -offsets {M5 vertical 0}
+deleteAllFPObjects
+addWellTap -cell TAPCELL_ASAP7_75t_L -cellInterval 12.960 -inRowOffset 1.296
+zoomBox -13.04300 -15.41250 427.86050 420.61925
+zoomBox -0.42525 -6.85025 318.12775 308.18275
+zoomBox -14.50500 -29.10875 360.26325 341.51850
+zoomBox -31.06925 -55.17325 409.83450 380.85875
+zoomBox -50.55675 -85.83725 468.15350 427.14150
+zoomBox -44.72500 -60.38900 330.04325 310.23825
+zoomBox -42.55100 -52.10675 276.00200 262.92625
+zoomBox -38.50300 -43.92300 232.26700 223.85500
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Left -layer 3 -spreadType center -spacing 2.016 -pin {  i_clk  i_rst_n  i_op_valid  {i_op_mode[0]}  {i_op_mode[1]}  {i_op_mode[2]}  {i_op_mode[3]}  i_in_valid  {i_in_data[0]}  {i_in_data[1]}  {i_in_data[2]}  {i_in_data[3]}  {i_in_data[4]}  {i_in_data[5]}  {i_in_data[6]}  {i_in_data[7]}  {i_in_data[8]}  {i_in_data[9]}  {i_in_data[10]}  {i_in_data[11]}  {i_in_data[12]}  {i_in_data[13]}  {i_in_data[14]}  {i_in_data[15]}  {i_in_data[16]}  {i_in_data[17]}  {i_in_data[18]}  {i_in_data[19]}  {i_in_data[20]}  {i_in_data[21]}  {i_in_data[22]}  {i_in_data[23]}  }
+editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Right -layer 3 -spreadType center -spacing 2.016 -pin {  o_op_ready  o_in_ready  o_out_valid  {o_out_data[0]}  {o_out_data[1]}  {o_out_data[2]}  {o_out_data[3]}  {o_out_data[4]}  {o_out_data[5]}  {o_out_data[6]}  {o_out_data[7]}  {o_out_data[8]}  {o_out_data[9]}  {o_out_data[10]}  {o_out_data[11]}  {o_out_data[12]}  {o_out_data[13]}  {o_out_data[14]}  {o_out_data[15]}  {o_out_data[16]}  {o_out_data[17]}  {o_out_data[18]}  {o_out_data[19]}  {o_out_data[20]}  {o_out_data[21]}  {o_out_data[22]}  {o_out_data[23]}  }
+editPin -snap TRACK -pin *
+setPinAssignMode -pinEditInBatch false
+legalizePin
+zoomBox -27.84825 -30.77725 167.78325 162.69250
+zoomBox -18.77225 -18.99650 122.57175 120.78575
+zoomBox -63.10650 -74.53350 207.66475 193.24575
+zoomBox -101.82600 -101.90100 216.72850 213.13350
+zoomBox -55.01075 -60.54175 215.76050 207.23750
+saveDesign Floorplan
+globalNetConnect VDD -type pgpin -pin VDD -inst *
+globalNetConnect VSS -type pgpin -pin VSS -inst *
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer Pad -stacked_via_bottom_layer M1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {
+
+standardcell } -skip_via_on_wire_shape { noshape } addRing -nets {VDD VSS} -type core_rings -follow core -layer {top M7 bottom M7 left M6 right M6} -width 2.176 -spacing 0.384 -offset 0.384 -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer Pad -stacked_via_bottom_layer M1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {standardcell } -skip_via_on_wire_shape { noshape }
+addRing -nets {VDD VSS} -type core_rings -follow core -layer {top M7 bottom M7 left M6 right M6} -width 2.176 -spacing 0.384 -offset 0.384 -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+addStripe -skip_via_on_wire_shape blockring -direction horizontal -set_to_set_distance 2.16 -skip_via_on_pin Standardcell -stacked_via_top_layer M1 -layer M2 -width 0.072 -nets VDD -stacked_via_bottom_layer M1 -start_from bottom -snap_wire_center_to_grid None -start_offset -0.044 -stop_offset -0.044
+addStripe -skip_via_on_wire_shape blockring -direction horizontal -set_to_set_distance 2.16 -skip_via_on_pin Standardcell -stacked_via_top_layer M1 -layer M2 -width 0.072 -nets VSS -stacked_via_bottom_layer M1 -start_from bottom -snap_wire_center_to_grid None -start_offset 1.036 -stop_offset -0.044
+addStripe -skip_via_on_wire_shape Noshape -set_to_set_distance 12.960 -skip_via_on_pin Standardcell -stacked_via_top_layer Pad -spacing 0.360 -xleft_offset 0.360 -layer M3 -width 0.936 -nets {VDD VSS} -stacked_via_bottom_layer M2 -start_from left
+addStripe -skip_via_on_wire_shape Noshape -direction horizontal -set_to_set_distance 21.6 -skip_via_on_pin Standardcell -stacked_via_top_layer M7 -spacing 0.864 -layer M4 -width 0.864 -nets {VDD VSS} -stacked_via_bottom_layer M3 -start_from bottom
+setSrouteMode -reset
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { corePin } -layerChangeRange { M1(1) M7(1) } -blockPinTarget { nearestTarget } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -deleteExistingRoutes -allowJogging 0 -crossoverViaLayerRange { M1(1) Pad(10) } -nets { VDD VSS } -allowLayerChange 0 -targetViaLayerRange { M1 (1) Pad(10) }
+editPowerVia -add_vias 1 -orthogonal_only 0
+verify_drc
+setOptMode -holdTargetSlack 0.020
+setOptMode -setupTargetSlack 0.020
+colorizePowerMesh
+zoomBox -26.51250 -32.64200 203.64325 194.97050
+zoomBox -55.08550 -60.39225 215.68575 207.38700
+saveDesign Powerplan
+zoomBox -32.79575 -38.40150 197.36000 189.21100
+zoomBox 27.03500 18.50025 147.17825 137.31600
+zoomBox 36.79250 27.32850 138.91425 128.32175
+zoomBox -110.83100 -104.79550 263.94150 265.83575
+zoomBox -75.73500 -71.14900 242.82175 243.88775
+zoomBox -45.90325 -42.54925 224.87000 225.23200
+place_opt_design
+setDrawView fplan
+setDrawView place
+setDrawView ameba
+setDrawView fplan
+getIoFlowFlag
+setIoFlowFlag 0
+floorPlan -site asap7sc7p5t -r 1.0 0.7 6.22 6.22 6.22 6.22
+uiSetTool select
+getIoFlowFlag
+fit
+zoomBox -91.71275 25.88500 620.18425 547.74975
+zoomBox -51.05350 71.60850 554.05875 515.19350
+zoomBox -16.49325 110.47350 497.85225 487.52075
+zoomBox -431.55550 -356.28675 1172.88150 819.86550
+zoomBox -539.36200 -477.52125 1348.21100 906.18750
+zoomBox -431.55550 -356.28675 1172.88150 819.86550
+zoomBox -339.92000 -253.23750 1023.85150 746.49200
+getIoFlowFlag
+zoomBox -554.17100 -342.59025 1050.26600 833.56200
+zoomBox -805.08000 -447.71125 1082.49275 935.99725
+zoomBox -1098.91300 -571.83425 1121.76075 1056.05800
+zoomBox -557.82700 -342.20675 1046.61000 833.94550
+zoomBox -452.16900 -232.63550 911.60250 767.09400
+zoomBox -362.35975 -139.50000 796.84625 710.27025
+zoomBox -286.02200 -60.33475 699.30325 661.97000
+zoomBox -418.43550 -100.86000 740.77075 748.91050
+zoomBox -757.48750 -204.62675 846.95050 971.52625
+zoomBox -548.78025 -168.42925 814.99225 831.30100
+getIoFlowFlag
+getIoFlowFlag
+setIoFlowFlag 0
+floorPlan -site asap7sc7p5t -r 0.999340369393 1 6.336 6.336 6.336 6.408
+uiSetTool select
+getIoFlowFlag
+fit
+zoomBox -68.60775 6.72550 529.04750 444.84400
+zoomBox 36.38975 72.66150 403.42500 341.72125
+zoomBox -317.77000 -149.74275 827.15175 689.55625
+zoomBox -409.75800 -207.50900 937.20875 779.90150
+zoomBox -321.32900 -155.76575 823.59275 683.53325
+zoomBox -246.16450 -114.11125 727.01900 599.29300
+zoomBox -182.27450 -78.70475 644.93150 527.68875
+zoomBox -111.99550 -33.98175 591.12950 481.45275
+zoomBox -182.27450 -78.70475 644.93150 527.68875
+zoomBox -264.95550 -131.32000 708.22800 582.08425
+zoomBox -182.27450 -78.70475 644.93150 527.68875

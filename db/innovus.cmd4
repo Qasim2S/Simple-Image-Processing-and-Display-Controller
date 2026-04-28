@@ -1,0 +1,218 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Tue Mar 24 10:49:03 2026                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v21.17-s075_1 (64bit) 03/15/2023 11:17 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 21.17-s075_1 NR230308-2354/21_17-UB (database version 18.20.604) {superthreading v2.17}
+#@(#)CDS: AAE 21.17-s026 (64bit) 03/15/2023 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 21.17-s025_1 () Mar 14 2023 11:00:06 ( )
+#@(#)CDS: SYNTECH 21.17-s007_1 () Feb 20 2023 06:56:35 ( )
+#@(#)CDS: CPE v21.17-s068
+#@(#)CDS: IQuantus/TQuantus 21.1.1-s939 (64bit) Wed Nov 9 09:34:24 PST 2022 (Linux 3.10.0-693.el7.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+win
+set init_design_uniquify 1
+set init_verilog ../run/netlist.v
+set init_design_netlisttype Verilog
+set init_design_settop 1
+set init_top_cell sha256
+set init_lef_file {../techlef/asap7_tech_4x_201209.lef ../lef/scaled/asap7sc7p5t_28_L_4x_220121a.lef ../lef/scaled/asap7sc7p5t_28_SL_4x_220121a.lef ../lef/scaled/asap7sc7p5t_28_R_4x_220121a.lef}
+set fp_core_cntl aspect
+set fp_aspect_ratio 1.0000
+set extract_shrink_factor 1.0
+set init_assign_buffer 0
+set init_pwr_net VDD
+set init_gnd_net VSS
+set init_cpf_file {}
+set init_mmmc_file ../scripts/sha256.mmmc
+init_design
+zoomBox -3.61125 -4.22475 100.48325 98.71950
+gui_select -rect {-3.03625 -2.30775 2.13975 4.78525}
+zoomBox -17.15925 -14.97500 126.91650 127.50875
+zoomBox -25.77500 -21.81125 143.72600 145.81675
+zoomBox -47.83550 -39.31600 186.76800 192.69525
+zoomBox -33.02875 -25.10300 89.43600 96.00850
+deselectAll
+zoomBox -6.74000 -6.44425 26.63100 26.55800
+zoomBox -5.18825 -4.82425 18.92250 19.02000
+zoomBox -3.03300 -2.73525 7.66525 7.84475
+zoomBox -1.79750 -1.70450 1.63250 1.68750
+zoomBox -1.10925 -1.10775 -0.00950 -0.02025
+zoomBox -1.91375 -1.71975 0.19325 0.36400
+zoomBox -0.76975 -0.71200 0.16500 0.21250
+zoomBox -0.40375 -0.28475 -0.05075 0.06425
+zoomBox -0.65700 -0.53450 0.01950 0.13450
+zoomBox -0.56175 -0.45150 0.01325 0.11725
+zoomBox -0.41075 -0.32075 0.00500 0.09050
+zoomBox -0.35175 -0.26950 0.00175 0.08000
+zoomBox -0.25875 -0.18925 -0.00325 0.06350
+zoomBox -0.64475 -0.60275 0.15325 0.18650
+zoomBox -2.16025 -2.22825 0.77000 0.66950
+zoomBox -9.07125 -9.64075 3.58125 2.87200
+zoomBox -23.92550 -25.57225 9.62275 7.60525
+zoomBox -63.31075 -67.81450 25.64200 20.15525
+zoomBox -142.58925 -152.84425 57.88775 45.41750
+gui_select -rect {2.87650 -12.91650 -25.92125 -49.09825}
+zoomBox -479.95200 -481.08450 145.41225 137.36975
+zoomBox -1262.79225 -1270.07275 395.34225 369.73975
+zoomBox -705.44275 -722.15025 312.85950 284.90000
+zoomBox -291.30875 -308.91300 240.25150 216.77375
+zoomBox -110.51550 -117.39650 215.92925 205.44125
+zoomBox -67.32050 -71.67625 210.15775 202.73600
+zoomBox -30.60475 -32.81400 205.25200 200.43650
+setDesignMode -process 7 -node N7
+setMultiCpuUsage -localCpu 4
+setDesignMode -bottomRoutingLayer 2
+setDesignMode -topRoutingLayer 7
+uiSetTool addLineShape
+::uiSetTool getLocation {guiAddShape::fillPointAndShowTextForm guiAddText startX startY}
+uiSetTool addLineShape
+floorPlan -site asap7sc7p5t -s 178.2 178.2 6.22 6.22
+floorPlan -site asap7sc7p5t -s 178.2 178.2 6.22 6.22 6.22 6.22 -noSnap
+addWellTap -cell TAPCELL_ASAP7_75t_L -cellInterval 12.960 -inRowOffset 1.296
+add_tracks -snap_m1_track_to_cell_pins
+add_tracks -mode replace -offsets {M5 vertical 0}
+deleteAllFPObjects
+addWellTap -cell TAPCELL_ASAP7_75t_L -cellInterval 12.960 -inRowOffset 1.296
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Left -layer 3
+editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Right -layer 3
+editPin -snap TRACK -pin *
+setPinAssignMode -pinEditInBatch false
+legalizePin
+::uiSetTool getLocation {guiAddShape::fillPointAndShowTextForm guiAddText startX startY}
+uiSetTool addLineShape
+zoomBox 1.21600 -26.06425 171.62275 142.45950
+zoomBox 33.18550 -19.28325 137.83675 84.21175
+zoomBox 52.76075 -13.41625 117.03000 50.14275
+zoomBox -36.03700 -65.24225 199.82350 168.01200
+zoomBox -82.91725 -92.93650 243.53350 229.90700
+zoomBox -112.72950 -110.54800 271.33000 269.26775
+zoomBox -71.88350 -75.43100 254.56725 247.41250
+zoomBox -42.12425 -42.96650 235.35900 231.45075
+zoomBox -32.08275 -36.98750 203.77800 196.26700
+zoomSelected
+zoomSelected
+zoomSelected
+zoomSelected
+zoomSelected
+zoomSelected
+zoomSelected
+zoomSelected
+panCenter 4.40400 136.75875
+zoomBox -34.95350 108.27475 40.65850 183.05125
+zoomBox -29.35600 113.76800 34.91450 177.32825
+uiSetTool select
+gui_select -rect {2.12825 148.92150 4.85050 139.80750}
+selectObject Unknown {}
+deleteSelectedFromFPlan
+zoomBox -48.99025 96.46025 55.66400 199.95800
+zoomBox -95.32150 55.17350 105.16275 253.44250
+zoomBox -155.17525 -0.04025 171.28000 322.80775
+zoomBox -346.91200 -181.04050 388.83650 546.57825
+zoomBox -222.45475 -130.65625 309.12375 395.04850
+zoomBox -173.84900 -110.97900 277.99275 335.87000
+zoomBox -91.00700 -63.77825 186.48050 210.64300
+zoomBox -215.29700 -110.05575 236.54550 336.79400
+zoomBox -106.99850 -71.49325 219.45800 251.35600
+saveDesign ../outputs/floorplan2
+zoomBox -77.14875 -62.11450 200.33950 212.30750
+zoomBox -51.39300 -54.06600 184.47200 179.19275
+zoomBox -77.99200 -63.03450 199.49625 211.38750
+zoomBox -37.82525 -50.54000 198.03975 182.71875
+zoomBox -3.68350 -39.91950 196.80175 158.35050
+zoomBox -37.76025 -50.34450 198.10475 182.91425
+zoomBox -125.01550 -76.87150 201.44125 245.97800
+globalNetConnect VDD -type pgpin -pin VDD -inst *
+globalNetConnect VSS -type pgpin -pin VSS -inst *
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0
+addRing -nets {VDD VSS} -type core_rings -follow core -layer {top M7 bottom M7 left M6
+right M6} -width 2.176 -spacing 0.384 -offset 0.384
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer Pad -stacked_via_bottom_layer M1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin { standardcell } -skip_via_on_wire_shape { noshape }
+addRing -nets {VDD VSS} -type core_rings -follow core -layer {top M7 bottom M7 left M6 right M6} -width 2.176 -spacing 0.384 -offset 0.384 -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+zoomBox -76.94875 -50.08750 200.53950 224.33450
+zoomBox -35.78550 -27.16800 200.07950 206.09075
+addStripe -skip_via_on_wire_shape blockring -direction horizontal -set_to_set_distance 2.16 -skip_via_on_pin Standardcell -stacked_via_top_layer M1 -layer M2 -width 0.072 -nets VDD -stacked_via_bottom_layer M1 -start_from bottom -snap_wire_center_to_grid None -start_offset -0.044 -stop_offset -0.044
+addStripe -skip_via_on_wire_shape blockring -direction horizontal -set_to_set_distance 2.16 -skip_via_on_pin Standardcell -stacked_via_top_layer M1 -layer M2 -width 0.072 -nets VSS -stacked_via_bottom_layer M1 -start_from bottom -snap_wire_center_to_grid None -start_offset 1.036 -stop_offset -0.044
+addStripe -skip_via_on_wire_shape Noshape -set_to_set_distance 12.96 -skip_via_on_pin Standardcell -stacked_via_top_layer Pad -spacing 0.360 -xleft_offset 0.360 -layer M3 -width 0.936 -nets {VDD VSS}
+addStripe -skip_via_on_wire_shape Noshape -direction horizontal -set_to_set_distance 21.6 -skip_via_on_pin Standardcell -stacked_via_top_layer M7 -spacing 0.864 -layer M4 -width 0.864 -nets {VDD VSS} -stacked_via_bottom_layer M3 -start_from bottom
+zoomBox -0.86175 -14.20200 199.62350 184.06800
+zoomBox -35.13375 -27.23325 200.73125 206.02550
+setSrouteMode -reset
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { corePin } -layerChangeRange { M1(1) M7(1) } -blockPinTarget {
+nearestTarget } -floatingStripeTarget { blockring padring ring stripe ringpin
+blockpin followpin } -deleteExistingRoutes -allowJogging 0 -crossoverViaLayerRange
+editPowerVia -add_vias 1 -orthogonal_only 0
+verify_drc
+setOptMode -holdTargetSlack 0.020
+setOptMode -setupTargetSlack 0.020
+colorizePowerMesh
+zoomBox 73.35650 67.45900 162.31300 155.43250
+zoomBox 117.44750 106.14450 145.96500 134.34700
+zoomBox 130.64500 115.09375 141.40050 125.73050
+zoomBox 125.65425 112.33625 143.16775 129.65625
+zoomBox 104.29425 100.56400 150.73125 146.48800
+zoomBox 82.85375 88.58075 158.46925 163.36075
+zoomBox 21.91000 21.37850 222.40250 219.65550
+zoomBox 98.95850 72.05025 203.61700 175.55225
+zoomBox 148.28000 104.64525 194.71775 150.57000
+zoomBox 123.49225 88.67025 199.10900 163.45150
+zoomBox 130.07200 95.91850 194.34650 159.48275
+zoomBox 154.48425 118.21125 175.08950 138.58875
+zoomBox 158.99450 122.17950 171.64850 134.69375
+zoomBox 154.48425 118.21100 175.08975 138.58875
+zoomBox 152.42175 116.39600 176.66350 140.37000
+zoomBox 135.18200 101.22725 189.81725 155.25875
+zoomBox 32.37225 10.76825 268.25900 244.04850
+zoomBox -51.42550 -63.74900 332.67675 316.10900
+zoomBox -250.27900 -240.57975 485.54100 487.10975
+zoomBox -139.43025 -101.83950 244.67275 278.01925
+zoomBox -98.68575 -79.34525 227.80200 243.53500
+zoomBox -64.05300 -60.22500 213.46175 214.22325
+zoomBox -34.61500 -44.04950 201.27250 189.23150
+setSrouteMode -reset
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { corePin } -layerChangeRange { M1(1) M7(1) } -blockPinTarget { nearestTarget } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -deleteExistingRoutes -allowJogging 0 -crossoverViaLayerRange { M1(1) Pad(10) } -nets { VDD VSS } -allowLayerChange 0 -targetViaLayerRange { M1 (1) Pad(10) }
+editPowerVia -add_vias 1 -orthogonal_only 0
+verify_drc
+setOptMode -holdTargetSlack 0.020
+setOptMode -setupTargetSlack 0.020
+colorizePowerMesh
+zoomBox 34.44625 -11.00500 157.58100 110.76925
+zoomBox 64.11025 -2.86700 139.73025 71.91750
+zoomBox 55.60700 -4.19400 144.57175 83.78775
+zoomBox 45.63200 -5.78425 150.29650 97.72375
+zoomBox 99.73125 -2.27850 128.25150 25.92650
+zoomBox 96.40375 -3.05725 129.95700 30.12525
+zoomBox 92.48900 -3.97325 131.96350 35.06500
+zoomBox 87.88350 -5.05075 134.32400 40.87650
+zoomBox 82.46525 -6.31850 137.10100 47.71350
+zoomBox 68.63000 -9.60350 144.25050 65.18150
+zoomBox 59.90550 -11.71700 148.87075 76.26525
+zoomBox 49.69925 -14.26125 154.36425 89.24725
+zoomBox 39.56275 -15.55375 162.69800 106.22100
+zoomBox 27.63725 -17.07450 172.50250 126.19000
+zoomBox 13.60725 -18.86350 184.03700 149.68300
+zoomBox -22.25200 -23.57500 213.63725 209.70775
+zoomBox -71.55050 -30.67300 254.94000 292.20975
+zoomBox 5.47375 -19.94925 175.90400 148.59775
+zoomBox 28.81600 -16.72675 151.95200 105.04875
+zoomBox 69.18275 -8.56125 108.65750 30.47725
+zoomBox 51.14250 -13.35450 126.76400 61.43150
+zoomBox 16.58325 -22.53625 161.45050 120.73025
+zoomBox 69.18250 -7.78525 108.65750 31.25350
+zoomBox 80.66325 0.68800 93.31825 13.20325
+zoomBox 84.01650 3.03950 88.78950 7.75975
+zoomBox 84.31750 4.25550 85.61850 5.54200
+zoomBox 83.82675 3.42800 87.27675 6.84000
+zoomBox 81.65475 -0.05100 94.31675 12.47100
+zoomBox 76.72475 -7.94600 110.29850 25.25675
+zoomBox 71.75175 -15.91050 126.42125 38.15500
+zoomBox 59.95100 -34.16450 164.68100 69.40825
+zoomBox 37.34450 -68.95700 237.97450 129.45600

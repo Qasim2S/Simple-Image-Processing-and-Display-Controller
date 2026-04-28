@@ -1,0 +1,76 @@
+verdiSetActWin -win $_nWave1
+wvResizeWindow -win $_nWave1 44 229 1201 491
+wvResizeWindow -win $_nWave1 3 45 1242 675
+wvConvertFile -win $_nWave1 -o \
+           "/home/v72206/MiniProject_03/MiniProject_03/01_RTL/ipdc.vcd.fsdb" \
+           "/home/v72206/MiniProject_03/MiniProject_03/01_RTL/ipdc.vcd"
+wvSetPosition -win $_nWave1 {("G1" 0)}
+wvOpenFile -win $_nWave1 \
+           {/home/v72206/MiniProject_03/MiniProject_03/01_RTL/ipdc.vcd.fsdb}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/testbed"
+wvGetSignalSetScope -win $_nWave1 "/testbed/u_ipdc"
+wvSetPosition -win $_nWave1 {("G1" 16)}
+wvSetPosition -win $_nWave1 {("G1" 16)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/testbed/u_ipdc/\\blue\[0\] \[7:0\]} \
+{/testbed/u_ipdc/\\blue\[1\] \[7:0\]} \
+{/testbed/u_ipdc/\\blue\[2\] \[7:0\]} \
+{/testbed/u_ipdc/\\blue\[3\] \[7:0\]} \
+{/testbed/u_ipdc/\\blue\[4\] \[7:0\]} \
+{/testbed/u_ipdc/\\blue\[5\] \[7:0\]} \
+{/testbed/u_ipdc/\\blue\[6\] \[7:0\]} \
+{/testbed/u_ipdc/\\blue\[7\] \[7:0\]} \
+{/testbed/u_ipdc/\\blue\[8\] \[7:0\]} \
+{/testbed/u_ipdc/\\blue\[9\] \[7:0\]} \
+{/testbed/u_ipdc/\\blue\[10\] \[7:0\]} \
+{/testbed/u_ipdc/\\blue\[11\] \[7:0\]} \
+{/testbed/u_ipdc/\\blue\[12\] \[7:0\]} \
+{/testbed/u_ipdc/\\blue\[13\] \[7:0\]} \
+{/testbed/u_ipdc/\\red\[254\] \[7:0\]} \
+{/testbed/u_ipdc/\\red\[255\] \[7:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 )} \
+           
+wvSetPosition -win $_nWave1 {("G1" 16)}
+wvSetPosition -win $_nWave1 {("G1" 16)}
+wvSetPosition -win $_nWave1 {("G1" 16)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/testbed/u_ipdc/\\blue\[0\] \[7:0\]} \
+{/testbed/u_ipdc/\\blue\[1\] \[7:0\]} \
+{/testbed/u_ipdc/\\blue\[2\] \[7:0\]} \
+{/testbed/u_ipdc/\\blue\[3\] \[7:0\]} \
+{/testbed/u_ipdc/\\blue\[4\] \[7:0\]} \
+{/testbed/u_ipdc/\\blue\[5\] \[7:0\]} \
+{/testbed/u_ipdc/\\blue\[6\] \[7:0\]} \
+{/testbed/u_ipdc/\\blue\[7\] \[7:0\]} \
+{/testbed/u_ipdc/\\blue\[8\] \[7:0\]} \
+{/testbed/u_ipdc/\\blue\[9\] \[7:0\]} \
+{/testbed/u_ipdc/\\blue\[10\] \[7:0\]} \
+{/testbed/u_ipdc/\\blue\[11\] \[7:0\]} \
+{/testbed/u_ipdc/\\blue\[12\] \[7:0\]} \
+{/testbed/u_ipdc/\\blue\[13\] \[7:0\]} \
+{/testbed/u_ipdc/\\red\[254\] \[7:0\]} \
+{/testbed/u_ipdc/\\red\[255\] \[7:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 )} \
+           
+wvSetPosition -win $_nWave1 {("G1" 16)}
+wvGetSignalClose -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "G1" 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 )} \
+           
+wvSetRadix -win $_nWave1 -format Bin
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvConvertFile -win $_nWave1 -o \
+           "/home/v72206/MiniProject_03/MiniProject_03/01_RTL/ipdc.vcd.fsdb" \
+           "/home/v72206/MiniProject_03/MiniProject_03/01_RTL/ipdc.vcd"
+wvReloadFile -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "G1" 16 )} 
+wvResizeWindow -win $_nWave1 3 45 1242 675

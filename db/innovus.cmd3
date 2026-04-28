@@ -1,0 +1,118 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Sun Mar 22 21:50:46 2026                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v21.17-s075_1 (64bit) 03/15/2023 11:17 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 21.17-s075_1 NR230308-2354/21_17-UB (database version 18.20.604) {superthreading v2.17}
+#@(#)CDS: AAE 21.17-s026 (64bit) 03/15/2023 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 21.17-s025_1 () Mar 14 2023 11:00:06 ( )
+#@(#)CDS: SYNTECH 21.17-s007_1 () Feb 20 2023 06:56:35 ( )
+#@(#)CDS: CPE v21.17-s068
+#@(#)CDS: IQuantus/TQuantus 21.1.1-s939 (64bit) Wed Nov 9 09:34:24 PST 2022 (Linux 3.10.0-693.el7.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+win
+set init_design_uniquify 1
+set init_verilog ../run/netlist.v
+set init_design_netlisttype Verilog
+set init_design_settop 1
+set init_top_cell sha256
+set init_lef_file {../techlef/asap7_tech_4x_201209.lef ../lef/scaled/asap7sc7p5t_28_L_4x_220121a.lef ../lef/scaled/asap7sc7p5t_28_SL_4x_220121a.lef ../lef/scaled/asap7sc7p5t_28_R_4x_220121a.lef}
+set fp_core_cntl aspect
+set fp_aspect_ratio 1.0000
+set extract_shrink_factor 1.0
+set init_assign_buffer 0
+set init_pwr_net VDD
+set init_gnd_net VSS
+set init_cpf_file {}
+set init_mmmc_file ../scripts/sha256.mmmc
+init_design
+setDesignMode -process 7 -node N7
+setMultiCpuUsage -localCpu 4
+setDesignMode -bottomRoutingLayer 2
+setDesignMode -topRoutingLayer 7
+floorPlan -site asap7sc7p5t -s 178.2 178.2 6.22 6.22
+floorPlan -site asap7sc7p5t -s 178.2 178.2 6.22 6.22 6.22 6.22 -noSnap
+addWellTap -cell TAPCELL_ASAP7_75t_L -cellInterval 12.960 -inRowOffset 1.296
+add_tracks -snap_m1_track_to_cell_pins
+add_tracks -mode replace -offsets {M5 vertical 0}
+deleteAllFPObjects
+addWellTap -cell TAPCELL_ASAP7_75t_L -cellInterval 12.960 -inRowOffset 1.296
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Left -layer 3
+editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Right -layer 3
+editPin -snap TRACK -pin *
+setPinAssignMode -pinEditInBatch false
+legalizePin
+saveDesign ../outputs/floorplan
+globalNetConnect VDD -type pgpin -pin VDD -inst *
+globalNetConnect VSS -type pgpin -pin VSS -inst *
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0
+addRing -nets {VDD VSS} -type core_rings -follow core -layer {top M7 bottom M7 left M6
+right M6} -width 2.176 -spacing 0.384 -offset 0.384
+zoomBox -18.93050 -24.32350 215.67150 207.68625
+zoomBox -9.40400 -8.96425 190.00775 188.24400
+zoomBox -1.30625 4.09125 168.19375 171.71825
+zoomBox -9.40400 -8.96425 190.00775 188.24400
+zoomBox -18.93075 -24.32375 215.67150 207.68625
+addStripe -skip_via_on_wire_shape blockring -direction horizontal -set_to_set_distance 2.16 -skip_via_on_pin Standardcell -stacked_via_top_layer M1 -layer M2 -width 0.072 -nets VDD -stacked_via_bottom_layer M1 -start_from bottom -snap_wire_center_to_grid None -start_offset -0.044 -stop_offset -0.044
+addStripe -skip_via_on_wire_shape blockring -direction horizontal -set_to_set_distance 2.16 -skip_via_on_pin Standardcell -stacked_via_top_layer M1 -layer M2 -width 0.072 -nets VSS -stacked_via_bottom_layer M1 -start_from bottom -snap_wire_center_to_grid None -start_offset 1.036 -stop_offset -0.044
+addStripe -skip_via_on_wire_shape Noshape -set_to_set_distance 12.960 -skip_via_on_pin Standardcell -stacked_via_top_layer Pad -spacing 0.360 -xleft_offset 0.360 -layer M3 -width 0.936 -nets {VDD VSS} -stacked_via_bottom_layer M2 -start_from left
+addStripe -skip_via_on_wire_shape Noshape -direction horizontal -set_to_set_distance 21.6 -skip_via_on_pin Standardcell -stacked_via_top_layer M7 -spacing 0.864 -layer M4 -width 0.864 -nets {VDD VSS} -stacked_via_bottom_layer M3 -start_from bottom
+setSrouteMode -reset
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { corePin } -layerChangeRange { M1(1) M7(1) } -blockPinTarget {
+nearestTarget } -floatingStripeTarget { blockring padring ring stripe ringpin
+blockpin followpin } -deleteExistingRoutes -allowJogging 0 -crossoverViaLayerRange
+editPowerVia -add_vias 1 -orthogonal_only 0
+verify_drc
+setOptMode -holdTargetSlack 0.020
+setOptMode -setupTargetSlack 0.020
+colorizePowerMesh
+saveDesign ../outputs/powerplan
+zoomBox -9.01525 -12.59375 190.39675 184.61475
+zoomBox -18.99550 -24.19425 215.60675 207.81575
+zoomBox -1.75675 -9.93675 197.65525 187.27175
+zoomBox 12.89625 2.18225 182.39650 169.80950
+zoomBox -1.75675 -9.93700 197.65550 187.27175
+zoomBox -18.99550 -24.19475 215.60725 207.81575
+encMessage warning 0
+encMessage debug 0
+is_common_ui_mode
+restoreDesign /home/v72206/asap7_reference_design/outputs/floorplan.dat sha256
+encMessage warning 1
+encMessage debug 0
+zoomBox 23.60200 -3.00925 193.10275 164.61850
+zoomBox 40.87975 4.52925 184.95550 147.01300
+zoomBox 68.44500 15.87400 172.54000 118.81875
+gui_select -rect {149.91900 27.18450 146.46825 58.04875}
+zoomBox -6.86175 -8.95100 192.55200 188.25925
+zoomBox -67.23225 -28.83950 208.77300 244.11600
+zoomBox 68.08675 -11.22900 143.29575 63.14900
+zoomBox 82.26925 -8.76925 136.60800 44.96900
+zoomBox 92.51625 -6.96450 131.77625 31.86175
+zoomBox 102.81100 -5.15100 126.92175 18.69325
+zoomBox 100.06850 -6.22450 128.43400 21.82750
+zoomBox 69.87350 -18.04425 145.08475 56.33600
+zoomBox 96.77075 -7.20925 130.14275 25.79400
+zoomBox 100.26450 -5.97400 128.63075 22.07875
+zoomBox 103.29675 -4.96325 127.40825 18.88175
+zoomBox 96.06125 -23.89375 150.40250 29.84700
+zoomBox 93.34150 -29.73950 157.27250 33.48500
+zoomBox 90.12100 -36.61700 165.33400 37.76500
+encMessage warning 0
+encMessage debug 0
+is_common_ui_mode
+restoreDesign /home/v72206/asap7_reference_design/outputs/floorplan.dat sha256
+encMessage warning 1
+encMessage debug 0
+encMessage warning 0
+encMessage debug 0
+is_common_ui_mode
+restoreDesign /home/v72206/asap7_reference_design/outputs/powerplan.dat sha256
+encMessage warning 1
+encMessage debug 0

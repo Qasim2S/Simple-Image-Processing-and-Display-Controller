@@ -1,0 +1,1303 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v21.17-s075_1, built Wed Mar 15 11:17:40 PDT 2023
+Options:	
+Date:		Sat Apr  4 21:01:10 2026
+Host:		vcl-vm0-175 (x86_64 w/Linux 4.18.0-553.27.1.el8_10.x86_64) (1core*4cpus*Intel(R) Xeon(R) Gold 6248R CPU @ 3.00GHz 36608KB)
+OS:		Rocky Linux 8.10 (Green Obsidian)
+
+License:
+		[21:01:10.078633] Configured Lic search path (21.01-s002): 6055@licaccess.cmc.ca
+
+		invs	Innovus Implementation System	21.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+**WARN: (IMPOPT-801):	Genus executable not found in PATH. Install Genus, add the path to the genus executable in the PATH variable and rerun Innovus.
+Change the soft stacksize limit to 0.2%RAM (30 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> win
+<CMD> set init_design_uniquify 1
+<CMD> set init_verilog ../outputs/ipdc_syn.v
+<CMD> set init_design_netlisttype Verilog
+<CMD> set init_design_settop 1
+<CMD> set init_top_cell ipdc
+<CMD> set init_lef_file {../techlef/asap7_tech_4x_201209.lef ../lef/scaled/asap7sc7p5t_28_L_4x_220121a.lef ../lef/scaled/asap7sc7p5t_28_SL_4x_220121a.lef ../lef/scaled/asap7sc7p5t_28_R_4x_220121a.lef}
+<CMD> set fp_core_cntl aspect
+<CMD> set fp_aspect_ratio 1.0000
+<CMD> set extract_shrink_factor 1.0
+<CMD> set init_assign_buffer 0
+<CMD> set init_pwr_net VDD
+<CMD> set init_gnd_net VSS
+<CMD> set init_cpf_file {}
+<CMD> set init_mmmc_file ../scripts/ipdc.mmmc
+<CMD> init_design
+#% Begin Load MMMC data ... (date=04/04 21:02:04, mem=984.1M)
+#% End Load MMMC data ... (date=04/04 21:02:04, total cpu=0:00:00.0, real=0:00:00.0, peak res=985.4M, current mem=985.4M)
+rc_typ_25
+
+Loading LEF file ../techlef/asap7_tech_4x_201209.lef ...
+
+Loading LEF file ../lef/scaled/asap7sc7p5t_28_L_4x_220121a.lef ...
+Set DBUPerIGU to M1 pitch 576.
+
+Loading LEF file ../lef/scaled/asap7sc7p5t_28_SL_4x_220121a.lef ...
+
+Loading LEF file ../lef/scaled/asap7sc7p5t_28_R_4x_220121a.lef ...
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+Loading view definition file from ../scripts/ipdc.mmmc
+Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_AO_LVT_TT_nldm_211120.lib' ...
+Read 42 cells in library 'asap7sc7p5t_AO_LVT_TT_nldm_211120' 
+Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_INVBUF_LVT_TT_nldm_220122.lib' ...
+Read 37 cells in library 'asap7sc7p5t_INVBUF_LVT_TT_nldm_211120' 
+Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_OA_LVT_TT_nldm_211120.lib' ...
+Read 34 cells in library 'asap7sc7p5t_OA_LVT_TT_nldm_211120' 
+Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SEQ_LVT_TT_nldm_220123.lib' ...
+Read 33 cells in library 'asap7sc7p5t_SEQ_LVT_TT_nldm_220123' 
+Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib' ...
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib, Line 11387)
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib, Line 14287)
+Read 56 cells in library 'asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120' 
+Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_AO_SLVT_TT_nldm_211120.lib' ...
+Read 42 cells in library 'asap7sc7p5t_AO_SLVT_TT_nldm_211120' 
+Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_INVBUF_SLVT_TT_nldm_220122.lib' ...
+Read 37 cells in library 'asap7sc7p5t_INVBUF_SLVT_TT_nldm_211120' 
+Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_OA_SLVT_TT_nldm_211120.lib' ...
+Read 34 cells in library 'asap7sc7p5t_OA_SLVT_TT_nldm_211120' 
+Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SEQ_SLVT_TT_nldm_220123.lib' ...
+Read 33 cells in library 'asap7sc7p5t_SEQ_SLVT_TT_nldm_220123' 
+Reading tc timing library '/home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib' ...
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib, Line 11387)
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/v72206/MiniProject_03/MiniProject_03/lib/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib, Line 14287)
+Read 56 cells in library 'asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120' 
+*** End library_loading (cpu=0.07min, real=0.07min, mem=82.0M, fe_cpu=0.37min, fe_real=0.97min, fe_mem=1144.3M) ***
+#% Begin Load netlist data ... (date=04/04 21:02:08, mem=1018.5M)
+*** Begin netlist parsing (mem=1144.3M) ***
+Created 404 new cells from 10 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '../outputs/ipdc_syn.v'
+
+*** Memory Usage v#1 (Current mem = 1208.258M, initial mem = 494.906M) ***
+*** End netlist parsing (cpu=0:00:01.0, real=0:00:01.0, mem=1208.3M) ***
+#% End Load netlist data ... (date=04/04 21:02:09, total cpu=0:00:01.0, real=0:00:01.0, peak res=1119.6M, current mem=1119.6M)
+Set top cell to ipdc.
+Hooked 404 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell ipdc ...
+*** Netlist is unique.
+Set DBUPerIGU to techSite asap7sc7p5t width 864.
+** info: there are 645 modules.
+** info: there are 138258 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 1333.672M, initial mem = 494.906M) ***
+Start create_tracks
+Extraction setup Started 
+Initializing multi-corner RC extraction with 1 active RC Corners ...
+Captable file(s) not specified in multi-corner setup. PreRoute extraction will use technology file. For postRoute extraction, default value for effort level would be 'medium' and effort level 'low' would not be allowed.
+Generating auto layer map file.
+Importing multi-corner technology file(s) for preRoute extraction...
+../qrc/qrcTechFile_typ03_scaled4xV06
+Generating auto layer map file.
+Completed (cpu: 0:00:02.7 real: 0:00:03.0)
+Set Shrink Factor to 1.00000
+Summary of Active RC-Corners : 
+ 
+ Analysis View: view_tc
+    RC-Corner Name        : rc_typ_25
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+    RC-Corner Technology file: '../qrc/qrcTechFile_typ03_scaled4xV06'
+Updating RC grid for preRoute extraction ...
+Initializing multi-corner resistance tables ...
+Default value for postRoute extraction mode's effortLevel (-effortLevel option of setExtractRCMode) changed to 'medium'.
+*Info: initialize multi-corner CTS.
+Reading timing constraints file '../sdc/ipdc.sdc' ...
+Current (total cpu=0:00:27.8, real=0:01:04, peak res=1528.9M, current mem=1528.9M)
+**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ../sdc/ipdc.sdc, Line 8).
+
+**WARN: (TCLNL-330):	set_input_delay on clock root 'i_clk' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File ../sdc/ipdc.sdc, Line 12).
+
+INFO (CTE): Reading of timing constraints file ../sdc/ipdc.sdc completed, with 2 WARNING
+WARNING (CTE-25): Line: 9 of File ../sdc/ipdc.sdc : Skipped unsupported command: set_max_area
+
+
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=1572.2M, current mem=1572.2M)
+Current (total cpu=0:00:27.9, real=0:01:04, peak res=1572.2M, current mem=1572.2M)
+Total number of combinational cells: 338
+Total number of sequential cells: 66
+Total number of tristate cells: 0
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+Total number of physical cells: 0
+List of usable buffers: BUFx10_ASAP7_75t_SL BUFx12_ASAP7_75t_SL BUFx12f_ASAP7_75t_SL BUFx16f_ASAP7_75t_SL BUFx24_ASAP7_75t_SL BUFx2_ASAP7_75t_SL BUFx3_ASAP7_75t_SL BUFx4_ASAP7_75t_SL BUFx5_ASAP7_75t_SL BUFx4f_ASAP7_75t_SL BUFx6f_ASAP7_75t_SL BUFx8_ASAP7_75t_SL HB1xp67_ASAP7_75t_SL HB2xp67_ASAP7_75t_SL BUFx10_ASAP7_75t_L BUFx12_ASAP7_75t_L BUFx12f_ASAP7_75t_L BUFx16f_ASAP7_75t_L BUFx24_ASAP7_75t_L BUFx2_ASAP7_75t_L BUFx3_ASAP7_75t_L BUFx4_ASAP7_75t_L BUFx5_ASAP7_75t_L BUFx4f_ASAP7_75t_L BUFx6f_ASAP7_75t_L BUFx8_ASAP7_75t_L HB1xp67_ASAP7_75t_L
+Total number of usable buffers: 27
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CKINVDCx10_ASAP7_75t_SL CKINVDCx12_ASAP7_75t_SL CKINVDCx11_ASAP7_75t_SL CKINVDCx14_ASAP7_75t_SL CKINVDCx16_ASAP7_75t_SL CKINVDCx20_ASAP7_75t_SL CKINVDCx8_ASAP7_75t_SL CKINVDCx5p33_ASAP7_75t_SL CKINVDCx6p67_ASAP7_75t_SL CKINVDCx9p33_ASAP7_75t_SL INVx11_ASAP7_75t_SL INVx13_ASAP7_75t_SL INVx1_ASAP7_75t_SL INVx2_ASAP7_75t_SL INVx3_ASAP7_75t_SL INVx4_ASAP7_75t_SL INVx5_ASAP7_75t_SL INVx6_ASAP7_75t_SL INVx8_ASAP7_75t_SL INVxp67_ASAP7_75t_SL INVxp33_ASAP7_75t_SL CKINVDCx10_ASAP7_75t_L CKINVDCx12_ASAP7_75t_L CKINVDCx11_ASAP7_75t_L CKINVDCx14_ASAP7_75t_L CKINVDCx16_ASAP7_75t_L CKINVDCx20_ASAP7_75t_L CKINVDCx8_ASAP7_75t_L CKINVDCx5p33_ASAP7_75t_L CKINVDCx6p67_ASAP7_75t_L CKINVDCx9p33_ASAP7_75t_L INVx11_ASAP7_75t_L INVx13_ASAP7_75t_L INVx1_ASAP7_75t_L INVx2_ASAP7_75t_L INVx3_ASAP7_75t_L INVx4_ASAP7_75t_L INVx5_ASAP7_75t_L INVx6_ASAP7_75t_L INVx8_ASAP7_75t_L INVxp67_ASAP7_75t_L INVxp33_ASAP7_75t_L
+Total number of usable inverters: 42
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: HB3xp67_ASAP7_75t_SL HB4xp67_ASAP7_75t_SL HB2xp67_ASAP7_75t_L HB3xp67_ASAP7_75t_L HB4xp67_ASAP7_75t_L
+Total number of identified usable delay cells: 5
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+#% Begin Load MMMC data post ... (date=04/04 21:02:14, mem=1574.7M)
+#% End Load MMMC data post ... (date=04/04 21:02:14, total cpu=0:00:00.0, real=0:00:00.0, peak res=1574.7M, current mem=1574.7M)
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   TCLCMD-1461          1  Skipped unsupported command: %s          
+WARNING   TCLNL-330            1  set_input_delay on clock root '%s' is no...
+WARNING   TECHLIB-1277         4  The %s '%s' has been defined for %s %s '...
+*** Message Summary: 6 warning(s), 0 error(s)
+
+can't read "fpxdim": no such variable
+can't read "fpxdim": no such variable
+<CMD> setDesignMode -process 7 -node N7
+##  Process: 7             (User Set)               
+##     Node: N7            (User Set)           
+Applying the recommended capacitance filtering threshold values for 7nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
+	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
+	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode is 'medium'.
+Process node set using 'setDesignMode' is less than or equal to 32nm, for which captable file(s) would be ignored as preRoute extraction would instead use technology file. For postRoute extraction, default value for effort level would be 'medium' and effort level 'low' would not be allowed.
+<CMD> setMultiCpuUsage -localCpu 4
+<CMD> setDesignMode -bottomRoutingLayer 2
+<CMD> setDesignMode -topRoutingLayer 7
+<CMD> floorPlan -site asap7sc7p5t -s 237.6 237.6 6.22 6.22 6.22 6.22 -noSnap
+**WARN: (IMPFP-3300):	FPlan core utilization is greater than 1.
+Start create_tracks
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+<CMD> addWellTap -cell TAPCELL_ASAP7_75t_L -cellInterval 12.960 -inRowOffset 1.296
+Multithreaded Timing Analysis is initialized with 4 threads
+
+Estimated cell power/ground rail width = 0.135 um
+**WARN: (IMPSP-378):	Center of Cell XOR2xp5_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell XOR2x2_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell XOR2x1_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell XNOR2xp5_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell XNOR2x2_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell XNOR2x1_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell TIELOx1_ASAP7_75t_R's M1(1) Pin 'L' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell TIEHIx1_ASAP7_75t_R's M1(1) Pin 'H' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFLx4_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFLx3_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFLx2_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFLx1_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFHx4_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFHx3_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFHx2_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFHx1_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell OR5x2_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell OR5x1_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell OR4x2_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell OR4x1_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (EMS-27):	Message (IMPSP-378) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+WARNING (IMPSP-382): Found 433 cells with pin-to-track misalignment. All floorplan's track offset and cell's pin-offsets did not allow any alignment.
+**WARN: (IMPSP-377):	Center of Cell DFFHQNx1_ASAP7_75t_SL's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DFFHQNx1_ASAP7_75t_SL's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DFFHQNx1_ASAP7_75t_SL's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DFFHQNx1_ASAP7_75t_SL's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DFFHQNx1_ASAP7_75t_SL's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (EMS-27):	Message (IMPSP-377) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+For 4180 new insts, Inserted 4180 well-taps <TAPCELL_ASAP7_75t_L> cells (prefix WELLTAP).
+invalid command name "dd_tracks"
+<CMD> add_tracks -mode replace -offsets {M5 vertical 0}
+Start create_tracks
+<CMD> deleteAllFPObjects
+There is no pin guide defined.
+**WARN: (IMPFP-6001):	NO matching routing blockage found. Nothing deleted. 
+There is no pin blockage which matches the wildcard name [*].
+<CMD> addWellTap -cell TAPCELL_ASAP7_75t_L -cellInterval 12.960 -inRowOffset 1.296
+**WARN: (IMPSP-378):	Center of Cell XOR2xp5_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell XOR2x2_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell XOR2x1_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell XNOR2xp5_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell XNOR2x2_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell XNOR2x1_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell TIELOx1_ASAP7_75t_R's M1(1) Pin 'L' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell TIEHIx1_ASAP7_75t_R's M1(1) Pin 'H' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFLx4_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFLx3_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFLx2_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFLx1_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFHx4_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFHx3_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFHx2_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFHx1_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell OR5x2_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell OR5x1_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell OR4x2_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell OR4x1_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (EMS-27):	Message (IMPSP-378) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+WARNING (IMPSP-382): Found 433 cells with pin-to-track misalignment. All floorplan's track offset and cell's pin-offsets did not allow any alignment.
+**WARN: (IMPSP-377):	Center of Cell DFFHQNx1_ASAP7_75t_SL's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DFFHQNx1_ASAP7_75t_SL's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DFFHQNx1_ASAP7_75t_SL's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DFFHQNx1_ASAP7_75t_SL's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DFFHQNx1_ASAP7_75t_SL's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (EMS-27):	Message (IMPSP-377) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+For 4180 new insts, Inserted 4180 well-taps <TAPCELL_ASAP7_75t_L> cells (prefix WELLTAP).
+<CMD> setPinAssignMode -pinEditInBatch true
+<CMD> editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Left -layer 3 -spreadType center -spacing 2.0 -pin {
+i_rst_n i_clk i_op_valid 
+{i_op_mode[0]} {i_op_mode[1]} {i_op_mode[2]} {i_op_mode[3]}
+i_in_valid
+{i_in_data[0]} {i_in_data[1]} {i_in_data[2]} {i_in_data[3]}
+{i_in_data[4]} {i_in_data[5]} {i_in_data[6]} {i_in_data[7]}
+{i_in_data[8]} {i_in_data[9]} {i_in_data[10]} {i_in_data[11]}
+{i_in_data[12]} {i_in_data[13]} {i_in_data[14]} {i_in_data[15]}
+{i_in_data[16]} {i_in_data[17]} {i_in_data[18]} {i_in_data[19]}
+{i_in_data[20]} {i_in_data[21]} {i_in_data[22]} {i_in_data[23]}
+}
+**WARN: (IMPTR-2108):	For layer M10, the gaps of 19 out of 19 tracks are narrower than 16.000um (space 8.000 + width 8.000).
+Type 'man IMPTR-2108' for more detail.
+ As a result, your trialRoute congestion could be incorrect.
+Successfully spread [32] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 2072.9M).
+<CMD> editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Right -layer 3 -spreadType center -spacing 2.0 -pin {
+o_op_ready o_in_ready o_out_valid
+{o_out_data[0]} {o_out_data[1]} {o_out_data[2]} {o_out_data[3]}
+{o_out_data[4]} {o_out_data[5]} {o_out_data[6]} {o_out_data[7]}
+{o_out_data[8]} {o_out_data[9]} {o_out_data[10]} {o_out_data[11]}
+{o_out_data[12]} {o_out_data[13]} {o_out_data[14]} {o_out_data[15]}
+{o_out_data[16]} {o_out_data[17]} {o_out_data[18]} {o_out_data[19]}
+{o_out_data[20]} {o_out_data[21]} {o_out_data[22]} {o_out_data[23]}
+}
+Successfully spread [27] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 2072.9M).
+<CMD> editPin -snap TRACK -pin *
+Updated attributes of 59 pin(s) of partition ipdc
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 2072.9M).
+<CMD> setPinAssignMode -pinEditInBatch false
+<CMD> legalizePin
+#% Begin legalizePin (date=04/04 21:05:39, mem=1754.1M)
+
+Start pin legalization for the partition [ipdc]:
+Moving Pin [i_clk] to LEGAL location (   0.000   95.860 2 )
+Moving Pin [i_rst_n] to LEGAL location (   0.000   93.784 4 )
+Moving Pin [i_op_valid] to LEGAL location (   0.000   97.816 4 )
+Moving Pin [i_op_mode[3]] to LEGAL location (   0.000  105.880 4 )
+Moving Pin [i_op_mode[2]] to LEGAL location (   0.000  103.888 2 )
+Moving Pin [i_op_mode[1]] to LEGAL location (   0.000  101.848 4 )
+Moving Pin [i_op_mode[0]] to LEGAL location (   0.000   99.856 2 )
+Moving Pin [o_op_ready] to LEGAL location ( 250.040  151.384 4 )
+Moving Pin [i_in_valid] to LEGAL location (   0.000  107.920 2 )
+Moving Pin [i_in_data[23]] to LEGAL location (   0.000  156.340 2 )
+Moving Pin [i_in_data[22]] to LEGAL location (   0.000  154.264 4 )
+Moving Pin [i_in_data[21]] to LEGAL location (   0.000  152.200 2 )
+Moving Pin [i_in_data[20]] to LEGAL location (   0.000  150.232 4 )
+Moving Pin [i_in_data[19]] to LEGAL location (   0.000  148.168 2 )
+Moving Pin [i_in_data[18]] to LEGAL location (   0.000  146.200 4 )
+Moving Pin [i_in_data[17]] to LEGAL location (   0.000  144.136 2 )
+Moving Pin [i_in_data[16]] to LEGAL location (   0.000  142.168 4 )
+Moving Pin [i_in_data[15]] to LEGAL location (   0.000  140.140 2 )
+Moving Pin [i_in_data[14]] to LEGAL location (   0.000  138.136 4 )
+Moving Pin [i_in_data[13]] to LEGAL location (   0.000  136.144 2 )
+Moving Pin [i_in_data[12]] to LEGAL location (   0.000  134.104 4 )
+Moving Pin [i_in_data[11]] to LEGAL location (   0.000  132.112 2 )
+Moving Pin [i_in_data[10]] to LEGAL location (   0.000  130.072 4 )
+Moving Pin [i_in_data[9]] to LEGAL location (   0.000  128.080 2 )
+Moving Pin [i_in_data[8]] to LEGAL location (   0.000  126.040 4 )
+Moving Pin [i_in_data[7]] to LEGAL location (   0.000  123.940 2 )
+Moving Pin [i_in_data[6]] to LEGAL location (   0.000  122.008 4 )
+Moving Pin [i_in_data[5]] to LEGAL location (   0.000  119.944 2 )
+Moving Pin [i_in_data[4]] to LEGAL location (   0.000  117.976 4 )
+Moving Pin [i_in_data[3]] to LEGAL location (   0.000  115.912 2 )
+Moving Pin [i_in_data[2]] to LEGAL location (   0.000  113.944 4 )
+Moving Pin [i_in_data[1]] to LEGAL location (   0.000  111.880 2 )
+Moving Pin [i_in_data[0]] to LEGAL location (   0.000  109.900 2 )
+Moving Pin [o_in_ready] to LEGAL location ( 250.040  149.392 2 )
+Moving Pin [o_out_valid] to LEGAL location ( 250.040  147.352 4 )
+Moving Pin [o_out_data[23]] to LEGAL location ( 250.040   98.968 4 )
+Moving Pin [o_out_data[22]] to LEGAL location ( 250.040  100.936 2 )
+Moving Pin [o_out_data[21]] to LEGAL location ( 250.040  103.000 4 )
+Moving Pin [o_out_data[20]] to LEGAL location ( 250.040  104.968 2 )
+Moving Pin [o_out_data[19]] to LEGAL location ( 250.040  107.032 4 )
+Moving Pin [o_out_data[18]] to LEGAL location ( 250.040  109.000 2 )
+Moving Pin [o_out_data[17]] to LEGAL location ( 250.040  111.064 4 )
+Moving Pin [o_out_data[16]] to LEGAL location ( 250.040  113.140 2 )
+Moving Pin [o_out_data[15]] to LEGAL location ( 250.040  115.096 4 )
+Moving Pin [o_out_data[14]] to LEGAL location ( 250.040  117.136 2 )
+Moving Pin [o_out_data[13]] to LEGAL location ( 250.040  119.128 4 )
+Moving Pin [o_out_data[12]] to LEGAL location ( 250.040  121.168 2 )
+Moving Pin [o_out_data[11]] to LEGAL location ( 250.040  123.160 4 )
+Moving Pin [o_out_data[10]] to LEGAL location ( 250.040  125.200 2 )
+Moving Pin [o_out_data[9]] to LEGAL location ( 250.040  127.180 2 )
+Moving Pin [o_out_data[8]] to LEGAL location ( 250.040  129.160 2 )
+Moving Pin [o_out_data[7]] to LEGAL location ( 250.040  131.224 4 )
+Moving Pin [o_out_data[6]] to LEGAL location ( 250.040  133.192 2 )
+Moving Pin [o_out_data[5]] to LEGAL location ( 250.040  135.256 4 )
+Moving Pin [o_out_data[4]] to LEGAL location ( 250.040  137.224 2 )
+Moving Pin [o_out_data[3]] to LEGAL location ( 250.040  139.288 4 )
+Moving Pin [o_out_data[2]] to LEGAL location ( 250.040  141.220 2 )
+Moving Pin [o_out_data[1]] to LEGAL location ( 250.040  143.320 4 )
+Moving Pin [o_out_data[0]] to LEGAL location ( 250.040  145.360 2 )
+Summary report for top level: [ipdc] 
+	Total Pads                         : 0
+	Total Pins                         : 59
+	Legally Assigned Pins              : 59
+	Illegally Assigned Pins            : 0
+	Unplaced Pins                      : 0
+	Constant/Spl Net Pins              : 0
+	Internal Pins                      : 0
+	Legally Assigned Feedthrough Pins  : 0
+	Illegally Assigned Feedthrough Pins: 0
+End of Summary report
+59 pin(s) of the Partition ipdc were legalized.
+End pin legalization for the partition [ipdc].
+
+#% End legalizePin (date=04/04 21:05:39, total cpu=0:00:00.1, real=0:00:00.0, peak res=1754.4M, current mem=1754.4M)
+<CMD> globalNetConnect VDD -type pgpin -pin VDD -inst *
+<CMD> globalNetConnect VSS -type pgpin -pin VSS -inst *
+<CMD> zoomBox -7.06750 5.93775 367.70050 376.56475
+<CMD> zoomBox 23.29300 26.17825 253.44775 253.78975
+<CMD> zoomBox -37.28750 -14.35225 481.42300 498.62675
+<CMD> zoomBox -80.21500 -45.90600 637.72350 664.09950
+<CMD> zoomBox -68.48075 -38.76350 372.42325 397.26875
+<CMD> zoomBox -61.29475 -35.59675 313.47375 335.03075
+<CMD> zoomBox -55.18675 -32.90500 263.36650 282.12825
+<CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer Pad -stacked_via_bottom_layer M1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin { standardcell } -skip_via_on_wire_shape { noshape }
+The ring targets are set to core/block ring wires.
+addRing command will consider rows while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will ignore shorts while creating rings.
+<CMD> addRing -nets {VDD VSS} -type core_rings -follow core -layer {top M7 bottom M7 left M6 right M6} -width 2.176 -spacing 0.384 -offset 0.384 -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+#% Begin addRing (date=04/04 21:06:51, mem=1754.8M)
+
+viaInitial starts at Sat Apr  4 21:06:51 2026
+viaInitial ends at Sat Apr  4 21:06:51 2026
+setAddStripeMode -use_exact_spacing true is set by default for this design under 20nm node. 
+Setting -use_cce to 1. ViaGen will call CCE to colorize via and may re-colorize surrounding vias to resolve color conflict within the local range.
+Setting -optimize_cross_via to 1. ViaGen will try to generate vias with the minimum enclosure.
+setViaGenMode -optimize_cross_via true is set by default for this design of 12nm node or under. 
+Setting -disable_via_merging to 1. ViaGen disables via merging with the via created earlier.
+setViaGenMode -disable_via_merging true is set by default for this design of 12nm node or under. 
+Setting -keep_existing_via to 1. ViaGen will keep the existing vias.
+setViaGenMode -keep_existing_via 1 is set by default for this design of 12nm node or under. 
+
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Ring generation is complete.
+vias are now being generated.
+addRing created 8 wires.
+ViaGen created 8 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|   M6   |        4       |       NA       |
+|   V6   |        8       |        0       |
+|   M7   |        4       |       NA       |
++--------+----------------+----------------+
+setAddStripeMode -use_exact_spacing is reset to default value: false.
+setViaGenMode -disable_via_merging is reset to default value: false.
+setViaGenMode -keep_existing_via is reset to default value: 0.
+setViaGenMode -optimize_cross_via is reset to default value: false.
+#% End addRing (date=04/04 21:06:51, total cpu=0:00:00.1, real=0:00:00.0, peak res=1757.8M, current mem=1757.8M)
+<CMD> addStripe -skip_via_on_wire_shape blockring -direction horizontal -set_to_set_distance 2.16 -skip_via_on_pin Standardcell -stacked_via_top_layer M1 -layer M2 -width 0.072 -nets VDD -stacked_via_bottom_layer M1 -start_from bottom -snap_wire_center_to_grid None -start_offset -0.044 -stop_offset -0.044
+#% Begin addStripe (date=04/04 21:08:30, mem=1757.8M)
+**WARN: (IMPPP-4022):	Option "-stacked_via_top_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_top_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_top_layer layerName"..
+**WARN: (IMPPP-4022):	Option "-stacked_via_bottom_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_bottom_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_bottom_layer layerName"..
+setAddStripeMode -use_exact_spacing true is set by default for this design under 20nm node. 
+Setting -use_cce to 1. ViaGen will call CCE to colorize via and may re-colorize surrounding vias to resolve color conflict within the local range.
+Setting -optimize_cross_via to 1. ViaGen will try to generate vias with the minimum enclosure.
+setViaGenMode -optimize_cross_via true is set by default for this design of 12nm node or under. 
+Setting -disable_via_merging to 1. ViaGen disables via merging with the via created earlier.
+setViaGenMode -disable_via_merging true is set by default for this design of 12nm node or under. 
+Setting -keep_existing_via to 1. ViaGen will keep the existing vias.
+setViaGenMode -keep_existing_via 1 is set by default for this design of 12nm node or under. 
+
+**WARN: (IMPPP-2030):	Layer M2 allows on grid right way wires only. Snap wire center to routing grid automatically.
+Initialize fgc environment(mem: 2072.9M) ...  done(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  -use_exact_spacing  1
+The core ring for VDD is incomplete. The core ring will not be used as a boundary for stripes. In this situation, the power planner will generate stripes only within the core area.
+**WARN: (IMPPP-4055):	The run time of addStripe will degrade with multiple cpu setting according to the number of stripe sets, ignore the setting of setMultiCpuUsage in addStripe.
+Type 'man IMPPP-4055' for more detail.
+Completing 10% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Completing 20% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Completing 30% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Completing 40% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Completing 50% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Completing 60% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Completing 70% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Completing 80% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Completing 90% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Completing 100% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Stripe generation is complete.
+addStripe created 111 wires.
+ViaGen created 0 via, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|   M2   |       111      |       NA       |
++--------+----------------+----------------+
+setAddStripeMode -use_exact_spacing is reset to default value: false.
+setViaGenMode -disable_via_merging is reset to default value: false.
+setViaGenMode -keep_existing_via is reset to default value: 0.
+setViaGenMode -optimize_cross_via is reset to default value: false.
+#% End addStripe (date=04/04 21:08:30, total cpu=0:00:00.1, real=0:00:00.0, peak res=1759.0M, current mem=1759.0M)
+<CMD> addStripe -skip_via_on_wire_shape blockring -direction horizontal -set_to_set_distance 2.16 -skip_via_on_pin Standardcell -stacked_via_top_layer M1 -layer M2 -width 0.072 -nets VSS -stacked_via_bottom_layer M1 -start_from bottom -snap_wire_center_to_grid None -start_offset 1.036 -stop_offset -0.044
+#% Begin addStripe (date=04/04 21:08:30, mem=1759.0M)
+**WARN: (IMPPP-4022):	Option "-stacked_via_top_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_top_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_top_layer layerName"..
+**WARN: (IMPPP-4022):	Option "-stacked_via_bottom_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_bottom_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_bottom_layer layerName"..
+setAddStripeMode -use_exact_spacing true is set by default for this design under 20nm node. 
+Setting -use_cce to 1. ViaGen will call CCE to colorize via and may re-colorize surrounding vias to resolve color conflict within the local range.
+Setting -optimize_cross_via to 1. ViaGen will try to generate vias with the minimum enclosure.
+setViaGenMode -optimize_cross_via true is set by default for this design of 12nm node or under. 
+Setting -disable_via_merging to 1. ViaGen disables via merging with the via created earlier.
+setViaGenMode -disable_via_merging true is set by default for this design of 12nm node or under. 
+Setting -keep_existing_via to 1. ViaGen will keep the existing vias.
+setViaGenMode -keep_existing_via 1 is set by default for this design of 12nm node or under. 
+
+**WARN: (IMPPP-2030):	Layer M2 allows on grid right way wires only. Snap wire center to routing grid automatically.
+Initialize fgc environment(mem: 2072.9M) ...  done(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  -use_exact_spacing  1
+The core ring for VSS is incomplete. The core ring will not be used as a boundary for stripes. In this situation, the power planner will generate stripes only within the core area.
+**WARN: (IMPPP-4055):	The run time of addStripe will degrade with multiple cpu setting according to the number of stripe sets, ignore the setting of setMultiCpuUsage in addStripe.
+Type 'man IMPPP-4055' for more detail.
+Completing 10% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Completing 20% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Completing 30% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Completing 40% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Completing 50% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Completing 60% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Completing 70% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Completing 80% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Completing 90% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Completing 100% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Stripe generation is complete.
+addStripe created 110 wires.
+ViaGen created 0 via, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|   M2   |       110      |       NA       |
++--------+----------------+----------------+
+setAddStripeMode -use_exact_spacing is reset to default value: false.
+setViaGenMode -disable_via_merging is reset to default value: false.
+setViaGenMode -keep_existing_via is reset to default value: 0.
+setViaGenMode -optimize_cross_via is reset to default value: false.
+#% End addStripe (date=04/04 21:08:30, total cpu=0:00:00.1, real=0:00:00.0, peak res=1759.0M, current mem=1759.0M)
+<CMD> addStripe -skip_via_on_wire_shape Noshape -set_to_set_distance 12.960 -skip_via_on_pin Standardcell -stacked_via_top_layer Pad -spacing 0.360 -xleft_offset 0.360 -layer M3 -width 0.936 -nets {VDD VSS} -stacked_via_bottom_layer M2 -start_from left
+#% Begin addStripe (date=04/04 21:08:30, mem=1759.0M)
+**WARN: (IMPPP-4022):	Option "-stacked_via_top_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_top_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_top_layer layerName"..
+**WARN: (IMPPP-4022):	Option "-xleft_offset" is obsolete and has been replaced by "-start_offset". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "-start_offset"..
+**WARN: (IMPPP-4022):	Option "-stacked_via_bottom_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_bottom_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_bottom_layer layerName"..
+setAddStripeMode -use_exact_spacing true is set by default for this design under 20nm node. 
+Setting -use_cce to 1. ViaGen will call CCE to colorize via and may re-colorize surrounding vias to resolve color conflict within the local range.
+Setting -optimize_cross_via to 1. ViaGen will try to generate vias with the minimum enclosure.
+setViaGenMode -optimize_cross_via true is set by default for this design of 12nm node or under. 
+Setting -disable_via_merging to 1. ViaGen disables via merging with the via created earlier.
+setViaGenMode -disable_via_merging true is set by default for this design of 12nm node or under. 
+Setting -keep_existing_via to 1. ViaGen will keep the existing vias.
+setViaGenMode -keep_existing_via 1 is set by default for this design of 12nm node or under. 
+
+**WARN: (IMPPP-2030):	Layer M3 allows on grid right way wires only. Snap wire center to routing grid automatically.
+Initialize fgc environment(mem: 2072.9M) ...  done(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  -use_exact_spacing  1
+**WARN: (IMPPP-4055):	The run time of addStripe will degrade with multiple cpu setting according to the number of stripe sets, ignore the setting of setMultiCpuUsage in addStripe.
+Type 'man IMPPP-4055' for more detail.
+Completing 10% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Completing 20% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Completing 30% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Completing 40% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Completing 50% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Completing 60% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Completing 70% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Completing 80% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+Completing 90% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2072.9M)
+*** Stripes and vias are being generated (current mem: 2072.914)***
+Start to generate stripes.
+Stripe generate is completed (cpu time: 0:00:00.0, peak mem: 2072.914M)
+Start to generate vias.
+    Completing 10% (cpu time: 0:00:00.1, peak mem: 2072.914M)
+    Completing 20% (cpu time: 0:00:00.0, peak mem: 2072.914M)
+    Completing 30% (cpu time: 0:00:00.0, peak mem: 2072.914M)
+    Completing 40% (cpu time: 0:00:00.0, peak mem: 2072.914M)
+    Completing 50% (cpu time: 0:00:00.0, peak mem: 2072.914M)
+    Completing 60% (cpu time: 0:00:00.0, peak mem: 2072.914M)
+    Completing 70% (cpu time: 0:00:00.0, peak mem: 2072.914M)
+    Completing 80% (cpu time: 0:00:00.0, peak mem: 2072.914M)
+    Completing 90% (cpu time: 0:00:00.0, peak mem: 2072.914M)
+    Completing 100% (cpu time: 0:00:00.0, peak mem: 2072.914M)
+  stripes and vias are completed(total cpu time: 0:00:00.1, peak mem: 2072.914M)
+Stripe generation is complete.
+addStripe created 38 wires.
+ViaGen created 4503 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|   V2   |      4199      |        0       |
+|   M3   |       38       |       NA       |
+|   V3   |       76       |        0       |
+|   V4   |       76       |        0       |
+|   V5   |       76       |        0       |
+|   V6   |       76       |        0       |
++--------+----------------+----------------+
+setAddStripeMode -use_exact_spacing is reset to default value: false.
+setViaGenMode -disable_via_merging is reset to default value: false.
+setViaGenMode -keep_existing_via is reset to default value: 0.
+setViaGenMode -optimize_cross_via is reset to default value: false.
+#% End addStripe (date=04/04 21:08:30, total cpu=0:00:00.3, real=0:00:00.0, peak res=1759.2M, current mem=1759.2M)
+wrong # args: should be ". option ?arg ...?"
+<CMD> addStripe -skip_via_on_wire_shape Noshape -direction horizontal -set_to_set_distance 21.6 -skip_via_on_pin Standardcell -stacked_via_top_layer M7 -spacing 0.864 -layer M4 -width 0.864 -nets {VDD VSS} -stacked_via_bottom_layer M3 -start_from bottom
+#% Begin addStripe (date=04/04 21:08:31, mem=1760.4M)
+**WARN: (IMPPP-4022):	Option "-stacked_via_top_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_top_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_top_layer layerName"..
+**WARN: (IMPPP-4022):	Option "-stacked_via_bottom_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_bottom_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_bottom_layer layerName"..
+setAddStripeMode -use_exact_spacing true is set by default for this design under 20nm node. 
+Setting -use_cce to 1. ViaGen will call CCE to colorize via and may re-colorize surrounding vias to resolve color conflict within the local range.
+Setting -optimize_cross_via to 1. ViaGen will try to generate vias with the minimum enclosure.
+setViaGenMode -optimize_cross_via true is set by default for this design of 12nm node or under. 
+Setting -disable_via_merging to 1. ViaGen disables via merging with the via created earlier.
+setViaGenMode -disable_via_merging true is set by default for this design of 12nm node or under. 
+Setting -keep_existing_via to 1. ViaGen will keep the existing vias.
+setViaGenMode -keep_existing_via 1 is set by default for this design of 12nm node or under. 
+
+**WARN: (IMPPP-2030):	Layer M4 allows on grid right way wires only. Snap wire center to routing grid automatically.
+Initialize fgc environment(mem: 2075.5M) ...  done(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2075.5M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2075.5M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2075.5M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2075.5M)
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  -use_exact_spacing  1
+**WARN: (IMPPP-4055):	The run time of addStripe will degrade with multiple cpu setting according to the number of stripe sets, ignore the setting of setMultiCpuUsage in addStripe.
+Type 'man IMPPP-4055' for more detail.
+Completing 10% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2075.5M)
+Completing 20% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2075.5M)
+Completing 30% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2075.5M)
+Completing 40% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2075.5M)
+Completing 50% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2075.5M)
+Completing 60% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2075.5M)
+Completing 70% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2075.5M)
+Completing 80% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2075.5M)
+Completing 90% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2075.5M)
+Completing 100% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2075.5M)
+*** Stripes and vias are being generated (current mem: 2075.531)***
+Start to generate stripes.
+Stripe generate is completed (cpu time: 0:00:00.0, peak mem: 2075.531M)
+Start to generate vias.
+    Completing 10% (cpu time: 0:00:00.0, peak mem: 2075.531M)
+    Completing 20% (cpu time: 0:00:00.0, peak mem: 2075.531M)
+    Completing 30% (cpu time: 0:00:00.0, peak mem: 2075.531M)
+    Completing 40% (cpu time: 0:00:00.0, peak mem: 2075.531M)
+    Completing 50% (cpu time: 0:00:00.0, peak mem: 2075.531M)
+    Completing 60% (cpu time: 0:00:00.0, peak mem: 2075.531M)
+    Completing 70% (cpu time: 0:00:00.0, peak mem: 2075.531M)
+    Completing 80% (cpu time: 0:00:00.0, peak mem: 2075.531M)
+    Completing 90% (cpu time: 0:00:00.0, peak mem: 2075.531M)
+    Completing 100% (cpu time: 0:00:00.0, peak mem: 2075.531M)
+  stripes and vias are completed(total cpu time: 0:00:00.0, peak mem: 2075.531M)
+Stripe generation is complete.
+addStripe created 22 wires.
+ViaGen created 506 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|   V3   |       418      |        0       |
+|   M4   |       22       |       NA       |
+|   V4   |       44       |        0       |
+|   V5   |       44       |        0       |
++--------+----------------+----------------+
+setAddStripeMode -use_exact_spacing is reset to default value: false.
+setViaGenMode -disable_via_merging is reset to default value: false.
+setViaGenMode -keep_existing_via is reset to default value: 0.
+setViaGenMode -optimize_cross_via is reset to default value: false.
+#% End addStripe (date=04/04 21:08:32, total cpu=0:00:00.2, real=0:00:00.0, peak res=1760.4M, current mem=1760.4M)
+<CMD> setSrouteMode -reset
+<CMD> setSrouteMode -viaConnectToShape { noshape }
+<CMD> sroute -connect { corePin } -layerChangeRange { M1(1) M7(1) } -blockPinTarget { nearestTarget } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -deleteExistingRoutes -allowJogging 0 -crossoverViaLayerRange { M1(1) Pad(10) } -nets { VDD VSS } -allowLayerChange 0 -targetViaLayerRange { M1 (1) Pad(10) }
+#% Begin sroute (date=04/04 21:08:52, mem=1760.4M)
+#% End sroute (date=04/04 21:08:52, total cpu=0:00:00.0, real=0:00:00.0, peak res=1760.4M, current mem=1760.4M)
+<CMD> editPowerVia -add_vias 1 -orthogonal_only 0
+#% Begin editPowerVia (date=04/04 21:08:52, mem=1760.4M)
+setAddStripeMode -use_exact_spacing true is set by default for this design under 20nm node. 
+Setting -use_cce to 1. ViaGen will call CCE to colorize via and may re-colorize surrounding vias to resolve color conflict within the local range.
+Setting -optimize_cross_via to 1. ViaGen will try to generate vias with the minimum enclosure.
+setViaGenMode -optimize_cross_via true is set by default for this design of 12nm node or under. 
+Setting -disable_via_merging to 1. ViaGen disables via merging with the via created earlier.
+setViaGenMode -disable_via_merging true is set by default for this design of 12nm node or under. 
+Setting -keep_existing_via to 1. ViaGen will keep the existing vias.
+setViaGenMode -keep_existing_via 1 is set by default for this design of 12nm node or under. 
+ViaGen engine uses clone via flow to insert special vias. Open fgc and cce engine automatically.
+
+Multi-CPU acceleration using 4 CPU(s).
+Clone Via Engine is enabled.
+**WARN: (IMPPP-610):	The power planner failed to find a matching VIARULE, so no via was created between layer: M3 & M4, size: 237.60 x 0.86 at (125.02, 49.42).
+Type 'man IMPPP-610' for more detail.
+**WARN: (IMPPP-528):	ViaGen failed to add via between layer M2 & M4 at (125.02, 49.42).
+Type 'man IMPPP-528' for more detail.
+**WARN: (IMPPP-610):	The power planner failed to find a matching VIARULE, so no via was created between layer: M3 & M4, size: 237.60 x 0.86 at (125.02, 92.62).
+Type 'man IMPPP-610' for more detail.
+**WARN: (IMPPP-528):	ViaGen failed to add via between layer M2 & M4 at (125.02, 92.62).
+Type 'man IMPPP-528' for more detail.
+**WARN: (IMPPP-610):	The power planner failed to find a matching VIARULE, so no via was created between layer: M3 & M4, size: 237.60 x 0.86 at (125.02, 135.82).
+Type 'man IMPPP-610' for more detail.
+**WARN: (IMPPP-528):	ViaGen failed to add via between layer M2 & M4 at (125.02, 135.82).
+Type 'man IMPPP-528' for more detail.
+**WARN: (IMPPP-610):	The power planner failed to find a matching VIARULE, so no via was created between layer: M3 & M4, size: 237.60 x 0.86 at (125.02, 179.02).
+Type 'man IMPPP-610' for more detail.
+**WARN: (IMPPP-528):	ViaGen failed to add via between layer M2 & M4 at (125.02, 179.02).
+Type 'man IMPPP-528' for more detail.
+**WARN: (IMPPP-610):	The power planner failed to find a matching VIARULE, so no via was created between layer: M3 & M4, size: 237.60 x 0.86 at (125.02, 222.22).
+Type 'man IMPPP-610' for more detail.
+**WARN: (IMPPP-528):	ViaGen failed to add via between layer M2 & M4 at (125.02, 222.22).
+Type 'man IMPPP-528' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the V6 layer at (1.188000, 1.144000) (3.188000, 3.232000).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-528):	ViaGen failed to add via between layer M6 & M7 at (2.19, 2.19).
+Type 'man IMPPP-528' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the V6 layer at (1.188000, 246.807999) (3.188000, 248.895996).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-528):	ViaGen failed to add via between layer M6 & M7 at (2.19, 247.85).
+Type 'man IMPPP-528' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the V6 layer at (3.748000, 3.704000) (5.748000, 5.792000).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-528):	ViaGen failed to add via between layer M6 & M7 at (4.75, 4.75).
+Type 'man IMPPP-528' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the V6 layer at (3.748000, 244.248001) (5.748000, 246.335999).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-528):	ViaGen failed to add via between layer M6 & M7 at (4.75, 245.29).
+Type 'man IMPPP-528' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the V6 layer at (244.292007, 3.704000) (246.292007, 5.792000).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-528):	ViaGen failed to add via between layer M6 & M7 at (245.29, 4.75).
+Type 'man IMPPP-528' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the V6 layer at (244.292007, 244.248001) (246.292007, 246.335999).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-528):	ViaGen failed to add via between layer M6 & M7 at (245.29, 245.29).
+Type 'man IMPPP-528' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the V6 layer at (246.852005, 1.144000) (248.852005, 3.232000).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-528):	ViaGen failed to add via between layer M6 & M7 at (247.85, 2.19).
+Type 'man IMPPP-528' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the V6 layer at (246.852005, 246.807999) (248.852005, 248.895996).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-528):	ViaGen failed to add via between layer M6 & M7 at (247.85, 247.85).
+Type 'man IMPPP-528' for more detail.
+ViaGen created 0 via, deleted 0 via to avoid violation.
+setAddStripeMode -use_exact_spacing is reset to default value: false.
+setViaGenMode -disable_via_merging is reset to default value: false.
+setViaGenMode -keep_existing_via is reset to default value: 0.
+setViaGenMode -optimize_cross_via is reset to default value: false.
+#% End editPowerVia (date=04/04 21:08:53, total cpu=0:00:00.3, real=0:00:01.0, peak res=1761.5M, current mem=1761.5M)
+<CMD> verify_drc
+#-check_same_via_cell true               # bool, default=false, user setting
+ *** Starting Verify DRC (MEM: 2095.5) ***
+
+  VERIFY DRC ...... Starting Verification
+  VERIFY DRC ...... Initializing
+  VERIFY DRC ...... Deleting Existing Violations
+  VERIFY DRC ...... Creating Sub-Areas
+  VERIFY DRC ...... Using new threading
+ VERIFY DRC ...... Thread : 0 finished.
+ VERIFY DRC ...... Thread : 3 finished.
+ VERIFY DRC ...... Thread : 1 finished.
+ VERIFY DRC ...... Thread : 2 finished.
+
+  Verification Complete : 0 Viols.
+
+ *** End Verify DRC (CPU: 0:00:00.1  ELAPSED TIME: 0.00  MEM: 268.1M) ***
+
+<CMD> setOptMode -holdTargetSlack 0.020
+<CMD> setOptMode -setupTargetSlack 0.020
+<CMD> colorizePowerMesh
+#% Begin colorizePowerMesh (date=04/04 21:08:54, mem=1765.4M)
+colorize geometry ... done
+clear drc markers and check special mask spacing by verify_drc ... 
+ VERIFY DRC ...... Thread : 0 finished.
+ VERIFY DRC ...... Thread : 3 finished.
+ VERIFY DRC ...... Thread : 1 finished.
+ VERIFY DRC ...... Thread : 2 finished.
+
+  Verification Complete : 47 Viols.
+
+ Violation Summary By Layer and Type:
+
+	         ColChg   Totals
+	M6            4        4
+	M7           43       43
+	Totals       47       47
+
+ *** End Verify DRC (CPU: 0:00:00.0  ELAPSED TIME: 0.00  MEM: 264.1M) ***
+
+Un-suppress "**WARN ..." messages.
+#% End colorizePowerMesh (date=04/04 21:08:54, total cpu=0:00:00.6, real=0:00:01.0, peak res=1843.3M, current mem=1835.4M)
+<CMD> place_opt_design
+**INFO: User settings:
+setDesignMode -bottomRoutingLayer    2
+setDesignMode -node                  N7
+setDesignMode -process               7
+setDesignMode -topRoutingLayer       7
+setExtractRCMode -coupling_c_th      0.1
+setExtractRCMode -relative_c_th      1
+setExtractRCMode -total_c_th         0
+setDelayCalMode -engine              aae
+setOptMode -holdTargetSlack          0.02
+setOptMode -setupTargetSlack         0.02
+setPlaceMode -place_detail_dpt_flow  true
+
+*** place_opt_design #1 [begin] : totSession cpu/real = 0:00:49.9/0:07:57.1 (0.1), mem = 2166.0M
+No user sequential activity specified, applying default sequential activity of "0.2" for Dynamic Power reporting.
+'set_default_switching_activity' finished successfully.
+*** Starting GigaPlace ***
+**WARN: (IMPSP-378):	Center of Cell XOR2xp5_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell XOR2x2_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell XOR2x1_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell XNOR2xp5_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell XNOR2x2_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell XNOR2x1_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell TIELOx1_ASAP7_75t_R's M1(1) Pin 'L' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell TIEHIx1_ASAP7_75t_R's M1(1) Pin 'H' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFLx4_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFLx3_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFLx2_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFLx1_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFHx4_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFHx3_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFHx2_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFHx1_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell OR5x2_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell OR5x1_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell OR4x2_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell OR4x1_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (EMS-27):	Message (IMPSP-378) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+WARNING (IMPSP-382): Found 433 cells with pin-to-track misalignment. All floorplan's track offset and cell's pin-offsets did not allow any alignment.
+**WARN: (IMPSP-377):	Center of Cell DFFHQNx1_ASAP7_75t_SL's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DFFHQNx1_ASAP7_75t_SL's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DFFHQNx1_ASAP7_75t_SL's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DFFHQNx1_ASAP7_75t_SL's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DFFHQNx1_ASAP7_75t_SL's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.0360 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell DHLx1_ASAP7_75t_SL's M1(1) Pin 'Q' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (EMS-27):	Message (IMPSP-377) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+*** GlobalPlace #1 [begin] (place_opt_design #1) : totSession cpu/real = 0:00:50.3/0:07:57.6 (0.1), mem = 2121.4M
+*** Start deleteBufferTree ***
+Info: Detect buffers to remove automatically.
+Analyzing netlist ...
+Updating netlist
+
+*summary: 4189 instances (buffers/inverters) removed
+*** Finish deleteBufferTree (0:00:09.2) ***
+Effort level <high> specified for tdgp_reg2reg_default path_group
+Deleted 4180 physical insts (cell - / prefix -).
+Did not delete 4180 physical insts as they were marked preplaced.
+INFO: #ExclusiveGroups=0
+INFO: There are no Exclusive Groups.
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+Extracting macro/IO cell pins and blockage ...... 
+Pin and blockage extraction finished
+No user-set net weight.
+Net fanout histogram:
+2		: 121381 (90.4%) nets
+3		: 2498 (1.9%) nets
+4     -	14	: 2486 (1.9%) nets
+15    -	39	: 7119 (5.3%) nets
+40    -	79	: 43 (0.0%) nets
+80    -	159	: 87 (0.1%) nets
+160   -	319	: 560 (0.4%) nets
+320   -	639	: 30 (0.0%) nets
+640   -	1279	: 11 (0.0%) nets
+1280  -	2559	: 0 (0.0%) nets
+2560  -	5119	: 0 (0.0%) nets
+5120+		: 1 (0.0%) nets
+Options: timingDriven clkGateAware ignoreScan pinGuide congEffort=auto gpeffort=medium 
+Scan chains were not defined.
+#std cell=138319 (4180 fixed + 134139 movable) #buf cell=0 #inv cell=4185 #block=0 (0 floating + 0 preplaced)
+#ioInst=0 #net=134216 #term=644786 #term/net=4.80, #fixedIo=0, #floatIo=0, #fixedPin=0, #floatPin=59
+stdCell: 138319 single + 0 double + 0 multi
+Total standard cell length = 193.6269 (mm), area = 0.2091 (mm^2)
+**WARN: (IMPSP-378):	Center of Cell XOR2xp5_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell XOR2x2_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell XOR2x1_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell XNOR2xp5_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell XNOR2x2_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell XNOR2x1_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell TIELOx1_ASAP7_75t_R's M1(1) Pin 'L' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell TIEHIx1_ASAP7_75t_R's M1(1) Pin 'H' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFLx4_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFLx3_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFLx2_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFLx1_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFHx4_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFHx3_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFHx2_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell SDFHx1_ASAP7_75t_R's M1(1) Pin 'QN' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell OR5x2_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell OR5x1_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell OR4x2_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (IMPSP-378):	Center of Cell OR4x1_ASAP7_75t_R's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  You should mark the cell dont_use.
+**WARN: (EMS-27):	Message (IMPSP-378) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+WARNING (IMPSP-382): Found 451 cells with pin-to-track misalignment. All floorplan's track offset and cell's pin-offsets did not allow any alignment.
+**WARN: (IMPSP-377):	Center of Cell INVx2_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell INVx1_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell INVx1_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell INVx1_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell INVx1_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell INVx2_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell INVxp33_ASAP7_75t_L's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell INVx2_ASAP7_75t_L's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell INVx1_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell INVx1_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell INVx1_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell INVx2_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell INVx1_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell INVx1_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell INVx1_ASAP7_75t_L's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell INVx2_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell INVx1_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell INVx1_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell INVx1_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (IMPSP-377):	Center of Cell INVx1_ASAP7_75t_SL's M1(1) Pin 'Y' does not fall on any existing track, given the current track offset of 0.0000 micron.  The expected track offset is 0.1080 micron.
+Type 'man IMPSP-377' for more detail.
+**WARN: (EMS-27):	Message (IMPSP-377) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+Average module density = 3.801.
+Density for the design = 3.801.
+       = stdcell_area 888061 sites (207167 um^2) / alloc_area 233640 sites (54504 um^2).
+Pin Density = 2.6644.
+            = total # of pins 644786 / total area 242000.
+Identified 2 spare or floating instances, with no clusters.
+**ERROR: (IMPSP-190):	Design has util 380.1% > 100%, placer cannot proceed. The problem may be caused by density screens (softBlockages and partial blockages) or user-specified cell padding. Please correct this problem first.
+**placeDesign ... cpu = 0: 0:11, real = 0: 0:11, mem = 2192.6M **
+*** GlobalPlace #1 [finish] (place_opt_design #1) : cpu/real = 0:00:11.1/0:00:11.1 (1.0), totSession cpu/real = 0:01:01.5/0:08:08.6 (0.1), mem = 2192.6M
+Enable CTE adjustment.
+**optDesign ... cpu = 0:00:00, real = 0:00:00, mem = 1882.3M, totSessionCpu=0:01:02 **
+**ERROR: Design must be placed before running "optDesign"
+**ERROR: Design must be placed before running "optDesign"
+**place_opt_design ... cpu = 0:00:12, real = 0:00:12, mem = 2192.6M **
+*** Finished GigaPlace ***
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+ERROR     IMPSP-190            1  Design has util %.1f%% > 100%%, placer c...
+WARNING   IMPSP-377        272245  Center of Cell %s's %s(%d) %s does not f...
+WARNING   IMPSP-378          884  Center of Cell %s's %s(%d) %s does not f...
+*** Message Summary: 273129 warning(s), 1 error(s)
+
+*** place_opt_design #1 [finish] : cpu/real = 0:00:11.6/0:00:11.5 (1.0), totSession cpu/real = 0:01:01.5/0:08:08.7 (0.1), mem = 2192.6M
+1
+<CMD> zoomBox -82.31100 -50.50500 292.45775 320.12275
+<CMD> zoomBox -44.52350 -32.49125 274.03000 282.54225
+<CMD> zoomBox -10.64425 -17.97150 260.12625 249.80700
+<CMD> zoomBox -37.74775 -20.52350 280.80575 294.51000
+<CMD> zoomBox -187.31275 -103.95700 855.61700 526.52100
+<CMD> zoomBox -146.14650 -86.49250 607.37050 369.02800
+<CMD> zoomBox -130.06925 -79.67200 510.42025 307.52050
+<CMD> zoomBox -100.35700 -63.41825 444.05925 265.69550
+<CMD> zoomBox -117.95700 -93.13075 522.53300 294.06200
+<CMD> zoomBox -103.46325 -49.02800 440.95325 280.08575
+<CMD> zoomBox -133.58975 -82.77800 506.90025 304.41475
+<CMD> zoomBox -105.74100 -53.06575 438.67575 276.04825
+<CMD> zoomBox -83.21375 -28.60225 379.54075 251.14475
+<CMD> zoomBox -101.60550 -61.42575 442.81175 267.68850
+<CMD> zoomBox -90.69375 -20.15450 372.06100 259.59275
+<CMD> ccopt_design
+#% Begin ccopt_design (date=04/04 21:19:49, mem=1886.1M)
+*** ccopt_design #1 [begin] : totSession cpu/real = 0:01:26.3/0:18:37.4 (0.1), mem = 2196.5M
+Runtime...
+**INFO: User's settings:
+setNanoRouteMode -drouteUseMinSpacingForBlockage                 auto
+setNanoRouteMode -extractThirdPartyCompatible                    false
+setNanoRouteMode -routeStrictlyHonorNonDefaultRule               false
+setDesignMode -bottomRoutingLayer                                2
+setDesignMode -node                                              N7
+setDesignMode -process                                           7
+setDesignMode -topRoutingLayer                                   7
+setExtractRCMode -coupling_c_th                                  0.1
+setExtractRCMode -engine                                         preRoute
+setExtractRCMode -relative_c_th                                  1
+setExtractRCMode -total_c_th                                     0
+setDelayCalMode -engine                                          aae
+setDelayCalMode -ignoreNetLoad                                   false
+setOptMode -holdTargetSlack                                      0.02
+setOptMode -preserveAllSequential                                true
+setPlaceMode -autoEnableFGCUnder10nm                             false
+setPlaceMode -autoEnableFGCUnder16nm                             false
+setPlaceMode -clusterFix                                         true
+setPlaceMode -exp_gigaplace_padding_adjustments_for_adv_nodes    true
+setPlaceMode -exp_slack_driven                                   true
+setPlaceMode -expAdvPinAccess                                    false
+setPlaceMode -expAutoPinAccessLayer                              false
+setPlaceMode -expHiddenFastMode                                  1
+setPlaceMode -expPaddingMinPadRatio                              1.125
+setPlaceMode -expTrimOptBeforeTDGP                               false
+setPlaceMode -ignoreLowEffortPathGroups                          false
+setPlaceMode -IOSlackAdjust                                      false
+setPlaceMode -ipReuseSKPTG                                       true
+setPlaceMode -ipTimingEffortLow                                  false
+setPlaceMode -NMPfixAreaCalcBug                                  1
+setPlaceMode -place_detail_color_aware_legal                     false
+setPlaceMode -place_detail_dpt_flow                              true
+setPlaceMode -place_detail_drc_check_short_only                  true
+setPlaceMode -place_global_exp_adjust_low_bound                  -8
+setPlaceMode -place_global_exp_skp_adjust_scale_mode             2
+setPlaceMode -place_global_exp_skp_adjust_scale_start_iteration  0
+setPlaceMode -place_global_exp_skp_adjust_scale_threshold_down   -80
+setPlaceMode -place_global_exp_skp_adjust_scale_threshold_up     0
+setPlaceMode -place_global_exp_skp_support_aocv                  false
+setPlaceMode -resetCombineRFLevel                                1000
+setPlaceMode -RTCSpread                                          false
+setPlaceMode -tdgp0DelayModeFix                                  true
+setPlaceMode -tdgp_all_view_vsm                                  false
+setPlaceMode -tdgp_basic_pg                                      true
+setPlaceMode -tdgp_repeat_start_level                            0
+setPlaceMode -tdgpForceSimplified                                true
+setPlaceMode -tdgpInitIgnoreNetLoad                              false
+setPlaceMode -tdgpPack                                           true
+setPlaceMode -tdgpPackEndPoints                                  true
+setPlaceMode -tdgpParallelArcMergeFix                            true
+setPlaceMode -tdgpRealSlackByFastProp                            true
+setPlaceMode -tdgpRestartFromSensPrecond                         false
+setPlaceMode -tdgpScaleUp                                        31
+setPlaceMode -tdgpSetEndPtSlew                                   false
+setPlaceMode -tdgpShiftMode                                      2
+setPlaceMode -tdgpSinglePinFixedNetWeight                        1.5
+setPlaceMode -tdgpSlackKeepTop                                   0
+setPlaceMode -tdgpSlackMarginCTEAdjust                           true
+setPlaceMode -tdgpSlackMarginKeepPositiveSoftPhaseSlack          true
+setPlaceMode -tdgpSlackMarginMode                                1
+setPlaceMode -tdgpSlackMarginPercentage                          1
+setPlaceMode -tdgpSlackMarginPreserve                            false
+setPlaceMode -tdgpSlackMarginScaleAdjustPower                    0.5
+setPlaceMode -tdgpViewPruning                                    true
+setPlaceMode -timingDriven                                       true
+setPlaceMode -trimView                                           allViews
+setPlaceMode -usePreconditioning                                 true
+setPlaceMode -VHFThreshold                                       2147483647
+
+(ccopt_design): CTS Engine: auto. Used Spec: CCOPT spec from create_ccopt_clock_tree_spec.
+(ccopt_design): create_ccopt_clock_tree_spec
+Creating clock tree spec for modes (timing configs): sdc
+extract_clock_generator_skew_groups=true: create_ccopt_clock_tree_spec will generate skew groups with a name prefix of "_clock_gen" to balance clock generator connected flops with the clock generator they drive.
+Reset timing graph...
+Ignoring AAE DB Resetting ...
+Reset timing graph done.
+Ignoring AAE DB Resetting ...
+Analyzing clock structure...
+Analyzing clock structure done.
+Reset timing graph...
+Ignoring AAE DB Resetting ...
+Reset timing graph done.
+Extracting original clock gating for i_clk...
+  clock_tree i_clk contains 6210 sinks and 0 clock gates.
+Extracting original clock gating for i_clk done.
+The skew group i_clk/sdc was created. It contains 6210 sinks and 1 sources.
+Checking clock tree convergence...
+Checking clock tree convergence done.
+Placement constraints of type 'region' or 'fence' will not be downgraded to 'guide' because the property change_fences_to_guides has been set to false.
+Set place::cacheFPlanSiteMark to 1
+'setDesignMode -flowEffort standard' => 'setOptMode -usefulSkewCCOpt standard' 
+Using CCOpt effort standard.
+CCOpt::Phase::Initialization...
+Check Prerequisites...
+**ERROR: (IMPCCOPT-4254):	Design must be placed before running 'ccopt_check_prerequisites_internal'.
+Check Prerequisites interrupted. (took cpu=0:00:00.0 real=0:00:00.0)
+CCOpt::Phase::Initialization interrupted. (took cpu=0:00:00.0 real=0:00:00.0)
+**ERROR: (IMPCCOPT-2196):	Cannot run ccopt_design because the command prerequisites were not met. Review the previous error messages for more details about the failure.
+Set place::cacheFPlanSiteMark to 0
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+ERROR     IMPCCOPT-2196        1  Cannot run ccopt_design because the comm...
+ERROR     IMPCCOPT-4254        1  Design must be placed before running '%s...
+*** Message Summary: 0 warning(s), 2 error(s)
+
+*** ccopt_design #1 [finish] : cpu/real = 0:00:06.9/0:00:07.1 (1.0), totSession cpu/real = 0:01:33.3/0:18:44.5 (0.1), mem = 2258.5M
+#% End ccopt_design (date=04/04 21:19:56, total cpu=0:00:07.0, real=0:00:07.0, peak res=1895.1M, current mem=1895.1M)
+
+<CMD> all_constraint_modes -active
+sdc
+<CMD> set_interactive_constraint_modes [all_constraint_modes -active]
+<CMD> reset_propagated_clock [all_clocks]
+<CMD> setDrawView place
+<CMD> setDrawView fplan
+<CMD> setDrawView ameba
+<CMD> setDrawView place
+<CMD> setDrawView fplan
+<CMD> setDrawView place
+<CMD> zoomBox -14.18550 59.69950 270.00400 231.49950
+<CMD> zoomBox -36.34325 37.65025 297.99775 239.76800
+<CMD> zoomBox -93.07850 -18.80825 369.67750 260.93975
+<CMD> zoomBox -62.41100 11.70975 330.93175 249.49550
+<CMD> zoomBox -116.78975 -22.99700 345.96625 256.75100
+<CMD> setDrawView place
+<CMD> set_propagated_clock [all_clocks]
+<CMD> ccopt_design
+#% Begin ccopt_design (date=04/04 21:20:45, mem=1895.3M)
+*** ccopt_design #2 [begin] : totSession cpu/real = 0:01:35.5/0:19:33.0 (0.1), mem = 2199.5M
+**INFO: User's settings:
+setNanoRouteMode -drouteUseMinSpacingForBlockage                 auto
+setNanoRouteMode -extractThirdPartyCompatible                    false
+setNanoRouteMode -routeStrictlyHonorNonDefaultRule               false
+setDesignMode -bottomRoutingLayer                                2
+setDesignMode -node                                              N7
+setDesignMode -process                                           7
+setDesignMode -topRoutingLayer                                   7
+setExtractRCMode -coupling_c_th                                  0.1
+setExtractRCMode -engine                                         preRoute
+setExtractRCMode -relative_c_th                                  1
+setExtractRCMode -total_c_th                                     0
+setDelayCalMode -engine                                          aae
+setDelayCalMode -ignoreNetLoad                                   false
+setOptMode -holdTargetSlack                                      0.02
+setOptMode -preserveAllSequential                                true
+setPlaceMode -autoEnableFGCUnder10nm                             false
+setPlaceMode -autoEnableFGCUnder16nm                             false
+setPlaceMode -clusterFix                                         true
+setPlaceMode -exp_gigaplace_padding_adjustments_for_adv_nodes    true
+setPlaceMode -exp_slack_driven                                   true
+setPlaceMode -expAdvPinAccess                                    false
+setPlaceMode -expAutoPinAccessLayer                              false
+setPlaceMode -expHiddenFastMode                                  1
+setPlaceMode -expPaddingMinPadRatio                              1.125
+setPlaceMode -expTrimOptBeforeTDGP                               false
+setPlaceMode -ignoreLowEffortPathGroups                          false
+setPlaceMode -IOSlackAdjust                                      false
+setPlaceMode -ipReuseSKPTG                                       true
+setPlaceMode -ipTimingEffortLow                                  false
+setPlaceMode -NMPfixAreaCalcBug                                  1
+setPlaceMode -place_detail_color_aware_legal                     false
+setPlaceMode -place_detail_dpt_flow                              true
+setPlaceMode -place_detail_drc_check_short_only                  true
+setPlaceMode -place_global_exp_adjust_low_bound                  -8
+setPlaceMode -place_global_exp_skp_adjust_scale_mode             2
+setPlaceMode -place_global_exp_skp_adjust_scale_start_iteration  0
+setPlaceMode -place_global_exp_skp_adjust_scale_threshold_down   -80
+setPlaceMode -place_global_exp_skp_adjust_scale_threshold_up     0
+setPlaceMode -place_global_exp_skp_support_aocv                  false
+setPlaceMode -resetCombineRFLevel                                1000
+setPlaceMode -RTCSpread                                          false
+setPlaceMode -tdgp0DelayModeFix                                  true
+setPlaceMode -tdgp_all_view_vsm                                  false
+setPlaceMode -tdgp_basic_pg                                      true
+setPlaceMode -tdgp_repeat_start_level                            0
+setPlaceMode -tdgpForceSimplified                                true
+setPlaceMode -tdgpInitIgnoreNetLoad                              false
+setPlaceMode -tdgpPack                                           true
+setPlaceMode -tdgpPackEndPoints                                  true
+setPlaceMode -tdgpParallelArcMergeFix                            true
+setPlaceMode -tdgpRealSlackByFastProp                            true
+setPlaceMode -tdgpRestartFromSensPrecond                         false
+setPlaceMode -tdgpScaleUp                                        31
+setPlaceMode -tdgpSetEndPtSlew                                   false
+setPlaceMode -tdgpShiftMode                                      2
+setPlaceMode -tdgpSinglePinFixedNetWeight                        1.5
+setPlaceMode -tdgpSlackKeepTop                                   0
+setPlaceMode -tdgpSlackMarginCTEAdjust                           true
+setPlaceMode -tdgpSlackMarginKeepPositiveSoftPhaseSlack          true
+setPlaceMode -tdgpSlackMarginMode                                1
+setPlaceMode -tdgpSlackMarginPercentage                          1
+setPlaceMode -tdgpSlackMarginPreserve                            false
+setPlaceMode -tdgpSlackMarginScaleAdjustPower                    0.5
+setPlaceMode -tdgpViewPruning                                    true
+setPlaceMode -timingDriven                                       true
+setPlaceMode -trimView                                           allViews
+setPlaceMode -usePreconditioning                                 true
+setPlaceMode -VHFThreshold                                       2147483647
+
+(ccopt_design): CTS Engine: auto. Used Spec: pre-existing CCOPT spec.
+Not setting up route_type 'default_route_type_nonleaf' from CTS mode settings, as it has already been done
+Not setting up route_type 'default_route_type_leaf' from CTS mode settings, as it has already been done
+Placement constraints of type 'region' or 'fence' will not be downgraded to 'guide' because the property change_fences_to_guides has been set to false.
+Set place::cacheFPlanSiteMark to 1
+'setDesignMode -flowEffort standard' => 'setOptMode -usefulSkewCCOpt standard' 
+Using CCOpt effort standard.
+CCOpt::Phase::Initialization...
+Check Prerequisites...
+**ERROR: (IMPCCOPT-4254):	Design must be placed before running 'ccopt_check_prerequisites_internal'.
+Check Prerequisites interrupted. (took cpu=0:00:00.0 real=0:00:00.0)
+CCOpt::Phase::Initialization interrupted. (took cpu=0:00:00.0 real=0:00:00.0)
+**ERROR: (IMPCCOPT-2196):	Cannot run ccopt_design because the command prerequisites were not met. Review the previous error messages for more details about the failure.
+Set place::cacheFPlanSiteMark to 0
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+ERROR     IMPCCOPT-2196        1  Cannot run ccopt_design because the comm...
+ERROR     IMPCCOPT-4254        1  Design must be placed before running '%s...
+*** Message Summary: 0 warning(s), 2 error(s)
+
+*** ccopt_design #2 [finish] : cpu/real = 0:00:00.0/0:00:00.0 (1.2), totSession cpu/real = 0:01:35.5/0:19:33.1 (0.1), mem = 2199.5M
+#% End ccopt_design (date=04/04 21:20:45, total cpu=0:00:00.1, real=0:00:00.0, peak res=1895.3M, current mem=1895.3M)
+
+<CMD> all_constraint_modes -active
+sdc
+<CMD> set_interactive_constraint_modes [all_constraint_modes -active]
+<CMD> reset_propagated_clock [all_clocks]
+**INFO (INTERRUPT): One more Ctrl-C to exit Innovus ...
+Innovus terminated by user interrupt.
+
+*** Memory Usage v#1 (Current mem = 2199.516M, initial mem = 494.906M) ***
+*** Message Summary: 550429 warning(s), 5 error(s)
+
+--- Ending "Innovus" (totcpu=0:01:36, real=0:19:41, mem=2199.5M) ---
